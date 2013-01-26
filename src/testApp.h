@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 #include "ofxMtlMapping2D.h"
+#include "ofxAnimatable.h"
+#include "faceController.h"
 
 
 class testApp : public ofBaseApp{
@@ -26,4 +28,6 @@ class testApp : public ofBaseApp{
      ofxMtlMapping2D *northMapping, *eastMapping, *southMapping;
     
     ofImage myImg, myImg2;
+    
+    faceController fController;
 };

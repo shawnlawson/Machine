@@ -1,5 +1,7 @@
 #include "testApp.h"
 
+int myrandom (int i) { return std::rand()%i;}
+
 //--------------------------------------------------------------
 void testApp::setup(){
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
@@ -21,6 +23,10 @@ void testApp::setup(){
     
     eastMapping = new ofxMtlMapping2D();
     eastMapping->init(3640, 780, "mapping/xml/shapes2.xml", "mapping/controls/mapping3.xml");
+    
+    fController = faceController();
+    fController.loadFaces("night1");
+
    
 }
 
@@ -36,7 +42,8 @@ void testApp::update(){
     ofViewport(0, 0, 3640, ofGetHeight());
     ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false);
     ofSetColor(255);
-    myImg.draw(0,0);
+    fController.draw();
+ //   myImg.draw(0,0);
     ofPopView();
     northMapping->unbind();
 
@@ -45,7 +52,7 @@ void testApp::update(){
     ofViewport(0, 0, 3640, ofGetHeight());
     ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false);
     ofSetColor(255);
-    myImg2.draw(0,0);
+   // myImg2.draw(0,0);
     ofPopView();
     southMapping->unbind();
     
