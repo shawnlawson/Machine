@@ -1,6 +1,5 @@
 #include "testApp.h"
 
-int myrandom (int i) { return std::rand()%i;}
 
 //--------------------------------------------------------------
 void testApp::setup(){
