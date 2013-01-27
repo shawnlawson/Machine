@@ -6,14 +6,7 @@ void testApp::setup(){
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 	ofSetFrameRate(30);
 	ofSetVerticalSync(true);
-   
    //   ofSetLogLevel(OF_LOG_VERBOSE);
-    
-    
-    myImg.loadImage("someLargeImage.jpg");
-        myImg2.loadImage("river.jpg");
-    
-    test = 1.0;
     
     northMapping = new ofxMtlMapping2D();
     northMapping->init(3640, 780, "mapping/xml/shapes.xml", "mapping/controls/mapping.xml");
@@ -27,12 +20,32 @@ void testApp::setup(){
     fController = faceController();
     fController.loadFaces("night1");
 
-   
+//   receiver.setup(PORT);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 
+/*	while(receiver.hasWaitingMessages()){
+		ofxOscMessage m;
+		receiver.getNextMessage(&m);
+        
+		// check for mouse moved message
+		if(m.getAddress() == "/mouse/position"){
+			// both the arguments are int32's
+			mouseX = m.getArgAsInt32(0);
+			mouseY = m.getArgAsInt32(1);
+		}
+		// check for mouse button message
+		else if(m.getAddress() == "/mouse/button"){
+			mouseButtonState = m.getArgAsString(0);
+		}
+		else{
+			cout << "message unknown " << m.getAddress() << endl;
+		}
+	}
+ */
+    
     northMapping->update();
     southMapping->update();
     eastMapping->update();
@@ -45,7 +58,6 @@ void testApp::update(){
      glEnable(GL_DEPTH_TEST);
     fController.draw();
     glDisable(GL_DEPTH_TEST);
- //   myImg.draw(0,0);
     ofPopView();
     northMapping->unbind();
 
@@ -54,7 +66,7 @@ void testApp::update(){
     ofViewport(0, 0, 3640, ofGetHeight());
     ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false);
     ofSetColor(255);
-   // myImg2.draw(0,0);
+
     ofPopView();
     southMapping->unbind();
     
@@ -62,8 +74,8 @@ void testApp::update(){
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
     ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false);
-    ofSetColor(255);
 
+    ofSetColor(255);
     ofPopView();
     eastMapping->unbind();
     
@@ -74,8 +86,8 @@ void testApp::draw(){
 
     ofPushMatrix();
     
-    //ofScale( .25, .25);
-    ofScale(2, 2);
+    ofScale( .25, .25);
+    //ofScale(2, 2);
 
         ofSetColor(255);
         ofBackground(0, 0, 0);
@@ -119,10 +131,7 @@ void testApp::keyPressed(int key){
 
     if(key=='f'){
         ofToggleFullscreen();
-    }
-    
-//    northMapping->keyPressed(key);
-    
+    }    
 }
 
 //--------------------------------------------------------------

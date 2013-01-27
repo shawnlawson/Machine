@@ -3,8 +3,11 @@
 #include "ofMain.h"
 #include "ofxMtlMapping2D.h"
 #include "ofxAnimatable.h"
+#include "ofxOsc.h"
 #include "faceController.h"
 
+// listen on port 12345
+#define PORT 12345
 
 class testApp : public ofBaseApp{
 	public:
@@ -22,12 +25,8 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-    float test;
     
-    
-     ofxMtlMapping2D *northMapping, *eastMapping, *southMapping;
-    
-    ofImage myImg, myImg2;
-    
+    ofxOscReceiver receiver;
+    ofxMtlMapping2D *northMapping, *eastMapping, *southMapping;
     faceController fController;
 };
