@@ -28,18 +28,23 @@ public:
     }
     
     void loadFaces( string path){
-        ofDirectory dir;
-        dir.allowExt("png");
-        int numFaces   = dir.listDir(path);
-        for(int i=0; i<numFaces; i++){
-            face f = face();
-            f.loadImage( dir.getPath(i) );
-            f.position = ofVec2f( 130* i, 0);
-            faces.push_back(f);
+        ofDirectory dirImage, dirMesh;
+        dirImage.allowExt("png");
+        dirMesh.allowExt("txt");
+        int numFaces = dirImage.listDir(path);
+        int numMesh = dirMesh.listDir(path);
+        if( numFaces == numMesh){
+            for(int i=0; i<numFaces; i++){
+                face f = face();
+                f.loadImage( dirImage.getPath(i) );
+                f.position = ofVec2f( 130* i, 0); //temporary placement
+                f.loadMesh( dirMesh.getPath(i) );
+                faces.push_back(f);
+            }
         }
-
     }
-    
+
+   
 void update(){}
 
     

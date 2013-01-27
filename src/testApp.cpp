@@ -6,6 +6,7 @@ void testApp::setup(){
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 	ofSetFrameRate(30);
 	ofSetVerticalSync(true);
+   
    //   ofSetLogLevel(OF_LOG_VERBOSE);
     
     
@@ -39,9 +40,11 @@ void testApp::update(){
     northMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
-    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false);
+    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false, 100, -100);
     ofSetColor(255);
+     glEnable(GL_DEPTH_TEST);
     fController.draw();
+    glDisable(GL_DEPTH_TEST);
  //   myImg.draw(0,0);
     ofPopView();
     northMapping->unbind();
@@ -71,7 +74,8 @@ void testApp::draw(){
 
     ofPushMatrix();
     
-    ofScale( .25, .25);
+    //ofScale( .25, .25);
+    ofScale(2, 2);
 
         ofSetColor(255);
         ofBackground(0, 0, 0);
