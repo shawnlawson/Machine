@@ -6,6 +6,7 @@ void testApp::setup(){
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 	ofSetFrameRate(30);
 	ofSetVerticalSync(true);
+    ofSetCoordHandedness(OF_RIGHT_HANDED);
    //   ofSetLogLevel(OF_LOG_VERBOSE);
     
     northMapping = new MachineMapping2D();
@@ -49,31 +50,54 @@ void testApp::update(){
     northMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
-    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false, 100, -100);
+//    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false, 1000, -1000);
+    glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+    glOrtho(0, 3640, 0, ofGetHeight(), 1000, -1000);
+    glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
     ofSetColor(255);
      glEnable(GL_DEPTH_TEST);
     fController.draw();
     glDisable(GL_DEPTH_TEST);
+    ofCircle(3640, 340, 200);
     ofPopView();
     northMapping->unbind();
 
+    eastMapping->bind();
+    ofPushView();
+    ofViewport(0, 0, 2990, ofGetHeight());
+  //  ofSetupScreenOrtho(2990, 780, OF_ORIENTATION_DEFAULT, false, 1000, -1000);
+    glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+    glOrtho(3640, 3640+2990, 0, ofGetHeight(), 1000, -1000);
+    glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+    ofSetColor(255);
+    glEnable(GL_DEPTH_TEST);
+    fController.draw();
+    glDisable(GL_DEPTH_TEST);
+    ofCircle(3640, 340, 200);
+    ofCircle(3640+2990, 340, 100);
+    ofPopView();
+    eastMapping->unbind();
+
+    
     southMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
-    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false);
+//    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false, 1000, -1000);
+    glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+    glOrtho(3640+2990, 3640+3640+2990, 0, ofGetHeight(), 1000, -1000);
+    glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
     ofSetColor(255);
-
+    ofCircle(3640, 340, 200);
+    ofCircle(3640+2990, 340, 100);
     ofPopView();
     southMapping->unbind();
     
-    eastMapping->bind();
-    ofPushView();
-    ofViewport(0, 0, 3640, ofGetHeight());
-    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false);
-
-    ofSetColor(255);
-    ofPopView();
-    eastMapping->unbind();
     
 }
 
@@ -111,16 +135,15 @@ void testApp::draw(){
     
     ofPushMatrix();
     ofTranslate(0, 1080);
-    southMapping->draw();
-    ofPopMatrix();
-
-    ofPushMatrix();
-    ofTranslate(0, 2160);
     eastMapping->draw();
     ofPopMatrix();
     
+    ofPushMatrix();
+    ofTranslate(0, 2160);
+    southMapping->draw();
     ofPopMatrix();
-    
+
+    ofPopMatrix();    
 }
 
 //--------------------------------------------------------------
