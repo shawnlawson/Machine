@@ -1,6 +1,6 @@
 #variables
 nameToWrite = "shapes.xml"
-panelsWide = 28
+panelsWide = 23
 panelsHigh = 6
  #in pixels, must be recaclulated per resolution
 panelSize = 130
