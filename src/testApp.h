@@ -1,10 +1,13 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxMtlMapping2D.h"
 #include "ofxAnimatable.h"
 #include "ofxOsc.h"
+#include "ofxFX.h"
+#include "ofxFXObject.h"
+
 #include "faceController.h"
+#include "MachineMapping2D.h"
 
 // listen on port 12345
 #define PORT 12345
@@ -21,12 +24,11 @@ class testApp : public ofBaseApp{
 		void mouseDragged(int x, int y, int button);
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
+
 
     
     ofxOscReceiver receiver;
-    ofxMtlMapping2D *northMapping, *eastMapping, *southMapping;
+
+    MachineMapping2D *northMapping, *eastMapping, *southMapping;
     faceController fController;
 };

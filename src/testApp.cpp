@@ -8,14 +8,14 @@ void testApp::setup(){
 	ofSetVerticalSync(true);
    //   ofSetLogLevel(OF_LOG_VERBOSE);
     
-    northMapping = new ofxMtlMapping2D();
-    northMapping->init(3640, 780, "mapping/xml/shapes.xml", "mapping/controls/mapping.xml");
+    northMapping = new MachineMapping2D();
+    northMapping->init(3640, 780, "mapping/xml/shapes.xml");
 
-    southMapping = new ofxMtlMapping2D();
-    southMapping->init(3640, 780, "mapping/xml/shapes2.xml", "mapping/controls/mapping2.xml");
+    southMapping = new MachineMapping2D();
+    southMapping->init(3640, 780, "mapping/xml/shapes2.xml");
     
-    eastMapping = new ofxMtlMapping2D();
-    eastMapping->init(3640, 780, "mapping/xml/shapes2.xml", "mapping/controls/mapping3.xml");
+    eastMapping = new MachineMapping2D();
+    eastMapping->init(2990, 780, "mapping/xml/shapes3.xml");
     
     fController = faceController();
     fController.loadFaces("night1");
@@ -45,10 +45,6 @@ void testApp::update(){
 		}
 	}
  */
-    
-    northMapping->update();
-    southMapping->update();
-    eastMapping->update();
 
     northMapping->bind();
     ofPushView();
@@ -90,8 +86,9 @@ void testApp::draw(){
     //ofScale(2, 2);
 
         ofSetColor(255);
-        ofBackground(0, 0, 0);
+        ofBackground(0);
         
+
         ofSetColor(128, 0, 0);
         ofRect(0, 0, 1920, 1080);
         ofSetColor(0, 128, 0);
@@ -156,20 +153,5 @@ void testApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
 
 }
