@@ -22,6 +22,7 @@ void testApp::setup(){
     fController.loadFaces("night1");
 
 //   receiver.setup(PORT);
+
 }
 
 //--------------------------------------------------------------
@@ -50,35 +51,22 @@ void testApp::update(){
     northMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
-//    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false, 1000, -1000);
-    glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-    glOrtho(0, 3640, 0, ofGetHeight(), 1000, -1000);
-    glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-    ofSetColor(255);
-     glEnable(GL_DEPTH_TEST);
-    fController.draw();
-    glDisable(GL_DEPTH_TEST);
-    ofCircle(3640, 340, 200);
+    ofSetupScreenPerspective(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 2000);
+
+    scene();
+    
     ofPopView();
     northMapping->unbind();
 
+    
     eastMapping->bind();
     ofPushView();
     ofViewport(0, 0, 2990, ofGetHeight());
-  //  ofSetupScreenOrtho(2990, 780, OF_ORIENTATION_DEFAULT, false, 1000, -1000);
-    glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-    glOrtho(3640, 3640+2990, 0, ofGetHeight(), 1000, -1000);
-    glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-    ofSetColor(255);
-    glEnable(GL_DEPTH_TEST);
-    fController.draw();
-    glDisable(GL_DEPTH_TEST);
-    ofCircle(3640, 340, 200);
-    ofCircle(3640+2990, 340, 100);
+    ofSetupScreenPerspective(2990, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 2000);
+    
+    ofTranslate(-3640, 0);
+    scene();
+    
     ofPopView();
     eastMapping->unbind();
 
@@ -86,19 +74,30 @@ void testApp::update(){
     southMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
-//    ofSetupScreenOrtho(3640, 780, OF_ORIENTATION_DEFAULT, false, 1000, -1000);
-    glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-    glOrtho(3640+2990, 3640+3640+2990, 0, ofGetHeight(), 1000, -1000);
-    glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-    ofSetColor(255);
-    ofCircle(3640, 340, 200);
-    ofCircle(3640+2990, 340, 100);
+    ofSetupScreenPerspective(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 2000);
+
+    ofTranslate(-3640-2990, 0);
+    scene();
+    
     ofPopView();
     southMapping->unbind();
     
     
+}
+
+void testApp::scene(){
+    ofSetColor(255);
+
+     //   ofRotateX(ofGetElapsedTimef()*-5);
+    glEnable(GL_DEPTH_TEST);
+
+    fController.draw();
+    
+    glDisable(GL_DEPTH_TEST);
+
+    ofCircle(3640, 340, 200);
+    ofCircle(3640+2990, 340, 100);
+
 }
 
 //--------------------------------------------------------------
@@ -151,7 +150,8 @@ void testApp::keyPressed(int key){
 
     if(key=='f'){
         ofToggleFullscreen();
-    }    
+    }
+
 }
 
 //--------------------------------------------------------------

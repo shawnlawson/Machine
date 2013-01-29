@@ -26,9 +26,10 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 
 
-    
+    void scene();
     ofxOscReceiver receiver;
 
     MachineMapping2D *northMapping, *eastMapping, *southMapping;
     faceController fController;
+
 };

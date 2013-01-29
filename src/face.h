@@ -45,20 +45,20 @@ public:
 //            symbol.character = words[0];
 //            symbol.code = words[1];
             
-            //ofMap to push data front to back around pivot point
-            //might need to be -65 65 to match tile size of 130
-            zData.push_back( ofMap(ofToFloat(line), 100, 255, -65, 65) );
+            float zTemp = ofClamp(ofToFloat(line), 127, 255);
+            zData.push_back( ofMap(zTemp, 127.0, 255.0, 0.0, -130.0) );
         }
 
-       // vboMesh.setMode(OF_PRIMITIVE_TRIANGLES);
-        vboMesh.setMode(OF_PRIMITIVE_POINTS);
-        int skip = 1;	// this controls the resolution of the mesh
+        int skip = 5;//1;	// this controls the resolution of the mesh
         int width = image.getWidth();
         int height = image.getHeight();
         ofVec3f zero(0, 0, 0);
         for(int y = 0; y < height - skip; y += skip) {
             for(int x = 0; x < width - skip; x += skip) {
 
+                //think about checking alpha of image and then not adding mesh for those parts
+                //depth buffer & alpha blend issues... 
+                
                 ofVec3f nw = ofVec3f(x, y, zData[y*width + x]);
                 ofVec3f ne = ofVec3f(x + skip, y, zData[y*width + x+1]);
                 ofVec3f sw = ofVec3f(x, y + skip, zData[(y+1)*width + x]);
@@ -72,9 +72,9 @@ public:
                 addTexCoords(nwi, nei, sei, swi);
                 
                 
-                if( zData[y*width +x]< -65.0){
-                    image.setColor(x, y, ofColor(1, 1, 1, 0));
-                }
+//                if( zData[y*width +x]< -65.0){
+//                    image.setColor(x, y, ofColor(1, 1, 1, 0));
+//                }
             }
         }
 
@@ -114,7 +114,8 @@ public:
     //--------------------------------------------------------------
     void draw(){
         //just image
-  //      image.draw(position);
+        
+     //   image.draw(position);
         
      //   ofScale(1, -1, 1); // make y point down
      //   ofScale(.5, .5, .5); // make everything a bit smaller
@@ -127,10 +128,12 @@ public:
                 ofTranslate(65, 65);
                 ofRotate(ofGetElapsedTimef()*20, 0, 1, 0);
                 ofTranslate(-65, -65);
-                vboMesh.draw();
+                vboMesh.drawWireframe();
             ofPopMatrix();
         ofPopMatrix();
         image.unbind();
+     
+
         
     }
     
