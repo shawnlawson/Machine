@@ -1,10 +1,12 @@
 #variables
-nameToWrite = "shapes.xml"
-panelsWide = 23
+nameToWrite = "north.xml"
+panelsWide = 28 #28 #23
 panelsHigh = 6
  #in pixels, must be recaclulated per resolution
 panelSize = 130
+panelPartial = 100
 panelGap =  7  
+panelSplit = panelGap*2
 panelOffset = 0
 
 #shorthand xml tags
@@ -30,10 +32,17 @@ for i in range( panelsHigh ):
   for j in range( panelsWide ) :
     toWrite += sS + str(idCounter) + sM + vS
     #projection verts
-    toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap) + dE
-    toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap) + dE
-    toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap) + dE
-    toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap) + dE
+    if i < 2:
+        toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap) + dE
+        toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap) + dE
+        toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap) + dE
+        toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap) + dE
+    else:
+        toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap + panelSplit) + dE
+        toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap + panelSplit) + dE
+        toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap + panelSplit) + dE
+        toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap + panelSplit) + dE
+
 
     toWrite += vE + pS
     #texture verts

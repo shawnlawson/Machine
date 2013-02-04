@@ -1,0 +1,18 @@
+<mapping>
+    <north>
+        <x>0.000000000</x>
+        <y>0.000000000</y>
+    </north>
+    <east>
+        <x>0.000000000</x>
+        <y>1080.000000000</y>
+    </east>
+    <south>
+        <x>0.000000000</x>
+        <y>2160.000000000</y>
+    </south>
+</mapping>
+<background>
+    <draw>1</draw>
+</background>
+<fullscreen>0</fullscreen>
