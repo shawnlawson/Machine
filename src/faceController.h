@@ -29,29 +29,26 @@ public:
     
     void loadFaces( string path){
         ofDirectory dirImage, dirMesh;
-        dirImage.allowExt("png");
+    //    dirImage.allowExt("png");
         dirMesh.allowExt("txt");
-        int numFaces = dirImage.listDir(path);
+      //  int numFaces = dirImage.listDir(path);
         int numMesh = dirMesh.listDir(path);
-        if( numFaces == numMesh){
-            for(int i=0; i<numFaces; i++){
+     //   if( numFaces == numMesh){
+            for(int i=0; i<numMesh; i++){
                 face f = face();
-                f.loadImage( dirImage.getPath(i) );
-                f.position = ofVec2f( 130* i, 0); //temporary placement
+         //       f.loadImage( dirImage.getPath(i) );
+        //        f.position = ofVec2f( 130* i, 0); //temporary placement
                 f.loadMesh( dirMesh.getPath(i) );
                 faces.push_back(f);
-            }
-        }
+           }
+      //  }
     }
-
-   
-void update(){}
 
     
 void draw(){
     
     for(vector<face>::iterator it =  faces.begin(); it != faces.end(); ++it){
-        it->draw();
+        it->customDraw();
     }
 
 }
