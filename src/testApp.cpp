@@ -3,7 +3,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+  //  ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 	ofSetFrameRate(30);
 	ofSetVerticalSync(true);
     ofSetCoordHandedness(OF_RIGHT_HANDED);
@@ -19,6 +19,11 @@ void testApp::setup(){
     fController = faceController();
     fController.loadFaces("night1");
 
+    pController = PolygonController();
+    
+    eController = EffectController();
+    eController.loadShaders();
+    
     myLoadSettings();
     
    receiver.setup(PORT);
@@ -29,23 +34,10 @@ void testApp::setup(){
     grid.loadShader();
     
     myZoom = false;
-    
-    for(int i=0;i<6;i++){
-		float x = cos(ofDegToRad(i*60.0f))*350.0f;
-		float y = sin(ofDegToRad(i*60.0f))*350.0f;
-		startingNodes[i] = ofVec2f(x,y);
-	}
-    
-    int maxLevel = 4;
-	edf0 = new PolygonEDF0(0,0,maxLevel);
-      
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
-
-    edf0->update(startingNodes, ofGetFrameNum()*0.01f);//,mPerlin);
 
 	while(receiver.hasWaitingMessages()){
 		ofxOscMessage m;
@@ -65,13 +57,19 @@ void testApp::update(){
 	}
  
 
+    
+  //  pController.update();
+    
+
+    
     northMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
    // ofSetupScreenPerspective(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 3000);
     ofSetupScreenOrtho(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
-    scene();
     
+    scene(0);
+    eController.draw(0, 780, 0.0);
     ofPopView();
     northMapping->unbind();
 
@@ -82,7 +80,7 @@ void testApp::update(){
 //    ofSetupScreenPerspective(2990, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 2000);
   ofSetupScreenOrtho(2990, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-3640, 0);
-    scene();
+    scene(3640);
     
     ofPopView();
     eastMapping->unbind();
@@ -94,7 +92,7 @@ void testApp::update(){
  //   ofSetupScreenPerspective(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 2000);
   ofSetupScreenOrtho(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-3640-2990, 0);
-    scene();
+    scene(3640+2990);
     
     ofPopView();
     southMapping->unbind();
@@ -102,29 +100,26 @@ void testApp::update(){
     
 }
 
-void testApp::scene(){
+void testApp::scene(int leftSide){
+//   glLineWidth(1.5);
+//    grid.customDraw();
+//ofEnableBlendMode(OF_BLENDMODE_ADD);
+
+//    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+//    pController.draw();
+//    ofDisableAlphaBlending();
+
+//    glEnable(GL_DEPTH_TEST);
+//    glPointSize(4);
+//  fController.draw();
+//    glDisable(GL_DEPTH_TEST);
+
+    eController.draw(leftSide, 780, 0.0);
+
     
-    ofSetColor(255);
-
-     //   ofRotateX(ofGetElapsedTimef()*-5);
-    glEnable(GL_DEPTH_TEST);
-
-    glPointSize(4);
-    fController.draw();
-    
-    glDisable(GL_DEPTH_TEST);
-
+// testing circles
 //    ofCircle(3640, 340, 200);
 //    ofCircle(3640+2990, 340, 100);
-
-    
-    ofPushMatrix();
-    //ofSetLineWidth(3);
-    glLineWidth(2.0);
-    grid.customDraw();
-    ofPopMatrix();
-    
-
     
 }
 
@@ -139,7 +134,8 @@ void testApp::draw(){
         ofScale(.9, .9);
 
         ofSetColor(255);
-        ofBackground(0);
+    
+ //   ofBackground(0);
         
         if(drawBackground){
             ofSetColor(128, 0, 0);
@@ -179,13 +175,8 @@ void testApp::draw(){
     float deltaTime = ofGetLastFrameTime();
     
  //   blackScreen.draw(deltaTime);
-    
 
-    ofSetColor(255);
-    ofPushMatrix();
-	ofTranslate(ofGetWidth()/2,ofGetHeight()/2);
-	edf0->draw();
-    ofPopMatrix();
+
 }
 
 //--------------------------------------------------------------

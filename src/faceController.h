@@ -19,29 +19,29 @@ public:
     
     vector <face> faces;
     
-    faceController(){
-        
-    }
-    
-    ~faceController(){
-
-    }
+    faceController(){}
     
     void loadFaces( string path){
         ofDirectory dirImage, dirMesh;
-    //    dirImage.allowExt("png");
+        dirImage.allowExt("png");
         dirMesh.allowExt("txt");
-      //  int numFaces = dirImage.listDir(path);
+        int numFaces = dirImage.listDir(path);
         int numMesh = dirMesh.listDir(path);
-     //   if( numFaces == numMesh){
+        if( numFaces == numMesh){
             for(int i=0; i<numMesh; i++){
                 face f = face();
-         //       f.loadImage( dirImage.getPath(i) );
-        //        f.position = ofVec2f( 130* i, 0); //temporary placement
+                f.loadImage( dirImage.getPath(i) );
                 f.loadMesh( dirMesh.getPath(i) );
                 faces.push_back(f);
            }
-      //  }
+        }
+        
+        //loop over faces and set positions
+    //        f.position = ofVec2f( 130* i, 0); //temporary placement
+        //get total locations
+        //copy face
+        //add to end of vector and update new position
+        
     }
 
     

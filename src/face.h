@@ -9,16 +9,22 @@
 #pragma mark once
 #include "ofMain.h"
 
+#define toClose 400
+#define toFar   2000
+
 class face : public ofNode, ofVboMesh{
 
 public:
     ofImage image;
+    ofxAnimatableFloat alpha;
     
-    face(){}
+    face(){
+        alpha.reset(1.0);
+    }
     
     //--------------------------------------------------------------
     void loadImage( string path ){
-        image.allocate(130, 130, OF_IMAGE_COLOR_ALPHA);
+        image.allocate(280, 180, OF_IMAGE_COLOR_ALPHA);
         image.loadImage(path);
     }
     
@@ -32,87 +38,55 @@ public:
         }
         
         ofBuffer buffer(file);
-        vector<float> data;
+        vector<ofVec3f> vData;
 
-        ofPixels pixels;
-        pixels.allocate(130, 130, OF_PIXELS_RGBA);
-        image.allocate(130, 130, OF_IMAGE_COLOR_ALPHA);
-        
-        enableColors();
-
-        
-        int pos = 0;
-        
+        int skip = 3;//1;	// this controls the resolution of the mesh
+        int width = image.getWidth();
+        int height = image.getHeight();
+        ofVec3f zero(0, 0, 0);
         while (!buffer.isLastLine()) {
             string line = buffer.getNextLine();
-            vector<string> colors = ofSplitString(line, " ");
-            
-            //pixels.setColor(pos%130, (int)((pos-(pos%130))/130), ofColor(ofToFloat(colors[0]), ofToFloat(colors[1]), ofToFloat(colors[2])));
-           // cout << line << endl;
-            //safety check
-            if(!buffer.isLastLine()){
-                string line2 = buffer.getNextLine();
-                vector<string> vert = ofSplitString(line2, " ");
-//                data.push_back(ofToFloat(vert[0]));
-//                data.push_back(ofToFloat(vert[1]));
-//                data.push_back(ofToFloat(vert[2]));
-                if( vert.size() == 3){
-                    if( ofToFloat(vert[2]) < 1000  && ofToFloat(vert[2]) > 400){
-                        addVertex(ofVec3f(ofToFloat(vert[0])-17, ofToFloat(vert[1])+70, ofToFloat(vert[2])-800));
-                        if( colors.size() == 3){
-                            addColor(ofFloatColor(ofToFloat(colors[0]), ofToFloat(colors[1]), ofToFloat(colors[2])));
-                        }else{
-                            cout << "color burp " << pos << endl;
-                        }
-                    }
-                }else{
-                    cout << "vert burp " << pos << endl;
-                }            
+            //data.push_back(ofToInt(line));
+            vector<string> vert = ofSplitString(line, " ");
+            vData.push_back(ofVec3f(ofToFloat(vert[0]), ofToFloat(vert[1]), ofToFloat(vert[2])));
+        }
+        
+        for(int y = 0; y < height - skip; y += skip) {
+            for(int x = 0; x < width - skip; x += skip) {
                 
+                ofVec3f nw = vData[y*width + x];
+                ofVec3f ne = vData[y*width + x+skip];
+                ofVec3f sw = vData[(y+skip)*width + x];
+                ofVec3f se = vData[(y+skip)*width + x+skip];
                 
-                pos++;
+                if(nw.z > toClose && nw.z < toFar &&
+                   ne.z > toClose && ne.z < toFar &&
+                   sw.z > toClose && sw.z < toFar &&
+                   se.z > toClose && se.z < toFar ){
+                    
+                    addFace(nw, ne, se, sw);
+                    
+                    ofVec2f nwi(x, y);
+                    ofVec2f nei(x + skip, y);
+                    ofVec2f swi(x, y + skip);
+                    ofVec2f sei(x + skip, y + skip);
+                    addTexCoords(nwi, nei, sei, swi);
+                }
             }
-            
-            pos++;
+        }
+        
+        ofVec3f center = getCentroid();
+        ofVec3f *v = getVerticesPointer();
+        
+        for(int i=0; i<getNumVertices(); i++){
+            v->x -= center.x;
+            v->y -= center.y;
+            v->z -= center.z;
+            v++;
         }
 
-        setPosition(130, 130, 0);
-               
-//        image.setFromPixels(pixels);
-        
-//        while (!buffer.isLastLine()) {
-//            string line = buffer.getNextLine();
-//            
-//            float zTemp = ofClamp(ofToFloat(line), 127, 255);
-//            data.push_back( ofMap(zTemp, 127.0, 255.0, 0.0, -130.0) );
-//        }
-//
-//        int skip = 2;//1;	// this controls the resolution of the mesh
-//        int width = image.getWidth();
-//        int height = image.getHeight();
-//        ofVec3f zero(0, 0, 0);
-//        for(int y = 0; y < height - skip; y += skip) {
-//            for(int x = 0; x < width - skip; x += skip) {
-//
-//                //think about checking alpha of image and then not adding mesh for those parts
-//                //depth buffer & alpha blend issues... 
-//                
-//                ofVec3f nw = ofVec3f(x, y, data[y*width + x]);
-//                ofVec3f ne = ofVec3f(x + skip, y, data[y*width + x+1]);
-//                ofVec3f sw = ofVec3f(x, y + skip, data[(y+1)*width + x]);
-//                ofVec3f se = ofVec3f(x + skip, y + skip, data[(y+1)*width + x+1]);
-//                ofVec2f nwi(x, y);
-//                ofVec2f nei(x + skip, y);
-//                ofVec2f swi(x, y + skip);
-//                ofVec2f sei(x + skip, y + skip);
-//                
-//                addFace(nw, ne, se, sw);
-//                addTexCoords(nwi, nei, sei, swi);
-//                
-//            }
-//        }
-//
-
+        enableColors();        
+        setPosition(300, 300, 0);
         
     }
     
@@ -153,14 +127,15 @@ public:
      //   image.draw(position);
 
 
-     //   image.bind();
+        image.bind();
 
         rotate(1, 0, 1, 0);
         transformGL();
-        drawVertices();
+      //  drawVertices();
+        drawFaces();
         restoreTransformGL();
 
-    //    image.unbind();
+        image.unbind();
      
 
         

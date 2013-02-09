@@ -57,7 +57,9 @@ void MachineMapping2D::draw()
 void MachineMapping2D::bind()
 {
     _fbo.bind();
-    ofClear(.0f, .0f, .0f, .0f);
+  //  ofSetColor(0, 0, 0, 255);
+  //  ofRect(0, 0, _fbo.getWidth(), _fbo.getHeight());
+    ofClear(0.0f, 0.0f, 0.0f, 1.0f);
     ofClearAlpha();
 }
 

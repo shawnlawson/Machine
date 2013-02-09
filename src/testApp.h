@@ -9,8 +9,9 @@
 
 #include "BlackScreen.h"
 #include "MyGrid.h"
-#include "PolygonEDF0.h"
+#include "PolygonController.h"
 #include "faceController.h"
+#include "EffectController.h"
 #include "MachineMapping2D.h"
 
 // listen on port 12345
@@ -37,7 +38,7 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 
 
-    void scene();
+    void scene( int leftSide );
     void nudgeMappings( int direction );
     void myLoadSettings();
     
@@ -45,8 +46,12 @@ class testApp : public ofBaseApp{
 
     BlackScreen     blackScreen;
     MyGrid          grid;
+    PolygonController     pController;
+    
     MachineMapping2D *northMapping, *eastMapping, *southMapping;
     faceController fController;
+    
+    EffectController eController;
     
     moveMapping myMoveMapping;
 
@@ -57,8 +62,6 @@ class testApp : public ofBaseApp{
     
     bool    myZoom;
     
-    PolygonEDF0 *edf0;
-    	ofVec2f startingNodes[6];
     
    
 };
