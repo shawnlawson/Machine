@@ -59,45 +59,35 @@ void testApp::update(){
 
     
   //  pController.update();
+    fController.updateShowState(4);
     
 
     
     northMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
-   // ofSetupScreenPerspective(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 3000);
     ofSetupScreenOrtho(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
-    
     scene(0);
-    eController.draw(0, 780, 0.0);
     ofPopView();
     northMapping->unbind();
-
     
     eastMapping->bind();
     ofPushView();
     ofViewport(0, 0, 2990, ofGetHeight());
-//    ofSetupScreenPerspective(2990, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 2000);
-  ofSetupScreenOrtho(2990, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
+    ofSetupScreenOrtho(2990, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-3640, 0);
     scene(3640);
-    
     ofPopView();
     eastMapping->unbind();
-
     
     southMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
- //   ofSetupScreenPerspective(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, 1, 2000);
-  ofSetupScreenOrtho(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
+    ofSetupScreenOrtho(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-3640-2990, 0);
     scene(3640+2990);
-    
     ofPopView();
     southMapping->unbind();
-    
-    
 }
 
 void testApp::scene(int leftSide){
@@ -109,12 +99,13 @@ void testApp::scene(int leftSide){
 //    pController.draw();
 //    ofDisableAlphaBlending();
 
-//    glEnable(GL_DEPTH_TEST);
-//    glPointSize(4);
-//  fController.draw();
-//    glDisable(GL_DEPTH_TEST);
 
-    eController.draw(leftSide, 780, 0.0);
+    glEnable(GL_DEPTH_TEST);
+    glPointSize(4);
+  fController.draw();
+    glDisable(GL_DEPTH_TEST);
+
+//    eController.draw(leftSide, 780, 0.0);
 
     
 // testing circles
@@ -133,9 +124,9 @@ void testApp::draw(){
     else
         ofScale(.9, .9);
 
-        ofSetColor(255);
+    ofSetColor(0, 0, 0, 255);
+    ofRect(0, 0, 5760, 3240);
     
- //   ofBackground(0);
         
         if(drawBackground){
             ofSetColor(128, 0, 0);

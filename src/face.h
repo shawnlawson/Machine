@@ -9,7 +9,7 @@
 #pragma mark once
 #include "ofMain.h"
 
-#define toClose 400
+#define toClose 350
 #define toFar   2000
 
 class face : public ofNode, ofVboMesh{
@@ -17,6 +17,7 @@ class face : public ofNode, ofVboMesh{
 public:
     ofImage image;
     ofxAnimatableFloat alpha;
+    bool inUse = false;
     
     face(){
         alpha.reset(1.0);
@@ -40,7 +41,7 @@ public:
         ofBuffer buffer(file);
         vector<ofVec3f> vData;
 
-        int skip = 3;//1;	// this controls the resolution of the mesh
+        int skip = 5;//1;	// this controls the resolution of the mesh
         int width = image.getWidth();
         int height = image.getHeight();
         ofVec3f zero(0, 0, 0);
@@ -85,9 +86,7 @@ public:
             v++;
         }
 
-        enableColors();        
-        setPosition(300, 300, 0);
-        
+        enableColors();                
     }
     
     //--------------------------------------------------------------
