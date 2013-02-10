@@ -20,7 +20,8 @@ public:
     bool inUse = false;
     
     face(){
-        alpha.reset(1.0);
+        alpha.reset(0.0);
+        alpha.setDuration(5.0);
     }
     
     //--------------------------------------------------------------
@@ -41,13 +42,12 @@ public:
         ofBuffer buffer(file);
         vector<ofVec3f> vData;
 
-        int skip = 5;//1;	// this controls the resolution of the mesh
+        int skip = 3;//1;	// this controls the resolution of the mesh
         int width = image.getWidth();
         int height = image.getHeight();
         ofVec3f zero(0, 0, 0);
         while (!buffer.isLastLine()) {
             string line = buffer.getNextLine();
-            //data.push_back(ofToInt(line));
             vector<string> vert = ofSplitString(line, " ");
             vData.push_back(ofVec3f(ofToFloat(vert[0]), ofToFloat(vert[1]), ofToFloat(vert[2])));
         }
@@ -124,7 +124,11 @@ public:
     void customDraw(){
         //just image
      //   image.draw(position);
-
+        
+      //  if(alpha.isAnimating())
+            alpha.update(ofGetLastFrameTime());
+        
+        ofSetColor(255, 255, 255, alpha.val()*255);
 
         image.bind();
 
@@ -135,9 +139,7 @@ public:
         restoreTransformGL();
 
         image.unbind();
-     
-
-        
+   
     }
     
 };

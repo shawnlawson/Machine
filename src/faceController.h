@@ -11,20 +11,17 @@
 
 #include "face.h"
 
-#define NUM_PANELS 72
+#define NUM_PANELS 20 //72
 
 class faceController{
     
 public:
     vector <face> allFaces;
-    vector <face*> facesOnScreen;
-    vector  <int> slotsEmpty;
+    face* facesOnScreen[NUM_PANELS] = {NULL};
+    int faceToSwap = -1;
 
 //--------------------------------------------------------------
-    faceController(){
-        for(int i=0; i<NUM_PANELS; i++)
-            slotsEmpty.push_back(i);
-    }
+    faceController(){}
     
 //--------------------------------------------------------------
     void loadFaces( string path){
@@ -41,7 +38,9 @@ public:
                 f.setScale(.8);
                 allFaces.push_back(f);
            }
-        }      
+        }
+        
+        resetFacesOnPanels();
     }
     
 //--------------------------------------------------------------
@@ -55,44 +54,64 @@ public:
                 
             //populate everything
             case 1:
-                if(facesOnScreen.size() != NUM_PANELS){
-                    resetFacesOnPanels();
-                    for( int i=0; i<NUM_PANELS; i++){
-                        slotsEmpty.erase( remove(slotsEmpty.begin(), slotsEmpty.end(), i) );
-                        addFaceAtPlace(i, i);
-                    }
+                resetFacesOnPanels();
+                for( int i=0; i<NUM_PANELS; i++){
+                    addFaceAtPlace(i, i);
                 }
                 break;
             
             //set all to transparent now
             case 2:
-                for(int i=0; i<facesOnScreen.size(); i++){
-                    facesOnScreen[i]->alpha.reset(1.0);
+                for(int i=0; i<NUM_PANELS; i++){
+                    facesOnScreen[i]->alpha.reset(0.0);
                 }
                 break;
             
             //set all opaque now
             case 3:
-                for(int i=0; i<facesOnScreen.size(); i++){
-                    facesOnScreen[i]->alpha.reset(0.0);
+                for(int i=0; i<NUM_PANELS; i++){
+                    facesOnScreen[i]->alpha.reset(1.0f);
                 }
                 break;
                 
-            //gradually add and fade in
+            //random start fade in
             case 4:
-                if( facesOnScreen.size()<NUM_PANELS ){
-                    addFaceToPanel();
-                }else{
-                    
-                    
+                for(int i=0; i<NUM_PANELS; i++){
+                    facesOnScreen[i]->alpha.reset(0.0);
+                    facesOnScreen[i]->alpha.animateToAfterDelay(1.0f, ofRandom(60.0));
                 }
                 break;
             
-            //gradually fade out and delete
+            //random start fade out
             case 5:
-                
+                for(int i=0; i<NUM_PANELS; i++){
+                    facesOnScreen[i]->alpha.reset(1.0);
+                    facesOnScreen[i]->alpha.animateToAfterDelay(0.0f, ofRandom(60.0));
+                }
                 break;
                 
+            //gradually fade all to transparent
+            case 6:
+                for(int i=0; i<NUM_PANELS; i++){
+                    facesOnScreen[i]->alpha.animateFromTo(1.0f, 0.0f);
+                }
+                break;
+                
+            //gradually fade all to opaque
+            case 7:
+                for(int i=0; i<NUM_PANELS; i++){
+                    facesOnScreen[i]->alpha.animateFromTo(0.0f, 1.0f);
+                }
+                break;
+                
+            //swap faces
+            case 8:
+                if(faceToSwap < 0)
+                    startFaceSwap();
+                else
+                    waitForSwap();
+                
+                break;
             default:
                 break;
         }
@@ -101,7 +120,7 @@ public:
     
     void draw(){
         
-        for (int i=0; i<facesOnScreen.size(); i++) {
+        for (int i=0; i<NUM_PANELS; i++) {
             facesOnScreen[i]->customDraw();
         }
 
@@ -110,42 +129,49 @@ public:
 private:
 //--------------------------------------------------------------    
     void resetFacesOnPanels(){
-        facesOnScreen.clear();
-        slotsEmpty.clear();
         
         for(int i=0; i<NUM_PANELS; i++)
-            slotsEmpty.push_back(i);
+            facesOnScreen[i] = NULL;
         
         for(int i=0; i<allFaces.size(); i++) {
             allFaces[i].alpha.reset(0.0);
             allFaces[i].inUse = false;
         }  
     }
-    
-//--------------------------------------------------------------    
-    void addFaceToPanel(){
 
-        int whichFaceToUse = (int)ofRandom(allFaces.size()-1);
-
-        if (!allFaces[whichFaceToUse].inUse) {
-
-            int place = (int)ofRandom(NUM_PANELS);
+//--------------------------------------------------------------
+    void waitForSwap(){
+        
+        if( !facesOnScreen[faceToSwap]->alpha.isOrWillBeAnimating() ){
             
-            vector<int>::iterator it;
-            it = find(slotsEmpty.begin(), slotsEmpty.end(), place);
+            int testSwap = (int)ofRandom(allFaces.size()-1);
             
-            if(*it == place){
-                slotsEmpty.erase( remove(slotsEmpty.begin(), slotsEmpty.end(), place) );
-                addFaceAtPlace(place, whichFaceToUse);
-                allFaces[whichFaceToUse].inUse = true;
-            }else{
-            
+            if( !allFaces[testSwap].inUse ){
+                facesOnScreen[faceToSwap]->inUse = false;
+                addFaceAtPlace(faceToSwap, testSwap);
+                facesOnScreen[faceToSwap]->alpha.reset(0.0);
+                facesOnScreen[faceToSwap]->alpha.animateFromTo(0.0f, 1.0f);
+                faceToSwap = -1;
             }
+        }
+        
+    }
+    
+//--------------------------------------------------------------
+    void startFaceSwap(){
+        
+        int possibleSwap = (int)ofRandom(NUM_PANELS);
+        
+        if( !facesOnScreen[possibleSwap]->alpha.isOrWillBeAnimating() ){
+            faceToSwap = possibleSwap;
+            facesOnScreen[faceToSwap]->alpha.reset(1.0f);
+            facesOnScreen[faceToSwap]->alpha.animateFromTo(1.0f, 0.0f);
         }
     }
     
 //--------------------------------------------------------------    
     void addFaceAtPlace(int place, int faceToUse){
+        
         float posY, posX;
         int fPanel = 130.0; //change when we know
         int hPanel = 130.0; //change when we know
@@ -166,8 +192,8 @@ private:
         else
             posX = hPanel+fPanel + hPanel*2 + fPanel + hPanel*2 + tempX*fPanel*2;
         
-        facesOnScreen.push_back( &allFaces[faceToUse] );
-        face* f = facesOnScreen[facesOnScreen.size()-1];
-        f->setPosition(posX, posY, 0.0f);
+        facesOnScreen[place] = &allFaces[faceToUse];
+        facesOnScreen[place]->setPosition(posX, posY, 0.0f);
+        facesOnScreen[place]->inUse = true;
     }
 };

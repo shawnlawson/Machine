@@ -3,7 +3,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-  //  ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 	ofSetFrameRate(30);
 	ofSetVerticalSync(true);
     ofSetCoordHandedness(OF_RIGHT_HANDED);
@@ -17,7 +17,10 @@ void testApp::setup(){
     eastMapping->init(2990, 780, "mapping/xml/east.xml");
     
     fController = faceController();
-    fController.loadFaces("night1");
+//    fController.loadFaces("night1");
+//    fController.updateShowState(1);
+//    fController.updateShowState(3);
+
 
     pController = PolygonController();
     
@@ -34,6 +37,7 @@ void testApp::setup(){
     grid.loadShader();
     
     myZoom = false;
+        
 }
 
 //--------------------------------------------------------------
@@ -59,7 +63,7 @@ void testApp::update(){
 
     
   //  pController.update();
-    fController.updateShowState(4);
+//    fController.updateShowState(8);
     
 
     
@@ -100,10 +104,10 @@ void testApp::scene(int leftSide){
 //    ofDisableAlphaBlending();
 
 
-    glEnable(GL_DEPTH_TEST);
-    glPointSize(4);
-  fController.draw();
-    glDisable(GL_DEPTH_TEST);
+//    glEnable(GL_DEPTH_TEST);
+//    glPointSize(4);
+//  fController.draw();
+//    glDisable(GL_DEPTH_TEST);
 
 //    eController.draw(leftSide, 780, 0.0);
 
