@@ -62,9 +62,9 @@ void testApp::update(){
 	}
 
     
-    pController.update(0);
+//    pController.update(0);
 //    fController.updateShowState(8);
-    
+    eController.update();
 
     northMapping->bind();
     ofPushView();
@@ -98,12 +98,12 @@ void testApp::scene(int leftSide){
     glLineWidth(1.5);
     grid.customDraw();
 
-    //    eController.draw(leftSide, 780, 0.0);
+    eController.draw(leftSide, 260, 0.0);
 
     
-    ofEnableBlendMode(OF_BLENDMODE_ADD);
-    glLineWidth(1.0);
-    pController.draw();
+//    ofEnableBlendMode(OF_BLENDMODE_ADD);
+//    glLineWidth(1.0);
+//    pController.draw();
 
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 //    glEnable(GL_DEPTH_TEST);
@@ -115,6 +115,8 @@ void testApp::scene(int leftSide){
 // testing circles
 //    ofCircle(3640, 340, 200);
 //    ofCircle(3640+2990, 340, 100);
+    
+    
     
 }
 
@@ -239,9 +241,10 @@ void testApp::keyPressed(int key){
 			break;
 		case 359: // arrow down
 			nudgeMappings( 3 );
-			break;
+			break;     
         default:
             break;
+            
     }
 }
 
