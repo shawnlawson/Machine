@@ -78,7 +78,7 @@ public:
             case 4:
                 for(int i=0; i<NUM_PANELS; i++){
                     facesOnScreen[i]->alpha.reset(0.0);
-                    facesOnScreen[i]->alpha.animateToAfterDelay(1.0f, ofRandom(60.0));
+                    facesOnScreen[i]->alpha.animateToAfterDelay(1.0f, ofRandom(200.0));
                 }
                 break;
             
@@ -86,7 +86,7 @@ public:
             case 5:
                 for(int i=0; i<NUM_PANELS; i++){
                     facesOnScreen[i]->alpha.reset(1.0);
-                    facesOnScreen[i]->alpha.animateToAfterDelay(0.0f, ofRandom(60.0));
+                    facesOnScreen[i]->alpha.animateToAfterDelay(0.0f, ofRandom(200.0));
                 }
                 break;
                 

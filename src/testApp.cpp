@@ -16,13 +16,14 @@ void testApp::setup(){
     eastMapping = new MachineMapping2D();
     eastMapping->init(2990, 780, "mapping/xml/east.xml");
     
-    fController = faceController();
+//    fController = faceController();
 //    fController.loadFaces("night1");
 //    fController.updateShowState(1);
 //    fController.updateShowState(3);
 
 
     pController = PolygonController();
+    pController.update(4);
     
     eController = EffectController();
     eController.loadShaders();
@@ -59,14 +60,12 @@ void testApp::update(){
 			cout << "message unknown " << m.getAddress() << endl;
 		}
 	}
- 
 
     
-  //  pController.update();
+    pController.update(0);
 //    fController.updateShowState(8);
     
 
-    
     northMapping->bind();
     ofPushView();
     ofViewport(0, 0, 3640, ofGetHeight());
@@ -95,23 +94,24 @@ void testApp::update(){
 }
 
 void testApp::scene(int leftSide){
-//   glLineWidth(1.5);
-//    grid.customDraw();
-//ofEnableBlendMode(OF_BLENDMODE_ADD);
+    ofDisableAlphaBlending();
+    glLineWidth(1.5);
+    grid.customDraw();
 
-//    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-//    pController.draw();
-//    ofDisableAlphaBlending();
-
-
-//    glEnable(GL_DEPTH_TEST);
-//    glPointSize(4);
-//  fController.draw();
-//    glDisable(GL_DEPTH_TEST);
-
-//    eController.draw(leftSide, 780, 0.0);
+    //    eController.draw(leftSide, 780, 0.0);
 
     
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
+    glLineWidth(1.0);
+    pController.draw();
+
+    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+//    glEnable(GL_DEPTH_TEST);
+//    glPointSize(4);
+//    fController.draw();
+//    glDisable(GL_DEPTH_TEST);
+    
+
 // testing circles
 //    ofCircle(3640, 340, 200);
 //    ofCircle(3640+2990, 340, 100);
@@ -128,9 +128,7 @@ void testApp::draw(){
     else
         ofScale(.9, .9);
 
-    ofSetColor(0, 0, 0, 255);
-    ofRect(0, 0, 5760, 3240);
-    
+    ofBackground(0, 0, 0);
         
         if(drawBackground){
             ofSetColor(128, 0, 0);
@@ -148,7 +146,8 @@ void testApp::draw(){
             ofSetColor(0, 128, 128);
             ofRect(1920, 2160, 1920, 1080);
         }
-       
+       ofDisableAlphaBlending();
+    
         ofPushMatrix();
         ofTranslate(northPos);
         northMapping->draw();
@@ -163,7 +162,8 @@ void testApp::draw(){
         ofTranslate(southPos);
         southMapping->draw();
         ofPopMatrix();
-
+    
+      ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 
     
     ofPopMatrix();
