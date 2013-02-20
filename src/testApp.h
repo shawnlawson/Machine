@@ -1,21 +1,23 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxAnimatable.h"
 #include "ofxOsc.h"
-#include "ofxFX.h"
-#include "ofxFXObject.h"
 #include "ofxXmlSettings.h"
 
 #include "BlackScreen.h"
 #include "MyGrid.h"
 #include "PolygonController.h"
 #include "faceController.h"
-#include "EffectController.h"
+#include "Banner.h"
+#include "AnimatedGrid.h"
 #include "MachineMapping2D.h"
 
 // listen on port 12345
 #define PORT 12345
+#define LONG_WALL 3640
+#define SHORT_WALL 2990
+#define HEIGHT_WALL 780
+
 
 enum moveMapping{
     zero,
@@ -38,7 +40,7 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 
 
-    void scene( int leftSide );
+    void scene( int leftSide, float time );
     void nudgeMappings( int direction );
     void myLoadSettings();
     
@@ -51,7 +53,8 @@ class testApp : public ofBaseApp{
     MachineMapping2D *northMapping, *eastMapping, *southMapping;
     faceController fController;
     
-    EffectController eController;
+    Banner *banner;
+    AnimatedGrid *aGrid;
     
     moveMapping myMoveMapping;
 

@@ -10,11 +10,11 @@ void testApp::setup(){
    //   ofSetLogLevel(OF_LOG_VERBOSE);
     
     northMapping = new MachineMapping2D();
-    northMapping->init(3640, 780, "mapping/xml/north.xml");
+    northMapping->init(LONG_WALL, HEIGHT_WALL, "mapping/xml/north.xml");
     southMapping = new MachineMapping2D();
-    southMapping->init(3640, 780, "mapping/xml/south.xml");
+    southMapping->init(LONG_WALL, HEIGHT_WALL, "mapping/xml/south.xml");
     eastMapping = new MachineMapping2D();
-    eastMapping->init(2990, 780, "mapping/xml/east.xml");
+    eastMapping->init(SHORT_WALL, HEIGHT_WALL, "mapping/xml/east.xml");
     
 //    fController = faceController();
 //    fController.loadFaces("night1");
@@ -25,8 +25,11 @@ void testApp::setup(){
     pController = PolygonController();
     pController.update(4);
     
-    eController = EffectController();
-    eController.loadShaders();
+    banner = new Banner(LONG_WALL, 260);
+    banner->loadShaders();
+
+    aGrid = new AnimatedGrid( 0, 0);
+    aGrid->loadShaders();
     
     myLoadSettings();
     
@@ -61,46 +64,48 @@ void testApp::update(){
 		}
 	}
 
+    float dt  = ofGetLastFrameTime();
+    float time = ofGetElapsedTimef()*.1;
     
 //    pController.update(0);
 //    fController.updateShowState(8);
-    eController.update();
+//    banner->update(0);
+      aGrid->update(10, dt);
+
+
 
     northMapping->bind();
     ofPushView();
-    ofViewport(0, 0, 3640, ofGetHeight());
-    ofSetupScreenOrtho(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
-    scene(0);
+    ofViewport(0, 0, LONG_WALL, ofGetHeight());
+    ofSetupScreenOrtho(LONG_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
+    scene(0, time);
     ofPopView();
     northMapping->unbind();
     
     eastMapping->bind();
     ofPushView();
-    ofViewport(0, 0, 2990, ofGetHeight());
-    ofSetupScreenOrtho(2990, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
-    ofTranslate(-3640, 0);
-    scene(3640);
+    ofViewport(0, 0, SHORT_WALL, ofGetHeight());
+    ofSetupScreenOrtho(SHORT_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
+    ofTranslate(-LONG_WALL, 0);
+    scene(LONG_WALL, time);
     ofPopView();
     eastMapping->unbind();
     
     southMapping->bind();
     ofPushView();
-    ofViewport(0, 0, 3640, ofGetHeight());
-    ofSetupScreenOrtho(3640, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
-    ofTranslate(-3640-2990, 0);
-    scene(3640+2990);
+    ofViewport(0, 0, LONG_WALL, ofGetHeight());
+    ofSetupScreenOrtho(LONG_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
+    ofTranslate(-LONG_WALL-SHORT_WALL, 0);
+    scene(LONG_WALL+SHORT_WALL, time);
     ofPopView();
     southMapping->unbind();
 }
 
-void testApp::scene(int leftSide){
-    ofDisableAlphaBlending();
-    glLineWidth(1.5);
-    grid.customDraw();
+void testApp::scene(int leftSide, float time){
+//    ofDisableAlphaBlending();
+//    glLineWidth(1.5);
+//    grid.customDraw();
 
-    eController.draw(leftSide, 260, 0.0);
-
-    
 //    ofEnableBlendMode(OF_BLENDMODE_ADD);
 //    glLineWidth(1.0);
 //    pController.draw();
@@ -111,11 +116,11 @@ void testApp::scene(int leftSide){
 //    fController.draw();
 //    glDisable(GL_DEPTH_TEST);
     
-
-// testing circles
-//    ofCircle(3640, 340, 200);
-//    ofCircle(3640+2990, 340, 100);
+    aGrid->draw(time, leftSide, 780);
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
+banner->draw(time, leftSide, 260);
     
+
     
     
 }
