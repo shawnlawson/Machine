@@ -13,7 +13,7 @@
 
 class AnimatedGrid{
 public:
-    ofxAnimatableFloat alpha;
+    ofxAnimatableFloat alpha, waveAlpha;
     ofShader grid;
     
     float timeScaler;
@@ -24,6 +24,9 @@ public:
     void fadeOut();
     void fadeIn();
     void fadePartial(float newAlpha);
+    void fadeInWave();
+    void fadePartialWave(float newAlpha);
+    void fadeOutWave();
     void update(float dt);
     void draw(float time, int offsetX, int width, int height);
     

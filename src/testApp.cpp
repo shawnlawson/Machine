@@ -18,11 +18,11 @@ void testApp::setup(){
     
     fController = faceController();
     fController.loadFaces("night1");
-    fController.updateShowState(1, 0.0);
-    fController.updateShowState(3, 0.0);
+    fController.updateShowState(AllFacesPopulate, 0.0);
+    fController.updateShowState(AllOpaqueFade, .01);
 
     pController = PolygonController();
-    pController.update(RandomFadeIn, 0.0);
+  //  pController.update(AllOpaqueFade, 0.0);
     
     banner = new Banner(LONG_WALL, TILE_SIZE*2);
     banner->loadShaders();
@@ -44,14 +44,16 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    if(!bInit){
-
-    }
-
     float dt  = ofGetLastFrameTime();
     float time = ofGetElapsedTimef();
+
+    if(!bInit){
+        
+        bInit = true;
+    }
+
     
-//    pController.update(0, dt);
+    pController.update(0, dt);
     fController.updateShowState(SwapFaces, dt);
     banner->update(dt);
     aGrid->update(dt);
@@ -86,17 +88,16 @@ void testApp::update(){
 }
 
 void testApp::scene(int leftSide, int width, float time){
-//    ofDisableAlphaBlending();
 
     ofEnableBlendMode(OF_BLENDMODE_ADD);
     banner->draw(time, leftSide, width, 300);
+
     aGrid->draw(time, leftSide, width, HEIGHT_WALL);
-//    glLineWidth(1.0);
+
     pController.draw();
 
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
     glEnable(GL_DEPTH_TEST);
- //   glPointSize(4);
     fController.draw();
     glDisable(GL_DEPTH_TEST);
     
@@ -184,6 +185,7 @@ void testApp::keyPressed(int key){
             gui->saveSettings("GUI_Settings.xml");
             gui2->saveSettings("GUI_Settings2.xml");
             gui3->saveSettings("GUI_Settings3.xml");
+            gui4->saveSettings("GUI_Settings4.xml");
             cout << "settings saved" << endl;
             break;
             
@@ -191,6 +193,7 @@ void testApp::keyPressed(int key){
             gui->loadSettings("GUI_Settings.xml");
             gui2->loadSettings("GUI_Settings2.xml");
             gui3->loadSettings("GUI_Settings3.xml");
+            gui4->loadSettings("GUI_Settings4.xml");
             cout << "settings loaded" << endl;
             break;
             
@@ -231,7 +234,9 @@ void testApp::mouseReleased(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::buildGUI()
-{ gui = new ofxUICanvas();
+{
+    gui = new ofxUICanvas(OFX_UI_GLOBAL_CANVAS_WIDTH*5, ofGetHeight()-DIM_HEIGHT,
+                          OFX_UI_GLOBAL_CANVAS_WIDTH, DIM_HEIGHT);
     gui->addLabel("The Machine");
     gui->addSpacer();
     gui->addFPS();
@@ -239,29 +244,27 @@ void testApp::buildGUI()
     gui->addToggle("background", &drawBackground);
     gui->addSpacer();
     gui->add2DPad("North", ofPoint(DIM_WIDTH, DIM_WIDTH+DIM_WIDTH/4),
-                  ofPoint(DIM_HEIGHT, DIM_HEIGHT+DIM_HEIGHT/4)
+                  ofPoint(DIM_HEIGHT, DIM_HEIGHT+DIM_HEIGHT/2)
                   , &northPos);
     ((ofxUI2DPad *) gui->getWidget("North"))->setIncrement(1.0);
     gui->add2DPad("East", ofPoint(0, DIM_WIDTH/4),
-                  ofPoint(0, DIM_HEIGHT/4), &eastPos);
+                  ofPoint(0, DIM_HEIGHT/2), &eastPos);
     ((ofxUI2DPad *) gui->getWidget("East"))->setIncrement(1.0);
     gui->add2DPad("South", ofPoint(DIM_WIDTH, DIM_WIDTH+DIM_WIDTH/4),
-                  ofPoint(0, DIM_HEIGHT/4), &southPos);
+                  ofPoint(0, DIM_HEIGHT/2), &southPos);
     ((ofxUI2DPad *) gui->getWidget("South"))->setIncrement(1.0);
     gui->autoSizeToFitWidgets();
     ofAddListener(gui->newGUIEvent,this,&testApp::guiEvent);
-    //    gui->setPosition(10, ofGetHeight()-700);
     
-    
-    gui2 = new ofxUICanvas(OFX_UI_GLOBAL_CANVAS_WIDTH, 0,
-                           OFX_UI_GLOBAL_CANVAS_WIDTH, 0);
+    gui2 = new ofxUICanvas(0, ofGetHeight()-DIM_HEIGHT,
+                           OFX_UI_GLOBAL_CANVAS_WIDTH, DIM_HEIGHT);
     gui2->addLabel("Show Control");
     gui2->addSpacer();
     
     gui2->autoSizeToFitWidgets();
     ofAddListener(gui2->newGUIEvent, this, &testApp::guiEvent);
     
-    gui3 = new ofxUICanvas(OFX_UI_GLOBAL_CANVAS_WIDTH*2, 0,
+    gui3 = new ofxUICanvas(OFX_UI_GLOBAL_CANVAS_WIDTH*2, ofGetHeight()-DIM_HEIGHT,
                            OFX_UI_GLOBAL_CANVAS_WIDTH, 0);
     gui3->addLabel("Blackout");
     vector<string> names;
@@ -280,29 +283,54 @@ void testApp::buildGUI()
     names.clear();
     names.push_back("offSW");     names.push_back("partialSW");     names.push_back("onSW");
     gui3->addRadio("South_West", names, OFX_UI_ORIENTATION_HORIZONTAL );
-    gui3->addSpacer(0, 30);
+    gui3->addSpacer();gui3->addSpacer();
+    
     gui3->addLabel("Banner");
-    gui3->addSlider("Banner_Speed", .01, 1.0, &banner->timeScaler);
+    gui3->addSlider("Banner_Speed", .01, 5.0, &banner->timeScaler);
     names.clear();
     names.push_back("offB");     names.push_back("partialB");     names.push_back("onB");
     gui3->addRadio("Banner_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
-    gui3->addSpacer(0, 30);
+    gui3->addSpacer();gui3->addSpacer();
+    
     gui3->addLabel("Grid");
-    gui3->addSlider("Grid_Speed", .01, 1.0, &aGrid->timeScaler);
+    gui3->addSlider("Grid_Speed", .01, 2.0, &aGrid->timeScaler);
+    names.clear();
+    names.push_back("offWG");     names.push_back("partialWG");     names.push_back("onWG");
+    gui3->addRadio("GridWave_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
     names.clear();
     names.push_back("offG");     names.push_back("partialG");     names.push_back("onG");
     gui3->addRadio("Grid_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
-        gui3->addSpacer(0, 30);
+    gui3->addSpacer();gui3->addSpacer();
+    
+    gui3->addLabel("Raven");
+    gui3->addSlider("Raven_Speed", .001, .1, &pController.timeScaler);
+    names.clear();
+    names.push_back("offR");     names.push_back("partialR");     names.push_back("onR");
+    gui3->addRadio("Raven_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    gui3->addSpacer();gui3->addSpacer();
+    
+    gui3->addLabel("Faces");
+    gui3->addToggle("colorF", false);
+    names.clear();
+    names.push_back("pointF");     names.push_back("wireF");     names.push_back("triF");
+    gui3->addRadio("Face_Style", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    gui3->addSlider("pointSizeF", 0.0, 10.0, &fController.vertexSize);
+    gui3->addSlider("lineWidthF", 0.0, 10.0, &fController.lineWidth);
+    
     gui3->autoSizeToFitWidgets();
     ofAddListener(gui3->newGUIEvent, this, &testApp::guiEvent);
     
+    gui4 = new ofxUICanvas(OFX_UI_GLOBAL_CANVAS_WIDTH*2, ofGetHeight()-DIM_HEIGHT,
+                           OFX_UI_GLOBAL_CANVAS_WIDTH, 0);
+    gui4->addLabel("stuff");
+    
+    gui4->autoSizeToFitWidgets();
+    ofAddListener(gui4->newGUIEvent, this, &testApp::guiEvent);
     
     gui->loadSettings("GUI_Settings.xml");
     gui2->loadSettings("GUI_Settings2.xml");
     gui3->loadSettings("GUI_Settings3.xml");
-    
-
-    
+    gui4->loadSettings("GUI_Settings4.xml");  
 }
 //--------------------------------------------------------------
 void testApp::guiEvent(ofxUIEventArgs &e)
@@ -372,12 +400,45 @@ void testApp::guiEvent(ofxUIEventArgs &e)
     else if( name == "onG" ){
         aGrid->fadeIn();
     }
+    else if( name == "offWG" ){
+        aGrid->fadeOutWave();
+    }
+    else if( name == "partialWG" ){
+        aGrid->fadePartialWave(2.0);
+    }
+    else if( name == "onWG" ){
+        aGrid->fadeInWave();
+    }
+    else if( name == "offR" ){
+        pController.fadeOut();
+    }
+    else if( name == "partialR" ){
+        pController.fadePartial(0.5);
+    }
+    else if( name == "onR" ){
+        pController.fadeIn();
+    }
+    else if( name == "colorF" ){
+        if( ((ofxUIToggle *)e.widget)->getValue() )
+            fController.whiteOut.animateTo(0.0);
+        else
+            fController.whiteOut.animateTo(1.0);
+    }
+    else if( name == "pointF" ){
+        fController.setMode(OF_MESH_POINTS);
+    }
+    else if( name == "wireF" ){
+        fController.setMode(OF_MESH_WIREFRAME);
+    }
+    else if( name == "triF" ){
+        fController.setMode(OF_MESH_FILL);
+    }
 }
 //--------------------------------------------------------------
 void testApp::exit()
 {
-    gui->saveSettings("GUI_Settings.xml");
-    gui2->saveSettings("GUI_Settings2.xml");
-    gui3->saveSettings("GUI_Settings3.xml");
-    delete gui;
+//    gui->saveSettings("GUI_Settings.xml");
+//    gui2->saveSettings("GUI_Settings2.xml");
+//    gui3->saveSettings("GUI_Settings3.xml");
+    delete gui, gui2, gui3, gui4, northMapping, southMapping, eastMapping, banner, aGrid;
 }

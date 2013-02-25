@@ -44,7 +44,7 @@ class testApp : public ofBaseApp{
     bool    drawBackground, fullscreen;
     
     
-    ofxUICanvas *gui, *gui2, *gui3;
+    ofxUICanvas *gui, *gui2, *gui3, *gui4;
 	void guiEvent(ofxUIEventArgs &e);
 
     ofxXmlSettings XML;

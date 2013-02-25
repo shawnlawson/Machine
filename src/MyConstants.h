@@ -15,23 +15,16 @@
 #define SHORT_WALL 2450
 #define HEIGHT_WALL 750
 #define TILE_SIZE 125
-#define NUM_PANELS 70 //max 70
+#define NUM_PANELS 15 //max 70
 #define NUM_FRAMES 60
 
-//animated grid, banner, Raven controller, face controller
-
-enum updateType{
-    AllFacesDelete,
-    AllFacesPopulate,
-    
-    AllTransparentNow,
-    AllOpaqueNow,
-    RandomFadeIn,
-    RandomFadeOut,
-    AllTransparentFade,
-    AllOpaqueFade,
-    
-    SwapFaces
-
-    
-};
+//Raven controller, face controller
+#define    AllFacesDelete 0
+#define    AllFacesPopulate 1
+#define    AllTransparentNow 2
+#define    AllOpaqueNow 3
+#define    RandomFadeIn 4
+#define    RandomFadeOut 5
+#define    AllTransparentFade 6
+#define    AllOpaqueFade 7
+#define    SwapFaces 8

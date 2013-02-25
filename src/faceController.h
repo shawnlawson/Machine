@@ -9,6 +9,7 @@
 #pragma mark once
 #include "ofMain.h"
 
+#include "ofxAnimatableFloat.h"
 #include "face.h"
 
 
@@ -18,12 +19,17 @@ public:
     vector <face> allFaces;
     face* facesOnScreen[NUM_PANELS];
     int faceToSwap;
+    float vertexSize, lineWidth;
+    ofxAnimatableFloat whiteOut;
+    ofShader fader;
 
 //--------------------------------------------------------------
     faceController(){}
     
 //--------------------------------------------------------------
     void loadFaces( string path){
+        whiteOut.reset(1.0);
+        vertexSize = lineWidth = 1.0;
         faceToSwap = -1;
         ofDirectory dirImage, dirMesh;
         dirImage.allowExt("png");
@@ -41,71 +47,64 @@ public:
         }
         
         resetFacesOnPanels();
+        fader.load("shaders/fader");
     }
     
 //--------------------------------------------------------------
     void updateShowState( int showState, float dt ){
         
         switch ( showState ) {
-            //delete everything
-            case 0:
+
+            case AllFacesDelete:
                 resetFacesOnPanels();
                 break;
                 
-            //populate everything
-            case 1:
+            case AllFacesPopulate:
                 resetFacesOnPanels();
                 for( int i=0; i<NUM_PANELS; i++){
                     addFaceAtPlace(i, i);
                 }
                 break;
             
-            //set all to transparent now
-            case 2:
+            case AllTransparentNow:
                 for(int i=0; i<NUM_PANELS; i++){
                     facesOnScreen[i]->alpha.reset(0.0);
                 }
                 break;
             
-            //set all opaque now
-            case 3:
+            case AllOpaqueNow:
                 for(int i=0; i<NUM_PANELS; i++){
-                    facesOnScreen[i]->alpha.reset(1.0f);
+                    facesOnScreen[i]->alpha.reset(255.0f);
                 }
                 break;
                 
-            //random start fade in
-            case 4:
+            case RandomFadeIn:
                 for(int i=0; i<NUM_PANELS; i++){
                     facesOnScreen[i]->alpha.reset(0.0);
-                    facesOnScreen[i]->alpha.animateToAfterDelay(1.0f, ofRandom(200.0));
+                    facesOnScreen[i]->alpha.animateToAfterDelay(255.0f, ofRandom(120.0));
                 }
                 break;
             
-            //random start fade out
-            case 5:
+            case RandomFadeOut:
                 for(int i=0; i<NUM_PANELS; i++){
-                    facesOnScreen[i]->alpha.reset(1.0);
-                    facesOnScreen[i]->alpha.animateToAfterDelay(0.0f, ofRandom(200.0));
+                    facesOnScreen[i]->alpha.reset(255.0f);
+                    facesOnScreen[i]->alpha.animateToAfterDelay(0.0f, ofRandom(120.0));
                 }
                 break;
                 
-            //gradually fade all to transparent
-            case 6:
+            case AllTransparentFade:
                 for(int i=0; i<NUM_PANELS; i++){
-                    facesOnScreen[i]->alpha.animateFromTo(1.0f, 0.0f);
+                    facesOnScreen[i]->alpha.animateFromTo(255.0f, 0.0f);
                 }
                 break;
                 
-            //gradually fade all to opaque
-            case 7:
+            case AllOpaqueFade:
                 for(int i=0; i<NUM_PANELS; i++){
-                    facesOnScreen[i]->alpha.animateFromTo(0.0f, 1.0f);
+                    facesOnScreen[i]->alpha.animateFromTo(0.0f, 255.0f);
                 }
                 break;
                 
-            //swap faces
-            case 8:
+            case SwapFaces:
                 if(faceToSwap < 0)
                     startFaceSwap();
                 else
@@ -120,19 +119,36 @@ public:
             facesOnScreen[i]->update(dt);
         }
         
+        whiteOut.update(dt);
+        
     }
 
+//--------------------------------------------------------------  
+    void setMode(ofPolyRenderMode newMode){
+        for (int i=0; i<allFaces.size(); i++) {
+            allFaces[i].drawMode  = newMode;
+        }
+    }
     
+//--------------------------------------------------------------
     void draw(){
+        glLineWidth(lineWidth);
+        glPointSize(vertexSize);
+        cout << whiteOut.val() << endl;
+        fader.begin();
         
         for (int i=0; i<NUM_PANELS; i++) {
+            fader.setUniform1f("multiplier", whiteOut.val());
+            fader.setUniformTexture("tex", facesOnScreen[i]->image.getTextureReference(), 0);
             facesOnScreen[i]->customDraw();
         }
-
+        fader.end();
+        glLineWidth(1.0);
+        glPointSize(1.0);
     }
 
 private:
-//--------------------------------------------------------------    
+//--------------------------------------------------------------
     void resetFacesOnPanels(){
         
         for(int i=0; i<NUM_PANELS; i++)
@@ -155,7 +171,7 @@ private:
                 facesOnScreen[faceToSwap]->inUse = false;
                 addFaceAtPlace(faceToSwap, testSwap);
                 facesOnScreen[faceToSwap]->alpha.reset(0.0);
-                facesOnScreen[faceToSwap]->alpha.animateFromTo(0.0f, 1.0f);
+                facesOnScreen[faceToSwap]->alpha.animateFromTo(0.0f, 255.0f);
                 faceToSwap = -1;
             }
         }
@@ -169,8 +185,8 @@ private:
         
         if( !facesOnScreen[possibleSwap]->alpha.isOrWillBeAnimating() ){
             faceToSwap = possibleSwap;
-            facesOnScreen[faceToSwap]->alpha.reset(1.0f);
-            facesOnScreen[faceToSwap]->alpha.animateFromTo(1.0f, 0.0f);
+            facesOnScreen[faceToSwap]->alpha.reset(255.0f);
+            facesOnScreen[faceToSwap]->alpha.animateFromTo(255.0f, 0.0f);
         }
     }
     

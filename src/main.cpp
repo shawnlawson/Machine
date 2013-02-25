@@ -5,6 +5,6 @@
 int main(){
 	ofAppGlutWindow window; // create a window
 	// set width, height, mode (OF_WINDOW or OF_FULLSCREEN)
-	ofSetupOpenGL(&window, 1440, HEIGHT_WALL, OF_WINDOW); //960
+	ofSetupOpenGL(&window, 1440, 1080, OF_WINDOW); //960
 	ofRunApp(new testApp()); // start the app
 }

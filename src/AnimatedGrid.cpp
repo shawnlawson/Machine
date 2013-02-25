@@ -12,6 +12,7 @@
 AnimatedGrid::AnimatedGrid( int width, int height )
 {
     alpha.reset(1.0);
+    waveAlpha.reset(2.0);
     timeScaler = 0.1;
 }
 
@@ -35,15 +36,33 @@ void AnimatedGrid::fadePartial(float newAlpha)
     alpha.animateTo(newAlpha);
 }
 
+void AnimatedGrid::fadeInWave()
+{
+    waveAlpha.animateTo(8.0);
+}
+
+void AnimatedGrid::fadePartialWave(float newAlpha)
+{
+    waveAlpha.animateTo(newAlpha);
+}
+
+void AnimatedGrid::fadeOutWave()
+{
+    waveAlpha.animateTo(0.0);
+}
+
+
 void AnimatedGrid::update(float dt )
 {
     alpha.update(dt);
+    waveAlpha.update(dt);
 }
 
 void AnimatedGrid::draw(float time, int offsetX, int width, int height)
 {
     grid.begin();
     grid.setUniform1f("alpha", alpha.val());
+    grid.setUniform1f("waveAlpha", waveAlpha);
     grid.setUniform2f("BrickPct", 0.05, 0.05);
     grid.setUniform2f("BrickSize", 15.0, 15.0);
     grid.setUniform2f("resolution", 512.0, 512.0);

@@ -28,9 +28,11 @@ public:
     ofFbo           polyFbo[NUM_FRAMES];
     vector<myNode>  nodes;
     int whichFrame;
+    float timeScaler;
     
     PolygonController(){
         whichFrame = 0;
+        timeScaler = 0.01;
         
         for(int i=0;i<6;i++){
             float x = cos(ofDegToRad(i*60.0f))*295.0f; //radius of hexagon
@@ -58,8 +60,29 @@ public:
         }
     }
     
+    void fadeOut()
+    {
+        for (int i=0; i<nodes.size(); i++) {
+            nodes[i].alpha.animateTo(0.0);
+        }
+    }
+    
+    void fadeIn()
+    {
+        for (int i=0; i<nodes.size(); i++) {
+            nodes[i].alpha.animateTo(1.0);
+        }
+    }
+    
+    void fadePartial(float newAlpha)
+    {
+        for (int i=0; i<nodes.size(); i++) {
+            nodes[i].alpha.animateTo(newAlpha);
+        }
+    }
+    
     void update(int showState, float dt){
-        edf0->update(startingNodes, ofGetFrameNum()*0.01f);
+        edf0->update(startingNodes, ofGetFrameNum() * timeScaler);
         
         polyFbo[whichFrame].begin();
 
