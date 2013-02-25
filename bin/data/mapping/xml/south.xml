@@ -3,2520 +3,2340 @@
 		<setting key="type">quad</setting>
 		<outputVertices>
 			<vertex x="0" y="0"></vertex>
-			<vertex x="130" y="0"></vertex>
-			<vertex x="130" y="130"></vertex>
-			<vertex x="0" y="130"></vertex>
+			<vertex x="125" y="0"></vertex>
+			<vertex x="125" y="125"></vertex>
+			<vertex x="0" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
 			<vertex x="0" y="0"></vertex>
-			<vertex x="130" y="0"></vertex>
-			<vertex x="130" y="130"></vertex>
-			<vertex x="0" y="130"></vertex>
+			<vertex x="125" y="0"></vertex>
+			<vertex x="125" y="125"></vertex>
+			<vertex x="0" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="1">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="137" y="0"></vertex>
-			<vertex x="267" y="0"></vertex>
-			<vertex x="267" y="130"></vertex>
-			<vertex x="137" y="130"></vertex>
+			<vertex x="132" y="0"></vertex>
+			<vertex x="257" y="0"></vertex>
+			<vertex x="257" y="125"></vertex>
+			<vertex x="132" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="130" y="0"></vertex>
-			<vertex x="260" y="0"></vertex>
-			<vertex x="260" y="130"></vertex>
-			<vertex x="130" y="130"></vertex>
+			<vertex x="125" y="0"></vertex>
+			<vertex x="250" y="0"></vertex>
+			<vertex x="250" y="125"></vertex>
+			<vertex x="125" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="2">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="274" y="0"></vertex>
-			<vertex x="404" y="0"></vertex>
-			<vertex x="404" y="130"></vertex>
-			<vertex x="274" y="130"></vertex>
+			<vertex x="264" y="0"></vertex>
+			<vertex x="389" y="0"></vertex>
+			<vertex x="389" y="125"></vertex>
+			<vertex x="264" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="260" y="0"></vertex>
-			<vertex x="390" y="0"></vertex>
-			<vertex x="390" y="130"></vertex>
-			<vertex x="260" y="130"></vertex>
+			<vertex x="250" y="0"></vertex>
+			<vertex x="375" y="0"></vertex>
+			<vertex x="375" y="125"></vertex>
+			<vertex x="250" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="3">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="411" y="0"></vertex>
-			<vertex x="541" y="0"></vertex>
-			<vertex x="541" y="130"></vertex>
-			<vertex x="411" y="130"></vertex>
+			<vertex x="396" y="0"></vertex>
+			<vertex x="521" y="0"></vertex>
+			<vertex x="521" y="125"></vertex>
+			<vertex x="396" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="390" y="0"></vertex>
-			<vertex x="520" y="0"></vertex>
-			<vertex x="520" y="130"></vertex>
-			<vertex x="390" y="130"></vertex>
+			<vertex x="375" y="0"></vertex>
+			<vertex x="500" y="0"></vertex>
+			<vertex x="500" y="125"></vertex>
+			<vertex x="375" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="4">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="548" y="0"></vertex>
-			<vertex x="678" y="0"></vertex>
-			<vertex x="678" y="130"></vertex>
-			<vertex x="548" y="130"></vertex>
+			<vertex x="528" y="0"></vertex>
+			<vertex x="653" y="0"></vertex>
+			<vertex x="653" y="125"></vertex>
+			<vertex x="528" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="520" y="0"></vertex>
-			<vertex x="650" y="0"></vertex>
-			<vertex x="650" y="130"></vertex>
-			<vertex x="520" y="130"></vertex>
+			<vertex x="500" y="0"></vertex>
+			<vertex x="625" y="0"></vertex>
+			<vertex x="625" y="125"></vertex>
+			<vertex x="500" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="5">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="685" y="0"></vertex>
-			<vertex x="815" y="0"></vertex>
-			<vertex x="815" y="130"></vertex>
-			<vertex x="685" y="130"></vertex>
+			<vertex x="660" y="0"></vertex>
+			<vertex x="785" y="0"></vertex>
+			<vertex x="785" y="125"></vertex>
+			<vertex x="660" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="650" y="0"></vertex>
-			<vertex x="780" y="0"></vertex>
-			<vertex x="780" y="130"></vertex>
-			<vertex x="650" y="130"></vertex>
+			<vertex x="625" y="0"></vertex>
+			<vertex x="750" y="0"></vertex>
+			<vertex x="750" y="125"></vertex>
+			<vertex x="625" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="6">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="822" y="0"></vertex>
-			<vertex x="952" y="0"></vertex>
-			<vertex x="952" y="130"></vertex>
-			<vertex x="822" y="130"></vertex>
+			<vertex x="792" y="0"></vertex>
+			<vertex x="917" y="0"></vertex>
+			<vertex x="917" y="125"></vertex>
+			<vertex x="792" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="780" y="0"></vertex>
-			<vertex x="910" y="0"></vertex>
-			<vertex x="910" y="130"></vertex>
-			<vertex x="780" y="130"></vertex>
+			<vertex x="750" y="0"></vertex>
+			<vertex x="875" y="0"></vertex>
+			<vertex x="875" y="125"></vertex>
+			<vertex x="750" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="7">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="959" y="0"></vertex>
-			<vertex x="1089" y="0"></vertex>
-			<vertex x="1089" y="130"></vertex>
-			<vertex x="959" y="130"></vertex>
+			<vertex x="924" y="0"></vertex>
+			<vertex x="1049" y="0"></vertex>
+			<vertex x="1049" y="125"></vertex>
+			<vertex x="924" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="910" y="0"></vertex>
-			<vertex x="1040" y="0"></vertex>
-			<vertex x="1040" y="130"></vertex>
-			<vertex x="910" y="130"></vertex>
+			<vertex x="875" y="0"></vertex>
+			<vertex x="1000" y="0"></vertex>
+			<vertex x="1000" y="125"></vertex>
+			<vertex x="875" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="8">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1096" y="0"></vertex>
-			<vertex x="1226" y="0"></vertex>
-			<vertex x="1226" y="130"></vertex>
-			<vertex x="1096" y="130"></vertex>
+			<vertex x="1056" y="0"></vertex>
+			<vertex x="1181" y="0"></vertex>
+			<vertex x="1181" y="125"></vertex>
+			<vertex x="1056" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1040" y="0"></vertex>
-			<vertex x="1170" y="0"></vertex>
-			<vertex x="1170" y="130"></vertex>
-			<vertex x="1040" y="130"></vertex>
+			<vertex x="1000" y="0"></vertex>
+			<vertex x="1125" y="0"></vertex>
+			<vertex x="1125" y="125"></vertex>
+			<vertex x="1000" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="9">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1233" y="0"></vertex>
-			<vertex x="1363" y="0"></vertex>
-			<vertex x="1363" y="130"></vertex>
-			<vertex x="1233" y="130"></vertex>
+			<vertex x="1188" y="0"></vertex>
+			<vertex x="1313" y="0"></vertex>
+			<vertex x="1313" y="125"></vertex>
+			<vertex x="1188" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1170" y="0"></vertex>
-			<vertex x="1300" y="0"></vertex>
-			<vertex x="1300" y="130"></vertex>
-			<vertex x="1170" y="130"></vertex>
+			<vertex x="1125" y="0"></vertex>
+			<vertex x="1250" y="0"></vertex>
+			<vertex x="1250" y="125"></vertex>
+			<vertex x="1125" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="10">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1370" y="0"></vertex>
-			<vertex x="1500" y="0"></vertex>
-			<vertex x="1500" y="130"></vertex>
-			<vertex x="1370" y="130"></vertex>
+			<vertex x="1320" y="0"></vertex>
+			<vertex x="1445" y="0"></vertex>
+			<vertex x="1445" y="125"></vertex>
+			<vertex x="1320" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1300" y="0"></vertex>
-			<vertex x="1430" y="0"></vertex>
-			<vertex x="1430" y="130"></vertex>
-			<vertex x="1300" y="130"></vertex>
+			<vertex x="1250" y="0"></vertex>
+			<vertex x="1375" y="0"></vertex>
+			<vertex x="1375" y="125"></vertex>
+			<vertex x="1250" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="11">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1507" y="0"></vertex>
-			<vertex x="1637" y="0"></vertex>
-			<vertex x="1637" y="130"></vertex>
-			<vertex x="1507" y="130"></vertex>
+			<vertex x="1452" y="0"></vertex>
+			<vertex x="1577" y="0"></vertex>
+			<vertex x="1577" y="125"></vertex>
+			<vertex x="1452" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1430" y="0"></vertex>
-			<vertex x="1560" y="0"></vertex>
-			<vertex x="1560" y="130"></vertex>
-			<vertex x="1430" y="130"></vertex>
+			<vertex x="1375" y="0"></vertex>
+			<vertex x="1500" y="0"></vertex>
+			<vertex x="1500" y="125"></vertex>
+			<vertex x="1375" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="12">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1644" y="0"></vertex>
-			<vertex x="1774" y="0"></vertex>
-			<vertex x="1774" y="130"></vertex>
-			<vertex x="1644" y="130"></vertex>
+			<vertex x="1584" y="0"></vertex>
+			<vertex x="1709" y="0"></vertex>
+			<vertex x="1709" y="125"></vertex>
+			<vertex x="1584" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1560" y="0"></vertex>
-			<vertex x="1690" y="0"></vertex>
-			<vertex x="1690" y="130"></vertex>
-			<vertex x="1560" y="130"></vertex>
+			<vertex x="1500" y="0"></vertex>
+			<vertex x="1625" y="0"></vertex>
+			<vertex x="1625" y="125"></vertex>
+			<vertex x="1500" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="13">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1781" y="0"></vertex>
-			<vertex x="1911" y="0"></vertex>
-			<vertex x="1911" y="130"></vertex>
-			<vertex x="1781" y="130"></vertex>
+			<vertex x="1716" y="0"></vertex>
+			<vertex x="1841" y="0"></vertex>
+			<vertex x="1841" y="125"></vertex>
+			<vertex x="1716" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1690" y="0"></vertex>
-			<vertex x="1820" y="0"></vertex>
-			<vertex x="1820" y="130"></vertex>
-			<vertex x="1690" y="130"></vertex>
+			<vertex x="1625" y="0"></vertex>
+			<vertex x="1750" y="0"></vertex>
+			<vertex x="1750" y="125"></vertex>
+			<vertex x="1625" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="14">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1918" y="0"></vertex>
-			<vertex x="2048" y="0"></vertex>
-			<vertex x="2048" y="130"></vertex>
-			<vertex x="1918" y="130"></vertex>
+			<vertex x="1848" y="0"></vertex>
+			<vertex x="1973" y="0"></vertex>
+			<vertex x="1973" y="125"></vertex>
+			<vertex x="1848" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1820" y="0"></vertex>
-			<vertex x="1950" y="0"></vertex>
-			<vertex x="1950" y="130"></vertex>
-			<vertex x="1820" y="130"></vertex>
+			<vertex x="1750" y="0"></vertex>
+			<vertex x="1875" y="0"></vertex>
+			<vertex x="1875" y="125"></vertex>
+			<vertex x="1750" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="15">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2055" y="0"></vertex>
-			<vertex x="2185" y="0"></vertex>
-			<vertex x="2185" y="130"></vertex>
-			<vertex x="2055" y="130"></vertex>
+			<vertex x="1980" y="0"></vertex>
+			<vertex x="2105" y="0"></vertex>
+			<vertex x="2105" y="125"></vertex>
+			<vertex x="1980" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1950" y="0"></vertex>
-			<vertex x="2080" y="0"></vertex>
-			<vertex x="2080" y="130"></vertex>
-			<vertex x="1950" y="130"></vertex>
+			<vertex x="1875" y="0"></vertex>
+			<vertex x="2000" y="0"></vertex>
+			<vertex x="2000" y="125"></vertex>
+			<vertex x="1875" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="16">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2192" y="0"></vertex>
-			<vertex x="2322" y="0"></vertex>
-			<vertex x="2322" y="130"></vertex>
-			<vertex x="2192" y="130"></vertex>
+			<vertex x="2112" y="0"></vertex>
+			<vertex x="2237" y="0"></vertex>
+			<vertex x="2237" y="125"></vertex>
+			<vertex x="2112" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2080" y="0"></vertex>
-			<vertex x="2210" y="0"></vertex>
-			<vertex x="2210" y="130"></vertex>
-			<vertex x="2080" y="130"></vertex>
+			<vertex x="2000" y="0"></vertex>
+			<vertex x="2125" y="0"></vertex>
+			<vertex x="2125" y="125"></vertex>
+			<vertex x="2000" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="17">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2329" y="0"></vertex>
-			<vertex x="2459" y="0"></vertex>
-			<vertex x="2459" y="130"></vertex>
-			<vertex x="2329" y="130"></vertex>
+			<vertex x="2244" y="0"></vertex>
+			<vertex x="2369" y="0"></vertex>
+			<vertex x="2369" y="125"></vertex>
+			<vertex x="2244" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2210" y="0"></vertex>
-			<vertex x="2340" y="0"></vertex>
-			<vertex x="2340" y="130"></vertex>
-			<vertex x="2210" y="130"></vertex>
+			<vertex x="2125" y="0"></vertex>
+			<vertex x="2250" y="0"></vertex>
+			<vertex x="2250" y="125"></vertex>
+			<vertex x="2125" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="18">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2466" y="0"></vertex>
-			<vertex x="2596" y="0"></vertex>
-			<vertex x="2596" y="130"></vertex>
-			<vertex x="2466" y="130"></vertex>
+			<vertex x="2376" y="0"></vertex>
+			<vertex x="2501" y="0"></vertex>
+			<vertex x="2501" y="125"></vertex>
+			<vertex x="2376" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2340" y="0"></vertex>
-			<vertex x="2470" y="0"></vertex>
-			<vertex x="2470" y="130"></vertex>
-			<vertex x="2340" y="130"></vertex>
+			<vertex x="2250" y="0"></vertex>
+			<vertex x="2375" y="0"></vertex>
+			<vertex x="2375" y="125"></vertex>
+			<vertex x="2250" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="19">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2603" y="0"></vertex>
-			<vertex x="2733" y="0"></vertex>
-			<vertex x="2733" y="130"></vertex>
-			<vertex x="2603" y="130"></vertex>
+			<vertex x="2508" y="0"></vertex>
+			<vertex x="2633" y="0"></vertex>
+			<vertex x="2633" y="125"></vertex>
+			<vertex x="2508" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2470" y="0"></vertex>
-			<vertex x="2600" y="0"></vertex>
-			<vertex x="2600" y="130"></vertex>
-			<vertex x="2470" y="130"></vertex>
+			<vertex x="2375" y="0"></vertex>
+			<vertex x="2500" y="0"></vertex>
+			<vertex x="2500" y="125"></vertex>
+			<vertex x="2375" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="20">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2740" y="0"></vertex>
-			<vertex x="2870" y="0"></vertex>
-			<vertex x="2870" y="130"></vertex>
-			<vertex x="2740" y="130"></vertex>
+			<vertex x="2640" y="0"></vertex>
+			<vertex x="2765" y="0"></vertex>
+			<vertex x="2765" y="125"></vertex>
+			<vertex x="2640" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2600" y="0"></vertex>
-			<vertex x="2730" y="0"></vertex>
-			<vertex x="2730" y="130"></vertex>
-			<vertex x="2600" y="130"></vertex>
+			<vertex x="2500" y="0"></vertex>
+			<vertex x="2625" y="0"></vertex>
+			<vertex x="2625" y="125"></vertex>
+			<vertex x="2500" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="21">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2877" y="0"></vertex>
-			<vertex x="3007" y="0"></vertex>
-			<vertex x="3007" y="130"></vertex>
-			<vertex x="2877" y="130"></vertex>
+			<vertex x="2772" y="0"></vertex>
+			<vertex x="2897" y="0"></vertex>
+			<vertex x="2897" y="125"></vertex>
+			<vertex x="2772" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2730" y="0"></vertex>
-			<vertex x="2860" y="0"></vertex>
-			<vertex x="2860" y="130"></vertex>
-			<vertex x="2730" y="130"></vertex>
+			<vertex x="2625" y="0"></vertex>
+			<vertex x="2750" y="0"></vertex>
+			<vertex x="2750" y="125"></vertex>
+			<vertex x="2625" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="22">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3014" y="0"></vertex>
-			<vertex x="3144" y="0"></vertex>
-			<vertex x="3144" y="130"></vertex>
-			<vertex x="3014" y="130"></vertex>
+			<vertex x="2904" y="0"></vertex>
+			<vertex x="3029" y="0"></vertex>
+			<vertex x="3029" y="125"></vertex>
+			<vertex x="2904" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2860" y="0"></vertex>
-			<vertex x="2990" y="0"></vertex>
-			<vertex x="2990" y="130"></vertex>
-			<vertex x="2860" y="130"></vertex>
+			<vertex x="2750" y="0"></vertex>
+			<vertex x="2875" y="0"></vertex>
+			<vertex x="2875" y="125"></vertex>
+			<vertex x="2750" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="23">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3151" y="0"></vertex>
-			<vertex x="3281" y="0"></vertex>
-			<vertex x="3281" y="130"></vertex>
-			<vertex x="3151" y="130"></vertex>
+			<vertex x="3036" y="0"></vertex>
+			<vertex x="3161" y="0"></vertex>
+			<vertex x="3161" y="125"></vertex>
+			<vertex x="3036" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2990" y="0"></vertex>
-			<vertex x="3120" y="0"></vertex>
-			<vertex x="3120" y="130"></vertex>
-			<vertex x="2990" y="130"></vertex>
+			<vertex x="2875" y="0"></vertex>
+			<vertex x="3000" y="0"></vertex>
+			<vertex x="3000" y="125"></vertex>
+			<vertex x="2875" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="24">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3288" y="0"></vertex>
-			<vertex x="3418" y="0"></vertex>
-			<vertex x="3418" y="130"></vertex>
-			<vertex x="3288" y="130"></vertex>
+			<vertex x="3168" y="0"></vertex>
+			<vertex x="3293" y="0"></vertex>
+			<vertex x="3293" y="125"></vertex>
+			<vertex x="3168" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3120" y="0"></vertex>
-			<vertex x="3250" y="0"></vertex>
-			<vertex x="3250" y="130"></vertex>
-			<vertex x="3120" y="130"></vertex>
+			<vertex x="3000" y="0"></vertex>
+			<vertex x="3125" y="0"></vertex>
+			<vertex x="3125" y="125"></vertex>
+			<vertex x="3000" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="25">
 		<setting key="type">quad</setting>
 		<outputVertices>
+			<vertex x="3300" y="0"></vertex>
 			<vertex x="3425" y="0"></vertex>
-			<vertex x="3555" y="0"></vertex>
-			<vertex x="3555" y="130"></vertex>
-			<vertex x="3425" y="130"></vertex>
+			<vertex x="3425" y="125"></vertex>
+			<vertex x="3300" y="125"></vertex>
 		</outputVertices>
 		<inputPolygon>
+			<vertex x="3125" y="0"></vertex>
 			<vertex x="3250" y="0"></vertex>
-			<vertex x="3380" y="0"></vertex>
-			<vertex x="3380" y="130"></vertex>
-			<vertex x="3250" y="130"></vertex>
+			<vertex x="3250" y="125"></vertex>
+			<vertex x="3125" y="125"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="26">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3562" y="0"></vertex>
-			<vertex x="3692" y="0"></vertex>
-			<vertex x="3692" y="130"></vertex>
-			<vertex x="3562" y="130"></vertex>
+			<vertex x="0" y="132"></vertex>
+			<vertex x="125" y="132"></vertex>
+			<vertex x="125" y="257"></vertex>
+			<vertex x="0" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3380" y="0"></vertex>
-			<vertex x="3510" y="0"></vertex>
-			<vertex x="3510" y="130"></vertex>
-			<vertex x="3380" y="130"></vertex>
+			<vertex x="0" y="125"></vertex>
+			<vertex x="125" y="125"></vertex>
+			<vertex x="125" y="250"></vertex>
+			<vertex x="0" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="27">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3699" y="0"></vertex>
-			<vertex x="3829" y="0"></vertex>
-			<vertex x="3829" y="130"></vertex>
-			<vertex x="3699" y="130"></vertex>
+			<vertex x="132" y="132"></vertex>
+			<vertex x="257" y="132"></vertex>
+			<vertex x="257" y="257"></vertex>
+			<vertex x="132" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3510" y="0"></vertex>
-			<vertex x="3640" y="0"></vertex>
-			<vertex x="3640" y="130"></vertex>
-			<vertex x="3510" y="130"></vertex>
+			<vertex x="125" y="125"></vertex>
+			<vertex x="250" y="125"></vertex>
+			<vertex x="250" y="250"></vertex>
+			<vertex x="125" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="28">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="0" y="137"></vertex>
-			<vertex x="130" y="137"></vertex>
-			<vertex x="130" y="267"></vertex>
-			<vertex x="0" y="267"></vertex>
+			<vertex x="264" y="132"></vertex>
+			<vertex x="389" y="132"></vertex>
+			<vertex x="389" y="257"></vertex>
+			<vertex x="264" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="0" y="130"></vertex>
-			<vertex x="130" y="130"></vertex>
-			<vertex x="130" y="260"></vertex>
-			<vertex x="0" y="260"></vertex>
+			<vertex x="250" y="125"></vertex>
+			<vertex x="375" y="125"></vertex>
+			<vertex x="375" y="250"></vertex>
+			<vertex x="250" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="29">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="137" y="137"></vertex>
-			<vertex x="267" y="137"></vertex>
-			<vertex x="267" y="267"></vertex>
-			<vertex x="137" y="267"></vertex>
+			<vertex x="396" y="132"></vertex>
+			<vertex x="521" y="132"></vertex>
+			<vertex x="521" y="257"></vertex>
+			<vertex x="396" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="130" y="130"></vertex>
-			<vertex x="260" y="130"></vertex>
-			<vertex x="260" y="260"></vertex>
-			<vertex x="130" y="260"></vertex>
+			<vertex x="375" y="125"></vertex>
+			<vertex x="500" y="125"></vertex>
+			<vertex x="500" y="250"></vertex>
+			<vertex x="375" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="30">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="274" y="137"></vertex>
-			<vertex x="404" y="137"></vertex>
-			<vertex x="404" y="267"></vertex>
-			<vertex x="274" y="267"></vertex>
+			<vertex x="528" y="132"></vertex>
+			<vertex x="653" y="132"></vertex>
+			<vertex x="653" y="257"></vertex>
+			<vertex x="528" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="260" y="130"></vertex>
-			<vertex x="390" y="130"></vertex>
-			<vertex x="390" y="260"></vertex>
-			<vertex x="260" y="260"></vertex>
+			<vertex x="500" y="125"></vertex>
+			<vertex x="625" y="125"></vertex>
+			<vertex x="625" y="250"></vertex>
+			<vertex x="500" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="31">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="411" y="137"></vertex>
-			<vertex x="541" y="137"></vertex>
-			<vertex x="541" y="267"></vertex>
-			<vertex x="411" y="267"></vertex>
+			<vertex x="660" y="132"></vertex>
+			<vertex x="785" y="132"></vertex>
+			<vertex x="785" y="257"></vertex>
+			<vertex x="660" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="390" y="130"></vertex>
-			<vertex x="520" y="130"></vertex>
-			<vertex x="520" y="260"></vertex>
-			<vertex x="390" y="260"></vertex>
+			<vertex x="625" y="125"></vertex>
+			<vertex x="750" y="125"></vertex>
+			<vertex x="750" y="250"></vertex>
+			<vertex x="625" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="32">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="548" y="137"></vertex>
-			<vertex x="678" y="137"></vertex>
-			<vertex x="678" y="267"></vertex>
-			<vertex x="548" y="267"></vertex>
+			<vertex x="792" y="132"></vertex>
+			<vertex x="917" y="132"></vertex>
+			<vertex x="917" y="257"></vertex>
+			<vertex x="792" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="520" y="130"></vertex>
-			<vertex x="650" y="130"></vertex>
-			<vertex x="650" y="260"></vertex>
-			<vertex x="520" y="260"></vertex>
+			<vertex x="750" y="125"></vertex>
+			<vertex x="875" y="125"></vertex>
+			<vertex x="875" y="250"></vertex>
+			<vertex x="750" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="33">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="685" y="137"></vertex>
-			<vertex x="815" y="137"></vertex>
-			<vertex x="815" y="267"></vertex>
-			<vertex x="685" y="267"></vertex>
+			<vertex x="924" y="132"></vertex>
+			<vertex x="1049" y="132"></vertex>
+			<vertex x="1049" y="257"></vertex>
+			<vertex x="924" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="650" y="130"></vertex>
-			<vertex x="780" y="130"></vertex>
-			<vertex x="780" y="260"></vertex>
-			<vertex x="650" y="260"></vertex>
+			<vertex x="875" y="125"></vertex>
+			<vertex x="1000" y="125"></vertex>
+			<vertex x="1000" y="250"></vertex>
+			<vertex x="875" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="34">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="822" y="137"></vertex>
-			<vertex x="952" y="137"></vertex>
-			<vertex x="952" y="267"></vertex>
-			<vertex x="822" y="267"></vertex>
+			<vertex x="1056" y="132"></vertex>
+			<vertex x="1181" y="132"></vertex>
+			<vertex x="1181" y="257"></vertex>
+			<vertex x="1056" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="780" y="130"></vertex>
-			<vertex x="910" y="130"></vertex>
-			<vertex x="910" y="260"></vertex>
-			<vertex x="780" y="260"></vertex>
+			<vertex x="1000" y="125"></vertex>
+			<vertex x="1125" y="125"></vertex>
+			<vertex x="1125" y="250"></vertex>
+			<vertex x="1000" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="35">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="959" y="137"></vertex>
-			<vertex x="1089" y="137"></vertex>
-			<vertex x="1089" y="267"></vertex>
-			<vertex x="959" y="267"></vertex>
+			<vertex x="1188" y="132"></vertex>
+			<vertex x="1313" y="132"></vertex>
+			<vertex x="1313" y="257"></vertex>
+			<vertex x="1188" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="910" y="130"></vertex>
-			<vertex x="1040" y="130"></vertex>
-			<vertex x="1040" y="260"></vertex>
-			<vertex x="910" y="260"></vertex>
+			<vertex x="1125" y="125"></vertex>
+			<vertex x="1250" y="125"></vertex>
+			<vertex x="1250" y="250"></vertex>
+			<vertex x="1125" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="36">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1096" y="137"></vertex>
-			<vertex x="1226" y="137"></vertex>
-			<vertex x="1226" y="267"></vertex>
-			<vertex x="1096" y="267"></vertex>
+			<vertex x="1320" y="132"></vertex>
+			<vertex x="1445" y="132"></vertex>
+			<vertex x="1445" y="257"></vertex>
+			<vertex x="1320" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1040" y="130"></vertex>
-			<vertex x="1170" y="130"></vertex>
-			<vertex x="1170" y="260"></vertex>
-			<vertex x="1040" y="260"></vertex>
+			<vertex x="1250" y="125"></vertex>
+			<vertex x="1375" y="125"></vertex>
+			<vertex x="1375" y="250"></vertex>
+			<vertex x="1250" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="37">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1233" y="137"></vertex>
-			<vertex x="1363" y="137"></vertex>
-			<vertex x="1363" y="267"></vertex>
-			<vertex x="1233" y="267"></vertex>
+			<vertex x="1452" y="132"></vertex>
+			<vertex x="1577" y="132"></vertex>
+			<vertex x="1577" y="257"></vertex>
+			<vertex x="1452" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1170" y="130"></vertex>
-			<vertex x="1300" y="130"></vertex>
-			<vertex x="1300" y="260"></vertex>
-			<vertex x="1170" y="260"></vertex>
+			<vertex x="1375" y="125"></vertex>
+			<vertex x="1500" y="125"></vertex>
+			<vertex x="1500" y="250"></vertex>
+			<vertex x="1375" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="38">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1370" y="137"></vertex>
-			<vertex x="1500" y="137"></vertex>
-			<vertex x="1500" y="267"></vertex>
-			<vertex x="1370" y="267"></vertex>
+			<vertex x="1584" y="132"></vertex>
+			<vertex x="1709" y="132"></vertex>
+			<vertex x="1709" y="257"></vertex>
+			<vertex x="1584" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1300" y="130"></vertex>
-			<vertex x="1430" y="130"></vertex>
-			<vertex x="1430" y="260"></vertex>
-			<vertex x="1300" y="260"></vertex>
+			<vertex x="1500" y="125"></vertex>
+			<vertex x="1625" y="125"></vertex>
+			<vertex x="1625" y="250"></vertex>
+			<vertex x="1500" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="39">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1507" y="137"></vertex>
-			<vertex x="1637" y="137"></vertex>
-			<vertex x="1637" y="267"></vertex>
-			<vertex x="1507" y="267"></vertex>
+			<vertex x="1716" y="132"></vertex>
+			<vertex x="1841" y="132"></vertex>
+			<vertex x="1841" y="257"></vertex>
+			<vertex x="1716" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1430" y="130"></vertex>
-			<vertex x="1560" y="130"></vertex>
-			<vertex x="1560" y="260"></vertex>
-			<vertex x="1430" y="260"></vertex>
+			<vertex x="1625" y="125"></vertex>
+			<vertex x="1750" y="125"></vertex>
+			<vertex x="1750" y="250"></vertex>
+			<vertex x="1625" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="40">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1644" y="137"></vertex>
-			<vertex x="1774" y="137"></vertex>
-			<vertex x="1774" y="267"></vertex>
-			<vertex x="1644" y="267"></vertex>
+			<vertex x="1848" y="132"></vertex>
+			<vertex x="1973" y="132"></vertex>
+			<vertex x="1973" y="257"></vertex>
+			<vertex x="1848" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1560" y="130"></vertex>
-			<vertex x="1690" y="130"></vertex>
-			<vertex x="1690" y="260"></vertex>
-			<vertex x="1560" y="260"></vertex>
+			<vertex x="1750" y="125"></vertex>
+			<vertex x="1875" y="125"></vertex>
+			<vertex x="1875" y="250"></vertex>
+			<vertex x="1750" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="41">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1781" y="137"></vertex>
-			<vertex x="1911" y="137"></vertex>
-			<vertex x="1911" y="267"></vertex>
-			<vertex x="1781" y="267"></vertex>
+			<vertex x="1980" y="132"></vertex>
+			<vertex x="2105" y="132"></vertex>
+			<vertex x="2105" y="257"></vertex>
+			<vertex x="1980" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1690" y="130"></vertex>
-			<vertex x="1820" y="130"></vertex>
-			<vertex x="1820" y="260"></vertex>
-			<vertex x="1690" y="260"></vertex>
+			<vertex x="1875" y="125"></vertex>
+			<vertex x="2000" y="125"></vertex>
+			<vertex x="2000" y="250"></vertex>
+			<vertex x="1875" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="42">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1918" y="137"></vertex>
-			<vertex x="2048" y="137"></vertex>
-			<vertex x="2048" y="267"></vertex>
-			<vertex x="1918" y="267"></vertex>
+			<vertex x="2112" y="132"></vertex>
+			<vertex x="2237" y="132"></vertex>
+			<vertex x="2237" y="257"></vertex>
+			<vertex x="2112" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1820" y="130"></vertex>
-			<vertex x="1950" y="130"></vertex>
-			<vertex x="1950" y="260"></vertex>
-			<vertex x="1820" y="260"></vertex>
+			<vertex x="2000" y="125"></vertex>
+			<vertex x="2125" y="125"></vertex>
+			<vertex x="2125" y="250"></vertex>
+			<vertex x="2000" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="43">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2055" y="137"></vertex>
-			<vertex x="2185" y="137"></vertex>
-			<vertex x="2185" y="267"></vertex>
-			<vertex x="2055" y="267"></vertex>
+			<vertex x="2244" y="132"></vertex>
+			<vertex x="2369" y="132"></vertex>
+			<vertex x="2369" y="257"></vertex>
+			<vertex x="2244" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1950" y="130"></vertex>
-			<vertex x="2080" y="130"></vertex>
-			<vertex x="2080" y="260"></vertex>
-			<vertex x="1950" y="260"></vertex>
+			<vertex x="2125" y="125"></vertex>
+			<vertex x="2250" y="125"></vertex>
+			<vertex x="2250" y="250"></vertex>
+			<vertex x="2125" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="44">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2192" y="137"></vertex>
-			<vertex x="2322" y="137"></vertex>
-			<vertex x="2322" y="267"></vertex>
-			<vertex x="2192" y="267"></vertex>
+			<vertex x="2376" y="132"></vertex>
+			<vertex x="2501" y="132"></vertex>
+			<vertex x="2501" y="257"></vertex>
+			<vertex x="2376" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2080" y="130"></vertex>
-			<vertex x="2210" y="130"></vertex>
-			<vertex x="2210" y="260"></vertex>
-			<vertex x="2080" y="260"></vertex>
+			<vertex x="2250" y="125"></vertex>
+			<vertex x="2375" y="125"></vertex>
+			<vertex x="2375" y="250"></vertex>
+			<vertex x="2250" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="45">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2329" y="137"></vertex>
-			<vertex x="2459" y="137"></vertex>
-			<vertex x="2459" y="267"></vertex>
-			<vertex x="2329" y="267"></vertex>
+			<vertex x="2508" y="132"></vertex>
+			<vertex x="2633" y="132"></vertex>
+			<vertex x="2633" y="257"></vertex>
+			<vertex x="2508" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2210" y="130"></vertex>
-			<vertex x="2340" y="130"></vertex>
-			<vertex x="2340" y="260"></vertex>
-			<vertex x="2210" y="260"></vertex>
+			<vertex x="2375" y="125"></vertex>
+			<vertex x="2500" y="125"></vertex>
+			<vertex x="2500" y="250"></vertex>
+			<vertex x="2375" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="46">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2466" y="137"></vertex>
-			<vertex x="2596" y="137"></vertex>
-			<vertex x="2596" y="267"></vertex>
-			<vertex x="2466" y="267"></vertex>
+			<vertex x="2640" y="132"></vertex>
+			<vertex x="2765" y="132"></vertex>
+			<vertex x="2765" y="257"></vertex>
+			<vertex x="2640" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2340" y="130"></vertex>
-			<vertex x="2470" y="130"></vertex>
-			<vertex x="2470" y="260"></vertex>
-			<vertex x="2340" y="260"></vertex>
+			<vertex x="2500" y="125"></vertex>
+			<vertex x="2625" y="125"></vertex>
+			<vertex x="2625" y="250"></vertex>
+			<vertex x="2500" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="47">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2603" y="137"></vertex>
-			<vertex x="2733" y="137"></vertex>
-			<vertex x="2733" y="267"></vertex>
-			<vertex x="2603" y="267"></vertex>
+			<vertex x="2772" y="132"></vertex>
+			<vertex x="2897" y="132"></vertex>
+			<vertex x="2897" y="257"></vertex>
+			<vertex x="2772" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2470" y="130"></vertex>
-			<vertex x="2600" y="130"></vertex>
-			<vertex x="2600" y="260"></vertex>
-			<vertex x="2470" y="260"></vertex>
+			<vertex x="2625" y="125"></vertex>
+			<vertex x="2750" y="125"></vertex>
+			<vertex x="2750" y="250"></vertex>
+			<vertex x="2625" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="48">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2740" y="137"></vertex>
-			<vertex x="2870" y="137"></vertex>
-			<vertex x="2870" y="267"></vertex>
-			<vertex x="2740" y="267"></vertex>
+			<vertex x="2904" y="132"></vertex>
+			<vertex x="3029" y="132"></vertex>
+			<vertex x="3029" y="257"></vertex>
+			<vertex x="2904" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2600" y="130"></vertex>
-			<vertex x="2730" y="130"></vertex>
-			<vertex x="2730" y="260"></vertex>
-			<vertex x="2600" y="260"></vertex>
+			<vertex x="2750" y="125"></vertex>
+			<vertex x="2875" y="125"></vertex>
+			<vertex x="2875" y="250"></vertex>
+			<vertex x="2750" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="49">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2877" y="137"></vertex>
-			<vertex x="3007" y="137"></vertex>
-			<vertex x="3007" y="267"></vertex>
-			<vertex x="2877" y="267"></vertex>
+			<vertex x="3036" y="132"></vertex>
+			<vertex x="3161" y="132"></vertex>
+			<vertex x="3161" y="257"></vertex>
+			<vertex x="3036" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2730" y="130"></vertex>
-			<vertex x="2860" y="130"></vertex>
-			<vertex x="2860" y="260"></vertex>
-			<vertex x="2730" y="260"></vertex>
+			<vertex x="2875" y="125"></vertex>
+			<vertex x="3000" y="125"></vertex>
+			<vertex x="3000" y="250"></vertex>
+			<vertex x="2875" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="50">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3014" y="137"></vertex>
-			<vertex x="3144" y="137"></vertex>
-			<vertex x="3144" y="267"></vertex>
-			<vertex x="3014" y="267"></vertex>
+			<vertex x="3168" y="132"></vertex>
+			<vertex x="3293" y="132"></vertex>
+			<vertex x="3293" y="257"></vertex>
+			<vertex x="3168" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2860" y="130"></vertex>
-			<vertex x="2990" y="130"></vertex>
-			<vertex x="2990" y="260"></vertex>
-			<vertex x="2860" y="260"></vertex>
+			<vertex x="3000" y="125"></vertex>
+			<vertex x="3125" y="125"></vertex>
+			<vertex x="3125" y="250"></vertex>
+			<vertex x="3000" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="51">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3151" y="137"></vertex>
-			<vertex x="3281" y="137"></vertex>
-			<vertex x="3281" y="267"></vertex>
-			<vertex x="3151" y="267"></vertex>
+			<vertex x="3300" y="132"></vertex>
+			<vertex x="3425" y="132"></vertex>
+			<vertex x="3425" y="257"></vertex>
+			<vertex x="3300" y="257"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2990" y="130"></vertex>
-			<vertex x="3120" y="130"></vertex>
-			<vertex x="3120" y="260"></vertex>
-			<vertex x="2990" y="260"></vertex>
+			<vertex x="3125" y="125"></vertex>
+			<vertex x="3250" y="125"></vertex>
+			<vertex x="3250" y="250"></vertex>
+			<vertex x="3125" y="250"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="52">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3288" y="137"></vertex>
-			<vertex x="3418" y="137"></vertex>
-			<vertex x="3418" y="267"></vertex>
-			<vertex x="3288" y="267"></vertex>
+			<vertex x="0" y="285"></vertex>
+			<vertex x="125" y="285"></vertex>
+			<vertex x="125" y="410"></vertex>
+			<vertex x="0" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3120" y="130"></vertex>
-			<vertex x="3250" y="130"></vertex>
-			<vertex x="3250" y="260"></vertex>
-			<vertex x="3120" y="260"></vertex>
+			<vertex x="0" y="250"></vertex>
+			<vertex x="125" y="250"></vertex>
+			<vertex x="125" y="375"></vertex>
+			<vertex x="0" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="53">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3425" y="137"></vertex>
-			<vertex x="3555" y="137"></vertex>
-			<vertex x="3555" y="267"></vertex>
-			<vertex x="3425" y="267"></vertex>
+			<vertex x="132" y="285"></vertex>
+			<vertex x="257" y="285"></vertex>
+			<vertex x="257" y="410"></vertex>
+			<vertex x="132" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3250" y="130"></vertex>
-			<vertex x="3380" y="130"></vertex>
-			<vertex x="3380" y="260"></vertex>
-			<vertex x="3250" y="260"></vertex>
+			<vertex x="125" y="250"></vertex>
+			<vertex x="250" y="250"></vertex>
+			<vertex x="250" y="375"></vertex>
+			<vertex x="125" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="54">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3562" y="137"></vertex>
-			<vertex x="3692" y="137"></vertex>
-			<vertex x="3692" y="267"></vertex>
-			<vertex x="3562" y="267"></vertex>
+			<vertex x="264" y="285"></vertex>
+			<vertex x="389" y="285"></vertex>
+			<vertex x="389" y="410"></vertex>
+			<vertex x="264" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3380" y="130"></vertex>
-			<vertex x="3510" y="130"></vertex>
-			<vertex x="3510" y="260"></vertex>
-			<vertex x="3380" y="260"></vertex>
+			<vertex x="250" y="250"></vertex>
+			<vertex x="375" y="250"></vertex>
+			<vertex x="375" y="375"></vertex>
+			<vertex x="250" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="55">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3699" y="137"></vertex>
-			<vertex x="3829" y="137"></vertex>
-			<vertex x="3829" y="267"></vertex>
-			<vertex x="3699" y="267"></vertex>
+			<vertex x="396" y="285"></vertex>
+			<vertex x="521" y="285"></vertex>
+			<vertex x="521" y="410"></vertex>
+			<vertex x="396" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3510" y="130"></vertex>
-			<vertex x="3640" y="130"></vertex>
-			<vertex x="3640" y="260"></vertex>
-			<vertex x="3510" y="260"></vertex>
+			<vertex x="375" y="250"></vertex>
+			<vertex x="500" y="250"></vertex>
+			<vertex x="500" y="375"></vertex>
+			<vertex x="375" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="56">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="0" y="288"></vertex>
-			<vertex x="130" y="288"></vertex>
-			<vertex x="130" y="418"></vertex>
-			<vertex x="0" y="418"></vertex>
+			<vertex x="528" y="285"></vertex>
+			<vertex x="653" y="285"></vertex>
+			<vertex x="653" y="410"></vertex>
+			<vertex x="528" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="0" y="260"></vertex>
-			<vertex x="130" y="260"></vertex>
-			<vertex x="130" y="390"></vertex>
-			<vertex x="0" y="390"></vertex>
+			<vertex x="500" y="250"></vertex>
+			<vertex x="625" y="250"></vertex>
+			<vertex x="625" y="375"></vertex>
+			<vertex x="500" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="57">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="137" y="288"></vertex>
-			<vertex x="267" y="288"></vertex>
-			<vertex x="267" y="418"></vertex>
-			<vertex x="137" y="418"></vertex>
+			<vertex x="660" y="285"></vertex>
+			<vertex x="785" y="285"></vertex>
+			<vertex x="785" y="410"></vertex>
+			<vertex x="660" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="130" y="260"></vertex>
-			<vertex x="260" y="260"></vertex>
-			<vertex x="260" y="390"></vertex>
-			<vertex x="130" y="390"></vertex>
+			<vertex x="625" y="250"></vertex>
+			<vertex x="750" y="250"></vertex>
+			<vertex x="750" y="375"></vertex>
+			<vertex x="625" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="58">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="274" y="288"></vertex>
-			<vertex x="404" y="288"></vertex>
-			<vertex x="404" y="418"></vertex>
-			<vertex x="274" y="418"></vertex>
+			<vertex x="792" y="285"></vertex>
+			<vertex x="917" y="285"></vertex>
+			<vertex x="917" y="410"></vertex>
+			<vertex x="792" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="260" y="260"></vertex>
-			<vertex x="390" y="260"></vertex>
-			<vertex x="390" y="390"></vertex>
-			<vertex x="260" y="390"></vertex>
+			<vertex x="750" y="250"></vertex>
+			<vertex x="875" y="250"></vertex>
+			<vertex x="875" y="375"></vertex>
+			<vertex x="750" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="59">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="411" y="288"></vertex>
-			<vertex x="541" y="288"></vertex>
-			<vertex x="541" y="418"></vertex>
-			<vertex x="411" y="418"></vertex>
+			<vertex x="924" y="285"></vertex>
+			<vertex x="1049" y="285"></vertex>
+			<vertex x="1049" y="410"></vertex>
+			<vertex x="924" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="390" y="260"></vertex>
-			<vertex x="520" y="260"></vertex>
-			<vertex x="520" y="390"></vertex>
-			<vertex x="390" y="390"></vertex>
+			<vertex x="875" y="250"></vertex>
+			<vertex x="1000" y="250"></vertex>
+			<vertex x="1000" y="375"></vertex>
+			<vertex x="875" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="60">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="548" y="288"></vertex>
-			<vertex x="678" y="288"></vertex>
-			<vertex x="678" y="418"></vertex>
-			<vertex x="548" y="418"></vertex>
+			<vertex x="1056" y="285"></vertex>
+			<vertex x="1181" y="285"></vertex>
+			<vertex x="1181" y="410"></vertex>
+			<vertex x="1056" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="520" y="260"></vertex>
-			<vertex x="650" y="260"></vertex>
-			<vertex x="650" y="390"></vertex>
-			<vertex x="520" y="390"></vertex>
+			<vertex x="1000" y="250"></vertex>
+			<vertex x="1125" y="250"></vertex>
+			<vertex x="1125" y="375"></vertex>
+			<vertex x="1000" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="61">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="685" y="288"></vertex>
-			<vertex x="815" y="288"></vertex>
-			<vertex x="815" y="418"></vertex>
-			<vertex x="685" y="418"></vertex>
+			<vertex x="1188" y="285"></vertex>
+			<vertex x="1313" y="285"></vertex>
+			<vertex x="1313" y="410"></vertex>
+			<vertex x="1188" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="650" y="260"></vertex>
-			<vertex x="780" y="260"></vertex>
-			<vertex x="780" y="390"></vertex>
-			<vertex x="650" y="390"></vertex>
+			<vertex x="1125" y="250"></vertex>
+			<vertex x="1250" y="250"></vertex>
+			<vertex x="1250" y="375"></vertex>
+			<vertex x="1125" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="62">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="822" y="288"></vertex>
-			<vertex x="952" y="288"></vertex>
-			<vertex x="952" y="418"></vertex>
-			<vertex x="822" y="418"></vertex>
+			<vertex x="1320" y="285"></vertex>
+			<vertex x="1445" y="285"></vertex>
+			<vertex x="1445" y="410"></vertex>
+			<vertex x="1320" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="780" y="260"></vertex>
-			<vertex x="910" y="260"></vertex>
-			<vertex x="910" y="390"></vertex>
-			<vertex x="780" y="390"></vertex>
+			<vertex x="1250" y="250"></vertex>
+			<vertex x="1375" y="250"></vertex>
+			<vertex x="1375" y="375"></vertex>
+			<vertex x="1250" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="63">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="959" y="288"></vertex>
-			<vertex x="1089" y="288"></vertex>
-			<vertex x="1089" y="418"></vertex>
-			<vertex x="959" y="418"></vertex>
+			<vertex x="1452" y="285"></vertex>
+			<vertex x="1577" y="285"></vertex>
+			<vertex x="1577" y="410"></vertex>
+			<vertex x="1452" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="910" y="260"></vertex>
-			<vertex x="1040" y="260"></vertex>
-			<vertex x="1040" y="390"></vertex>
-			<vertex x="910" y="390"></vertex>
+			<vertex x="1375" y="250"></vertex>
+			<vertex x="1500" y="250"></vertex>
+			<vertex x="1500" y="375"></vertex>
+			<vertex x="1375" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="64">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1096" y="288"></vertex>
-			<vertex x="1226" y="288"></vertex>
-			<vertex x="1226" y="418"></vertex>
-			<vertex x="1096" y="418"></vertex>
+			<vertex x="1584" y="285"></vertex>
+			<vertex x="1709" y="285"></vertex>
+			<vertex x="1709" y="410"></vertex>
+			<vertex x="1584" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1040" y="260"></vertex>
-			<vertex x="1170" y="260"></vertex>
-			<vertex x="1170" y="390"></vertex>
-			<vertex x="1040" y="390"></vertex>
+			<vertex x="1500" y="250"></vertex>
+			<vertex x="1625" y="250"></vertex>
+			<vertex x="1625" y="375"></vertex>
+			<vertex x="1500" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="65">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1233" y="288"></vertex>
-			<vertex x="1363" y="288"></vertex>
-			<vertex x="1363" y="418"></vertex>
-			<vertex x="1233" y="418"></vertex>
+			<vertex x="1716" y="285"></vertex>
+			<vertex x="1841" y="285"></vertex>
+			<vertex x="1841" y="410"></vertex>
+			<vertex x="1716" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1170" y="260"></vertex>
-			<vertex x="1300" y="260"></vertex>
-			<vertex x="1300" y="390"></vertex>
-			<vertex x="1170" y="390"></vertex>
+			<vertex x="1625" y="250"></vertex>
+			<vertex x="1750" y="250"></vertex>
+			<vertex x="1750" y="375"></vertex>
+			<vertex x="1625" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="66">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1370" y="288"></vertex>
-			<vertex x="1500" y="288"></vertex>
-			<vertex x="1500" y="418"></vertex>
-			<vertex x="1370" y="418"></vertex>
+			<vertex x="1848" y="285"></vertex>
+			<vertex x="1973" y="285"></vertex>
+			<vertex x="1973" y="410"></vertex>
+			<vertex x="1848" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1300" y="260"></vertex>
-			<vertex x="1430" y="260"></vertex>
-			<vertex x="1430" y="390"></vertex>
-			<vertex x="1300" y="390"></vertex>
+			<vertex x="1750" y="250"></vertex>
+			<vertex x="1875" y="250"></vertex>
+			<vertex x="1875" y="375"></vertex>
+			<vertex x="1750" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="67">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1507" y="288"></vertex>
-			<vertex x="1637" y="288"></vertex>
-			<vertex x="1637" y="418"></vertex>
-			<vertex x="1507" y="418"></vertex>
+			<vertex x="1980" y="285"></vertex>
+			<vertex x="2105" y="285"></vertex>
+			<vertex x="2105" y="410"></vertex>
+			<vertex x="1980" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1430" y="260"></vertex>
-			<vertex x="1560" y="260"></vertex>
-			<vertex x="1560" y="390"></vertex>
-			<vertex x="1430" y="390"></vertex>
+			<vertex x="1875" y="250"></vertex>
+			<vertex x="2000" y="250"></vertex>
+			<vertex x="2000" y="375"></vertex>
+			<vertex x="1875" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="68">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1644" y="288"></vertex>
-			<vertex x="1774" y="288"></vertex>
-			<vertex x="1774" y="418"></vertex>
-			<vertex x="1644" y="418"></vertex>
+			<vertex x="2112" y="285"></vertex>
+			<vertex x="2237" y="285"></vertex>
+			<vertex x="2237" y="410"></vertex>
+			<vertex x="2112" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1560" y="260"></vertex>
-			<vertex x="1690" y="260"></vertex>
-			<vertex x="1690" y="390"></vertex>
-			<vertex x="1560" y="390"></vertex>
+			<vertex x="2000" y="250"></vertex>
+			<vertex x="2125" y="250"></vertex>
+			<vertex x="2125" y="375"></vertex>
+			<vertex x="2000" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="69">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1781" y="288"></vertex>
-			<vertex x="1911" y="288"></vertex>
-			<vertex x="1911" y="418"></vertex>
-			<vertex x="1781" y="418"></vertex>
+			<vertex x="2244" y="285"></vertex>
+			<vertex x="2369" y="285"></vertex>
+			<vertex x="2369" y="410"></vertex>
+			<vertex x="2244" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1690" y="260"></vertex>
-			<vertex x="1820" y="260"></vertex>
-			<vertex x="1820" y="390"></vertex>
-			<vertex x="1690" y="390"></vertex>
+			<vertex x="2125" y="250"></vertex>
+			<vertex x="2250" y="250"></vertex>
+			<vertex x="2250" y="375"></vertex>
+			<vertex x="2125" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="70">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1918" y="288"></vertex>
-			<vertex x="2048" y="288"></vertex>
-			<vertex x="2048" y="418"></vertex>
-			<vertex x="1918" y="418"></vertex>
+			<vertex x="2376" y="285"></vertex>
+			<vertex x="2501" y="285"></vertex>
+			<vertex x="2501" y="410"></vertex>
+			<vertex x="2376" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1820" y="260"></vertex>
-			<vertex x="1950" y="260"></vertex>
-			<vertex x="1950" y="390"></vertex>
-			<vertex x="1820" y="390"></vertex>
+			<vertex x="2250" y="250"></vertex>
+			<vertex x="2375" y="250"></vertex>
+			<vertex x="2375" y="375"></vertex>
+			<vertex x="2250" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="71">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2055" y="288"></vertex>
-			<vertex x="2185" y="288"></vertex>
-			<vertex x="2185" y="418"></vertex>
-			<vertex x="2055" y="418"></vertex>
+			<vertex x="2508" y="285"></vertex>
+			<vertex x="2633" y="285"></vertex>
+			<vertex x="2633" y="410"></vertex>
+			<vertex x="2508" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1950" y="260"></vertex>
-			<vertex x="2080" y="260"></vertex>
-			<vertex x="2080" y="390"></vertex>
-			<vertex x="1950" y="390"></vertex>
+			<vertex x="2375" y="250"></vertex>
+			<vertex x="2500" y="250"></vertex>
+			<vertex x="2500" y="375"></vertex>
+			<vertex x="2375" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="72">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2192" y="288"></vertex>
-			<vertex x="2322" y="288"></vertex>
-			<vertex x="2322" y="418"></vertex>
-			<vertex x="2192" y="418"></vertex>
+			<vertex x="2640" y="285"></vertex>
+			<vertex x="2765" y="285"></vertex>
+			<vertex x="2765" y="410"></vertex>
+			<vertex x="2640" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2080" y="260"></vertex>
-			<vertex x="2210" y="260"></vertex>
-			<vertex x="2210" y="390"></vertex>
-			<vertex x="2080" y="390"></vertex>
+			<vertex x="2500" y="250"></vertex>
+			<vertex x="2625" y="250"></vertex>
+			<vertex x="2625" y="375"></vertex>
+			<vertex x="2500" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="73">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2329" y="288"></vertex>
-			<vertex x="2459" y="288"></vertex>
-			<vertex x="2459" y="418"></vertex>
-			<vertex x="2329" y="418"></vertex>
+			<vertex x="2772" y="285"></vertex>
+			<vertex x="2897" y="285"></vertex>
+			<vertex x="2897" y="410"></vertex>
+			<vertex x="2772" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2210" y="260"></vertex>
-			<vertex x="2340" y="260"></vertex>
-			<vertex x="2340" y="390"></vertex>
-			<vertex x="2210" y="390"></vertex>
+			<vertex x="2625" y="250"></vertex>
+			<vertex x="2750" y="250"></vertex>
+			<vertex x="2750" y="375"></vertex>
+			<vertex x="2625" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="74">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2466" y="288"></vertex>
-			<vertex x="2596" y="288"></vertex>
-			<vertex x="2596" y="418"></vertex>
-			<vertex x="2466" y="418"></vertex>
+			<vertex x="2904" y="285"></vertex>
+			<vertex x="3029" y="285"></vertex>
+			<vertex x="3029" y="410"></vertex>
+			<vertex x="2904" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2340" y="260"></vertex>
-			<vertex x="2470" y="260"></vertex>
-			<vertex x="2470" y="390"></vertex>
-			<vertex x="2340" y="390"></vertex>
+			<vertex x="2750" y="250"></vertex>
+			<vertex x="2875" y="250"></vertex>
+			<vertex x="2875" y="375"></vertex>
+			<vertex x="2750" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="75">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2603" y="288"></vertex>
-			<vertex x="2733" y="288"></vertex>
-			<vertex x="2733" y="418"></vertex>
-			<vertex x="2603" y="418"></vertex>
+			<vertex x="3036" y="285"></vertex>
+			<vertex x="3161" y="285"></vertex>
+			<vertex x="3161" y="410"></vertex>
+			<vertex x="3036" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2470" y="260"></vertex>
-			<vertex x="2600" y="260"></vertex>
-			<vertex x="2600" y="390"></vertex>
-			<vertex x="2470" y="390"></vertex>
+			<vertex x="2875" y="250"></vertex>
+			<vertex x="3000" y="250"></vertex>
+			<vertex x="3000" y="375"></vertex>
+			<vertex x="2875" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="76">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2740" y="288"></vertex>
-			<vertex x="2870" y="288"></vertex>
-			<vertex x="2870" y="418"></vertex>
-			<vertex x="2740" y="418"></vertex>
+			<vertex x="3168" y="285"></vertex>
+			<vertex x="3293" y="285"></vertex>
+			<vertex x="3293" y="410"></vertex>
+			<vertex x="3168" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2600" y="260"></vertex>
-			<vertex x="2730" y="260"></vertex>
-			<vertex x="2730" y="390"></vertex>
-			<vertex x="2600" y="390"></vertex>
+			<vertex x="3000" y="250"></vertex>
+			<vertex x="3125" y="250"></vertex>
+			<vertex x="3125" y="375"></vertex>
+			<vertex x="3000" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="77">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2877" y="288"></vertex>
-			<vertex x="3007" y="288"></vertex>
-			<vertex x="3007" y="418"></vertex>
-			<vertex x="2877" y="418"></vertex>
+			<vertex x="3300" y="285"></vertex>
+			<vertex x="3425" y="285"></vertex>
+			<vertex x="3425" y="410"></vertex>
+			<vertex x="3300" y="410"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2730" y="260"></vertex>
-			<vertex x="2860" y="260"></vertex>
-			<vertex x="2860" y="390"></vertex>
-			<vertex x="2730" y="390"></vertex>
+			<vertex x="3125" y="250"></vertex>
+			<vertex x="3250" y="250"></vertex>
+			<vertex x="3250" y="375"></vertex>
+			<vertex x="3125" y="375"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="78">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3014" y="288"></vertex>
-			<vertex x="3144" y="288"></vertex>
-			<vertex x="3144" y="418"></vertex>
-			<vertex x="3014" y="418"></vertex>
+			<vertex x="0" y="417"></vertex>
+			<vertex x="125" y="417"></vertex>
+			<vertex x="125" y="542"></vertex>
+			<vertex x="0" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2860" y="260"></vertex>
-			<vertex x="2990" y="260"></vertex>
-			<vertex x="2990" y="390"></vertex>
-			<vertex x="2860" y="390"></vertex>
+			<vertex x="0" y="375"></vertex>
+			<vertex x="125" y="375"></vertex>
+			<vertex x="125" y="500"></vertex>
+			<vertex x="0" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="79">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3151" y="288"></vertex>
-			<vertex x="3281" y="288"></vertex>
-			<vertex x="3281" y="418"></vertex>
-			<vertex x="3151" y="418"></vertex>
+			<vertex x="132" y="417"></vertex>
+			<vertex x="257" y="417"></vertex>
+			<vertex x="257" y="542"></vertex>
+			<vertex x="132" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2990" y="260"></vertex>
-			<vertex x="3120" y="260"></vertex>
-			<vertex x="3120" y="390"></vertex>
-			<vertex x="2990" y="390"></vertex>
+			<vertex x="125" y="375"></vertex>
+			<vertex x="250" y="375"></vertex>
+			<vertex x="250" y="500"></vertex>
+			<vertex x="125" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="80">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3288" y="288"></vertex>
-			<vertex x="3418" y="288"></vertex>
-			<vertex x="3418" y="418"></vertex>
-			<vertex x="3288" y="418"></vertex>
+			<vertex x="264" y="417"></vertex>
+			<vertex x="389" y="417"></vertex>
+			<vertex x="389" y="542"></vertex>
+			<vertex x="264" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3120" y="260"></vertex>
-			<vertex x="3250" y="260"></vertex>
-			<vertex x="3250" y="390"></vertex>
-			<vertex x="3120" y="390"></vertex>
+			<vertex x="250" y="375"></vertex>
+			<vertex x="375" y="375"></vertex>
+			<vertex x="375" y="500"></vertex>
+			<vertex x="250" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="81">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3425" y="288"></vertex>
-			<vertex x="3555" y="288"></vertex>
-			<vertex x="3555" y="418"></vertex>
-			<vertex x="3425" y="418"></vertex>
+			<vertex x="396" y="417"></vertex>
+			<vertex x="521" y="417"></vertex>
+			<vertex x="521" y="542"></vertex>
+			<vertex x="396" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3250" y="260"></vertex>
-			<vertex x="3380" y="260"></vertex>
-			<vertex x="3380" y="390"></vertex>
-			<vertex x="3250" y="390"></vertex>
+			<vertex x="375" y="375"></vertex>
+			<vertex x="500" y="375"></vertex>
+			<vertex x="500" y="500"></vertex>
+			<vertex x="375" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="82">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3562" y="288"></vertex>
-			<vertex x="3692" y="288"></vertex>
-			<vertex x="3692" y="418"></vertex>
-			<vertex x="3562" y="418"></vertex>
+			<vertex x="528" y="417"></vertex>
+			<vertex x="653" y="417"></vertex>
+			<vertex x="653" y="542"></vertex>
+			<vertex x="528" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3380" y="260"></vertex>
-			<vertex x="3510" y="260"></vertex>
-			<vertex x="3510" y="390"></vertex>
-			<vertex x="3380" y="390"></vertex>
+			<vertex x="500" y="375"></vertex>
+			<vertex x="625" y="375"></vertex>
+			<vertex x="625" y="500"></vertex>
+			<vertex x="500" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="83">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3699" y="288"></vertex>
-			<vertex x="3829" y="288"></vertex>
-			<vertex x="3829" y="418"></vertex>
-			<vertex x="3699" y="418"></vertex>
+			<vertex x="660" y="417"></vertex>
+			<vertex x="785" y="417"></vertex>
+			<vertex x="785" y="542"></vertex>
+			<vertex x="660" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3510" y="260"></vertex>
-			<vertex x="3640" y="260"></vertex>
-			<vertex x="3640" y="390"></vertex>
-			<vertex x="3510" y="390"></vertex>
+			<vertex x="625" y="375"></vertex>
+			<vertex x="750" y="375"></vertex>
+			<vertex x="750" y="500"></vertex>
+			<vertex x="625" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="84">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="0" y="425"></vertex>
-			<vertex x="130" y="425"></vertex>
-			<vertex x="130" y="555"></vertex>
-			<vertex x="0" y="555"></vertex>
+			<vertex x="792" y="417"></vertex>
+			<vertex x="917" y="417"></vertex>
+			<vertex x="917" y="542"></vertex>
+			<vertex x="792" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="0" y="390"></vertex>
-			<vertex x="130" y="390"></vertex>
-			<vertex x="130" y="520"></vertex>
-			<vertex x="0" y="520"></vertex>
+			<vertex x="750" y="375"></vertex>
+			<vertex x="875" y="375"></vertex>
+			<vertex x="875" y="500"></vertex>
+			<vertex x="750" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="85">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="137" y="425"></vertex>
-			<vertex x="267" y="425"></vertex>
-			<vertex x="267" y="555"></vertex>
-			<vertex x="137" y="555"></vertex>
+			<vertex x="924" y="417"></vertex>
+			<vertex x="1049" y="417"></vertex>
+			<vertex x="1049" y="542"></vertex>
+			<vertex x="924" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="130" y="390"></vertex>
-			<vertex x="260" y="390"></vertex>
-			<vertex x="260" y="520"></vertex>
-			<vertex x="130" y="520"></vertex>
+			<vertex x="875" y="375"></vertex>
+			<vertex x="1000" y="375"></vertex>
+			<vertex x="1000" y="500"></vertex>
+			<vertex x="875" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="86">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="274" y="425"></vertex>
-			<vertex x="404" y="425"></vertex>
-			<vertex x="404" y="555"></vertex>
-			<vertex x="274" y="555"></vertex>
+			<vertex x="1056" y="417"></vertex>
+			<vertex x="1181" y="417"></vertex>
+			<vertex x="1181" y="542"></vertex>
+			<vertex x="1056" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="260" y="390"></vertex>
-			<vertex x="390" y="390"></vertex>
-			<vertex x="390" y="520"></vertex>
-			<vertex x="260" y="520"></vertex>
+			<vertex x="1000" y="375"></vertex>
+			<vertex x="1125" y="375"></vertex>
+			<vertex x="1125" y="500"></vertex>
+			<vertex x="1000" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="87">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="411" y="425"></vertex>
-			<vertex x="541" y="425"></vertex>
-			<vertex x="541" y="555"></vertex>
-			<vertex x="411" y="555"></vertex>
+			<vertex x="1188" y="417"></vertex>
+			<vertex x="1313" y="417"></vertex>
+			<vertex x="1313" y="542"></vertex>
+			<vertex x="1188" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="390" y="390"></vertex>
-			<vertex x="520" y="390"></vertex>
-			<vertex x="520" y="520"></vertex>
-			<vertex x="390" y="520"></vertex>
+			<vertex x="1125" y="375"></vertex>
+			<vertex x="1250" y="375"></vertex>
+			<vertex x="1250" y="500"></vertex>
+			<vertex x="1125" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="88">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="548" y="425"></vertex>
-			<vertex x="678" y="425"></vertex>
-			<vertex x="678" y="555"></vertex>
-			<vertex x="548" y="555"></vertex>
+			<vertex x="1320" y="417"></vertex>
+			<vertex x="1445" y="417"></vertex>
+			<vertex x="1445" y="542"></vertex>
+			<vertex x="1320" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="520" y="390"></vertex>
-			<vertex x="650" y="390"></vertex>
-			<vertex x="650" y="520"></vertex>
-			<vertex x="520" y="520"></vertex>
+			<vertex x="1250" y="375"></vertex>
+			<vertex x="1375" y="375"></vertex>
+			<vertex x="1375" y="500"></vertex>
+			<vertex x="1250" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="89">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="685" y="425"></vertex>
-			<vertex x="815" y="425"></vertex>
-			<vertex x="815" y="555"></vertex>
-			<vertex x="685" y="555"></vertex>
+			<vertex x="1452" y="417"></vertex>
+			<vertex x="1577" y="417"></vertex>
+			<vertex x="1577" y="542"></vertex>
+			<vertex x="1452" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="650" y="390"></vertex>
-			<vertex x="780" y="390"></vertex>
-			<vertex x="780" y="520"></vertex>
-			<vertex x="650" y="520"></vertex>
+			<vertex x="1375" y="375"></vertex>
+			<vertex x="1500" y="375"></vertex>
+			<vertex x="1500" y="500"></vertex>
+			<vertex x="1375" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="90">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="822" y="425"></vertex>
-			<vertex x="952" y="425"></vertex>
-			<vertex x="952" y="555"></vertex>
-			<vertex x="822" y="555"></vertex>
+			<vertex x="1584" y="417"></vertex>
+			<vertex x="1709" y="417"></vertex>
+			<vertex x="1709" y="542"></vertex>
+			<vertex x="1584" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="780" y="390"></vertex>
-			<vertex x="910" y="390"></vertex>
-			<vertex x="910" y="520"></vertex>
-			<vertex x="780" y="520"></vertex>
+			<vertex x="1500" y="375"></vertex>
+			<vertex x="1625" y="375"></vertex>
+			<vertex x="1625" y="500"></vertex>
+			<vertex x="1500" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="91">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="959" y="425"></vertex>
-			<vertex x="1089" y="425"></vertex>
-			<vertex x="1089" y="555"></vertex>
-			<vertex x="959" y="555"></vertex>
+			<vertex x="1716" y="417"></vertex>
+			<vertex x="1841" y="417"></vertex>
+			<vertex x="1841" y="542"></vertex>
+			<vertex x="1716" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="910" y="390"></vertex>
-			<vertex x="1040" y="390"></vertex>
-			<vertex x="1040" y="520"></vertex>
-			<vertex x="910" y="520"></vertex>
+			<vertex x="1625" y="375"></vertex>
+			<vertex x="1750" y="375"></vertex>
+			<vertex x="1750" y="500"></vertex>
+			<vertex x="1625" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="92">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1096" y="425"></vertex>
-			<vertex x="1226" y="425"></vertex>
-			<vertex x="1226" y="555"></vertex>
-			<vertex x="1096" y="555"></vertex>
+			<vertex x="1848" y="417"></vertex>
+			<vertex x="1973" y="417"></vertex>
+			<vertex x="1973" y="542"></vertex>
+			<vertex x="1848" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1040" y="390"></vertex>
-			<vertex x="1170" y="390"></vertex>
-			<vertex x="1170" y="520"></vertex>
-			<vertex x="1040" y="520"></vertex>
+			<vertex x="1750" y="375"></vertex>
+			<vertex x="1875" y="375"></vertex>
+			<vertex x="1875" y="500"></vertex>
+			<vertex x="1750" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="93">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1233" y="425"></vertex>
-			<vertex x="1363" y="425"></vertex>
-			<vertex x="1363" y="555"></vertex>
-			<vertex x="1233" y="555"></vertex>
+			<vertex x="1980" y="417"></vertex>
+			<vertex x="2105" y="417"></vertex>
+			<vertex x="2105" y="542"></vertex>
+			<vertex x="1980" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1170" y="390"></vertex>
-			<vertex x="1300" y="390"></vertex>
-			<vertex x="1300" y="520"></vertex>
-			<vertex x="1170" y="520"></vertex>
+			<vertex x="1875" y="375"></vertex>
+			<vertex x="2000" y="375"></vertex>
+			<vertex x="2000" y="500"></vertex>
+			<vertex x="1875" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="94">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1370" y="425"></vertex>
-			<vertex x="1500" y="425"></vertex>
-			<vertex x="1500" y="555"></vertex>
-			<vertex x="1370" y="555"></vertex>
+			<vertex x="2112" y="417"></vertex>
+			<vertex x="2237" y="417"></vertex>
+			<vertex x="2237" y="542"></vertex>
+			<vertex x="2112" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1300" y="390"></vertex>
-			<vertex x="1430" y="390"></vertex>
-			<vertex x="1430" y="520"></vertex>
-			<vertex x="1300" y="520"></vertex>
+			<vertex x="2000" y="375"></vertex>
+			<vertex x="2125" y="375"></vertex>
+			<vertex x="2125" y="500"></vertex>
+			<vertex x="2000" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="95">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1507" y="425"></vertex>
-			<vertex x="1637" y="425"></vertex>
-			<vertex x="1637" y="555"></vertex>
-			<vertex x="1507" y="555"></vertex>
+			<vertex x="2244" y="417"></vertex>
+			<vertex x="2369" y="417"></vertex>
+			<vertex x="2369" y="542"></vertex>
+			<vertex x="2244" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1430" y="390"></vertex>
-			<vertex x="1560" y="390"></vertex>
-			<vertex x="1560" y="520"></vertex>
-			<vertex x="1430" y="520"></vertex>
+			<vertex x="2125" y="375"></vertex>
+			<vertex x="2250" y="375"></vertex>
+			<vertex x="2250" y="500"></vertex>
+			<vertex x="2125" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="96">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1644" y="425"></vertex>
-			<vertex x="1774" y="425"></vertex>
-			<vertex x="1774" y="555"></vertex>
-			<vertex x="1644" y="555"></vertex>
+			<vertex x="2376" y="417"></vertex>
+			<vertex x="2501" y="417"></vertex>
+			<vertex x="2501" y="542"></vertex>
+			<vertex x="2376" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1560" y="390"></vertex>
-			<vertex x="1690" y="390"></vertex>
-			<vertex x="1690" y="520"></vertex>
-			<vertex x="1560" y="520"></vertex>
+			<vertex x="2250" y="375"></vertex>
+			<vertex x="2375" y="375"></vertex>
+			<vertex x="2375" y="500"></vertex>
+			<vertex x="2250" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="97">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1781" y="425"></vertex>
-			<vertex x="1911" y="425"></vertex>
-			<vertex x="1911" y="555"></vertex>
-			<vertex x="1781" y="555"></vertex>
+			<vertex x="2508" y="417"></vertex>
+			<vertex x="2633" y="417"></vertex>
+			<vertex x="2633" y="542"></vertex>
+			<vertex x="2508" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1690" y="390"></vertex>
-			<vertex x="1820" y="390"></vertex>
-			<vertex x="1820" y="520"></vertex>
-			<vertex x="1690" y="520"></vertex>
+			<vertex x="2375" y="375"></vertex>
+			<vertex x="2500" y="375"></vertex>
+			<vertex x="2500" y="500"></vertex>
+			<vertex x="2375" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="98">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1918" y="425"></vertex>
-			<vertex x="2048" y="425"></vertex>
-			<vertex x="2048" y="555"></vertex>
-			<vertex x="1918" y="555"></vertex>
+			<vertex x="2640" y="417"></vertex>
+			<vertex x="2765" y="417"></vertex>
+			<vertex x="2765" y="542"></vertex>
+			<vertex x="2640" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1820" y="390"></vertex>
-			<vertex x="1950" y="390"></vertex>
-			<vertex x="1950" y="520"></vertex>
-			<vertex x="1820" y="520"></vertex>
+			<vertex x="2500" y="375"></vertex>
+			<vertex x="2625" y="375"></vertex>
+			<vertex x="2625" y="500"></vertex>
+			<vertex x="2500" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="99">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2055" y="425"></vertex>
-			<vertex x="2185" y="425"></vertex>
-			<vertex x="2185" y="555"></vertex>
-			<vertex x="2055" y="555"></vertex>
+			<vertex x="2772" y="417"></vertex>
+			<vertex x="2897" y="417"></vertex>
+			<vertex x="2897" y="542"></vertex>
+			<vertex x="2772" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1950" y="390"></vertex>
-			<vertex x="2080" y="390"></vertex>
-			<vertex x="2080" y="520"></vertex>
-			<vertex x="1950" y="520"></vertex>
+			<vertex x="2625" y="375"></vertex>
+			<vertex x="2750" y="375"></vertex>
+			<vertex x="2750" y="500"></vertex>
+			<vertex x="2625" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="100">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2192" y="425"></vertex>
-			<vertex x="2322" y="425"></vertex>
-			<vertex x="2322" y="555"></vertex>
-			<vertex x="2192" y="555"></vertex>
+			<vertex x="2904" y="417"></vertex>
+			<vertex x="3029" y="417"></vertex>
+			<vertex x="3029" y="542"></vertex>
+			<vertex x="2904" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2080" y="390"></vertex>
-			<vertex x="2210" y="390"></vertex>
-			<vertex x="2210" y="520"></vertex>
-			<vertex x="2080" y="520"></vertex>
+			<vertex x="2750" y="375"></vertex>
+			<vertex x="2875" y="375"></vertex>
+			<vertex x="2875" y="500"></vertex>
+			<vertex x="2750" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="101">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2329" y="425"></vertex>
-			<vertex x="2459" y="425"></vertex>
-			<vertex x="2459" y="555"></vertex>
-			<vertex x="2329" y="555"></vertex>
+			<vertex x="3036" y="417"></vertex>
+			<vertex x="3161" y="417"></vertex>
+			<vertex x="3161" y="542"></vertex>
+			<vertex x="3036" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2210" y="390"></vertex>
-			<vertex x="2340" y="390"></vertex>
-			<vertex x="2340" y="520"></vertex>
-			<vertex x="2210" y="520"></vertex>
+			<vertex x="2875" y="375"></vertex>
+			<vertex x="3000" y="375"></vertex>
+			<vertex x="3000" y="500"></vertex>
+			<vertex x="2875" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="102">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2466" y="425"></vertex>
-			<vertex x="2596" y="425"></vertex>
-			<vertex x="2596" y="555"></vertex>
-			<vertex x="2466" y="555"></vertex>
+			<vertex x="3168" y="417"></vertex>
+			<vertex x="3293" y="417"></vertex>
+			<vertex x="3293" y="542"></vertex>
+			<vertex x="3168" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2340" y="390"></vertex>
-			<vertex x="2470" y="390"></vertex>
-			<vertex x="2470" y="520"></vertex>
-			<vertex x="2340" y="520"></vertex>
+			<vertex x="3000" y="375"></vertex>
+			<vertex x="3125" y="375"></vertex>
+			<vertex x="3125" y="500"></vertex>
+			<vertex x="3000" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="103">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2603" y="425"></vertex>
-			<vertex x="2733" y="425"></vertex>
-			<vertex x="2733" y="555"></vertex>
-			<vertex x="2603" y="555"></vertex>
+			<vertex x="3300" y="417"></vertex>
+			<vertex x="3425" y="417"></vertex>
+			<vertex x="3425" y="542"></vertex>
+			<vertex x="3300" y="542"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2470" y="390"></vertex>
-			<vertex x="2600" y="390"></vertex>
-			<vertex x="2600" y="520"></vertex>
-			<vertex x="2470" y="520"></vertex>
+			<vertex x="3125" y="375"></vertex>
+			<vertex x="3250" y="375"></vertex>
+			<vertex x="3250" y="500"></vertex>
+			<vertex x="3125" y="500"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="104">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2740" y="425"></vertex>
-			<vertex x="2870" y="425"></vertex>
-			<vertex x="2870" y="555"></vertex>
-			<vertex x="2740" y="555"></vertex>
+			<vertex x="0" y="549"></vertex>
+			<vertex x="125" y="549"></vertex>
+			<vertex x="125" y="674"></vertex>
+			<vertex x="0" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2600" y="390"></vertex>
-			<vertex x="2730" y="390"></vertex>
-			<vertex x="2730" y="520"></vertex>
-			<vertex x="2600" y="520"></vertex>
+			<vertex x="0" y="500"></vertex>
+			<vertex x="125" y="500"></vertex>
+			<vertex x="125" y="625"></vertex>
+			<vertex x="0" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="105">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2877" y="425"></vertex>
-			<vertex x="3007" y="425"></vertex>
-			<vertex x="3007" y="555"></vertex>
-			<vertex x="2877" y="555"></vertex>
+			<vertex x="132" y="549"></vertex>
+			<vertex x="257" y="549"></vertex>
+			<vertex x="257" y="674"></vertex>
+			<vertex x="132" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2730" y="390"></vertex>
-			<vertex x="2860" y="390"></vertex>
-			<vertex x="2860" y="520"></vertex>
-			<vertex x="2730" y="520"></vertex>
+			<vertex x="125" y="500"></vertex>
+			<vertex x="250" y="500"></vertex>
+			<vertex x="250" y="625"></vertex>
+			<vertex x="125" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="106">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3014" y="425"></vertex>
-			<vertex x="3144" y="425"></vertex>
-			<vertex x="3144" y="555"></vertex>
-			<vertex x="3014" y="555"></vertex>
+			<vertex x="264" y="549"></vertex>
+			<vertex x="389" y="549"></vertex>
+			<vertex x="389" y="674"></vertex>
+			<vertex x="264" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2860" y="390"></vertex>
-			<vertex x="2990" y="390"></vertex>
-			<vertex x="2990" y="520"></vertex>
-			<vertex x="2860" y="520"></vertex>
+			<vertex x="250" y="500"></vertex>
+			<vertex x="375" y="500"></vertex>
+			<vertex x="375" y="625"></vertex>
+			<vertex x="250" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="107">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3151" y="425"></vertex>
-			<vertex x="3281" y="425"></vertex>
-			<vertex x="3281" y="555"></vertex>
-			<vertex x="3151" y="555"></vertex>
+			<vertex x="396" y="549"></vertex>
+			<vertex x="521" y="549"></vertex>
+			<vertex x="521" y="674"></vertex>
+			<vertex x="396" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2990" y="390"></vertex>
-			<vertex x="3120" y="390"></vertex>
-			<vertex x="3120" y="520"></vertex>
-			<vertex x="2990" y="520"></vertex>
+			<vertex x="375" y="500"></vertex>
+			<vertex x="500" y="500"></vertex>
+			<vertex x="500" y="625"></vertex>
+			<vertex x="375" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="108">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3288" y="425"></vertex>
-			<vertex x="3418" y="425"></vertex>
-			<vertex x="3418" y="555"></vertex>
-			<vertex x="3288" y="555"></vertex>
+			<vertex x="528" y="549"></vertex>
+			<vertex x="653" y="549"></vertex>
+			<vertex x="653" y="674"></vertex>
+			<vertex x="528" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3120" y="390"></vertex>
-			<vertex x="3250" y="390"></vertex>
-			<vertex x="3250" y="520"></vertex>
-			<vertex x="3120" y="520"></vertex>
+			<vertex x="500" y="500"></vertex>
+			<vertex x="625" y="500"></vertex>
+			<vertex x="625" y="625"></vertex>
+			<vertex x="500" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="109">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3425" y="425"></vertex>
-			<vertex x="3555" y="425"></vertex>
-			<vertex x="3555" y="555"></vertex>
-			<vertex x="3425" y="555"></vertex>
+			<vertex x="660" y="549"></vertex>
+			<vertex x="785" y="549"></vertex>
+			<vertex x="785" y="674"></vertex>
+			<vertex x="660" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3250" y="390"></vertex>
-			<vertex x="3380" y="390"></vertex>
-			<vertex x="3380" y="520"></vertex>
-			<vertex x="3250" y="520"></vertex>
+			<vertex x="625" y="500"></vertex>
+			<vertex x="750" y="500"></vertex>
+			<vertex x="750" y="625"></vertex>
+			<vertex x="625" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="110">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3562" y="425"></vertex>
-			<vertex x="3692" y="425"></vertex>
-			<vertex x="3692" y="555"></vertex>
-			<vertex x="3562" y="555"></vertex>
+			<vertex x="792" y="549"></vertex>
+			<vertex x="917" y="549"></vertex>
+			<vertex x="917" y="674"></vertex>
+			<vertex x="792" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3380" y="390"></vertex>
-			<vertex x="3510" y="390"></vertex>
-			<vertex x="3510" y="520"></vertex>
-			<vertex x="3380" y="520"></vertex>
+			<vertex x="750" y="500"></vertex>
+			<vertex x="875" y="500"></vertex>
+			<vertex x="875" y="625"></vertex>
+			<vertex x="750" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="111">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3699" y="425"></vertex>
-			<vertex x="3829" y="425"></vertex>
-			<vertex x="3829" y="555"></vertex>
-			<vertex x="3699" y="555"></vertex>
+			<vertex x="924" y="549"></vertex>
+			<vertex x="1049" y="549"></vertex>
+			<vertex x="1049" y="674"></vertex>
+			<vertex x="924" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3510" y="390"></vertex>
-			<vertex x="3640" y="390"></vertex>
-			<vertex x="3640" y="520"></vertex>
-			<vertex x="3510" y="520"></vertex>
+			<vertex x="875" y="500"></vertex>
+			<vertex x="1000" y="500"></vertex>
+			<vertex x="1000" y="625"></vertex>
+			<vertex x="875" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="112">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="0" y="562"></vertex>
-			<vertex x="130" y="562"></vertex>
-			<vertex x="130" y="692"></vertex>
-			<vertex x="0" y="692"></vertex>
+			<vertex x="1056" y="549"></vertex>
+			<vertex x="1181" y="549"></vertex>
+			<vertex x="1181" y="674"></vertex>
+			<vertex x="1056" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="0" y="520"></vertex>
-			<vertex x="130" y="520"></vertex>
-			<vertex x="130" y="650"></vertex>
-			<vertex x="0" y="650"></vertex>
+			<vertex x="1000" y="500"></vertex>
+			<vertex x="1125" y="500"></vertex>
+			<vertex x="1125" y="625"></vertex>
+			<vertex x="1000" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="113">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="137" y="562"></vertex>
-			<vertex x="267" y="562"></vertex>
-			<vertex x="267" y="692"></vertex>
-			<vertex x="137" y="692"></vertex>
+			<vertex x="1188" y="549"></vertex>
+			<vertex x="1313" y="549"></vertex>
+			<vertex x="1313" y="674"></vertex>
+			<vertex x="1188" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="130" y="520"></vertex>
-			<vertex x="260" y="520"></vertex>
-			<vertex x="260" y="650"></vertex>
-			<vertex x="130" y="650"></vertex>
+			<vertex x="1125" y="500"></vertex>
+			<vertex x="1250" y="500"></vertex>
+			<vertex x="1250" y="625"></vertex>
+			<vertex x="1125" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="114">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="274" y="562"></vertex>
-			<vertex x="404" y="562"></vertex>
-			<vertex x="404" y="692"></vertex>
-			<vertex x="274" y="692"></vertex>
+			<vertex x="1320" y="549"></vertex>
+			<vertex x="1445" y="549"></vertex>
+			<vertex x="1445" y="674"></vertex>
+			<vertex x="1320" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="260" y="520"></vertex>
-			<vertex x="390" y="520"></vertex>
-			<vertex x="390" y="650"></vertex>
-			<vertex x="260" y="650"></vertex>
+			<vertex x="1250" y="500"></vertex>
+			<vertex x="1375" y="500"></vertex>
+			<vertex x="1375" y="625"></vertex>
+			<vertex x="1250" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="115">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="411" y="562"></vertex>
-			<vertex x="541" y="562"></vertex>
-			<vertex x="541" y="692"></vertex>
-			<vertex x="411" y="692"></vertex>
+			<vertex x="1452" y="549"></vertex>
+			<vertex x="1577" y="549"></vertex>
+			<vertex x="1577" y="674"></vertex>
+			<vertex x="1452" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="390" y="520"></vertex>
-			<vertex x="520" y="520"></vertex>
-			<vertex x="520" y="650"></vertex>
-			<vertex x="390" y="650"></vertex>
+			<vertex x="1375" y="500"></vertex>
+			<vertex x="1500" y="500"></vertex>
+			<vertex x="1500" y="625"></vertex>
+			<vertex x="1375" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="116">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="548" y="562"></vertex>
-			<vertex x="678" y="562"></vertex>
-			<vertex x="678" y="692"></vertex>
-			<vertex x="548" y="692"></vertex>
+			<vertex x="1584" y="549"></vertex>
+			<vertex x="1709" y="549"></vertex>
+			<vertex x="1709" y="674"></vertex>
+			<vertex x="1584" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="520" y="520"></vertex>
-			<vertex x="650" y="520"></vertex>
-			<vertex x="650" y="650"></vertex>
-			<vertex x="520" y="650"></vertex>
+			<vertex x="1500" y="500"></vertex>
+			<vertex x="1625" y="500"></vertex>
+			<vertex x="1625" y="625"></vertex>
+			<vertex x="1500" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="117">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="685" y="562"></vertex>
-			<vertex x="815" y="562"></vertex>
-			<vertex x="815" y="692"></vertex>
-			<vertex x="685" y="692"></vertex>
+			<vertex x="1716" y="549"></vertex>
+			<vertex x="1841" y="549"></vertex>
+			<vertex x="1841" y="674"></vertex>
+			<vertex x="1716" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="650" y="520"></vertex>
-			<vertex x="780" y="520"></vertex>
-			<vertex x="780" y="650"></vertex>
-			<vertex x="650" y="650"></vertex>
+			<vertex x="1625" y="500"></vertex>
+			<vertex x="1750" y="500"></vertex>
+			<vertex x="1750" y="625"></vertex>
+			<vertex x="1625" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="118">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="822" y="562"></vertex>
-			<vertex x="952" y="562"></vertex>
-			<vertex x="952" y="692"></vertex>
-			<vertex x="822" y="692"></vertex>
+			<vertex x="1848" y="549"></vertex>
+			<vertex x="1973" y="549"></vertex>
+			<vertex x="1973" y="674"></vertex>
+			<vertex x="1848" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="780" y="520"></vertex>
-			<vertex x="910" y="520"></vertex>
-			<vertex x="910" y="650"></vertex>
-			<vertex x="780" y="650"></vertex>
+			<vertex x="1750" y="500"></vertex>
+			<vertex x="1875" y="500"></vertex>
+			<vertex x="1875" y="625"></vertex>
+			<vertex x="1750" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="119">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="959" y="562"></vertex>
-			<vertex x="1089" y="562"></vertex>
-			<vertex x="1089" y="692"></vertex>
-			<vertex x="959" y="692"></vertex>
+			<vertex x="1980" y="549"></vertex>
+			<vertex x="2105" y="549"></vertex>
+			<vertex x="2105" y="674"></vertex>
+			<vertex x="1980" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="910" y="520"></vertex>
-			<vertex x="1040" y="520"></vertex>
-			<vertex x="1040" y="650"></vertex>
-			<vertex x="910" y="650"></vertex>
+			<vertex x="1875" y="500"></vertex>
+			<vertex x="2000" y="500"></vertex>
+			<vertex x="2000" y="625"></vertex>
+			<vertex x="1875" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="120">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1096" y="562"></vertex>
-			<vertex x="1226" y="562"></vertex>
-			<vertex x="1226" y="692"></vertex>
-			<vertex x="1096" y="692"></vertex>
+			<vertex x="2112" y="549"></vertex>
+			<vertex x="2237" y="549"></vertex>
+			<vertex x="2237" y="674"></vertex>
+			<vertex x="2112" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1040" y="520"></vertex>
-			<vertex x="1170" y="520"></vertex>
-			<vertex x="1170" y="650"></vertex>
-			<vertex x="1040" y="650"></vertex>
+			<vertex x="2000" y="500"></vertex>
+			<vertex x="2125" y="500"></vertex>
+			<vertex x="2125" y="625"></vertex>
+			<vertex x="2000" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="121">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1233" y="562"></vertex>
-			<vertex x="1363" y="562"></vertex>
-			<vertex x="1363" y="692"></vertex>
-			<vertex x="1233" y="692"></vertex>
+			<vertex x="2244" y="549"></vertex>
+			<vertex x="2369" y="549"></vertex>
+			<vertex x="2369" y="674"></vertex>
+			<vertex x="2244" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1170" y="520"></vertex>
-			<vertex x="1300" y="520"></vertex>
-			<vertex x="1300" y="650"></vertex>
-			<vertex x="1170" y="650"></vertex>
+			<vertex x="2125" y="500"></vertex>
+			<vertex x="2250" y="500"></vertex>
+			<vertex x="2250" y="625"></vertex>
+			<vertex x="2125" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="122">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1370" y="562"></vertex>
-			<vertex x="1500" y="562"></vertex>
-			<vertex x="1500" y="692"></vertex>
-			<vertex x="1370" y="692"></vertex>
+			<vertex x="2376" y="549"></vertex>
+			<vertex x="2501" y="549"></vertex>
+			<vertex x="2501" y="674"></vertex>
+			<vertex x="2376" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1300" y="520"></vertex>
-			<vertex x="1430" y="520"></vertex>
-			<vertex x="1430" y="650"></vertex>
-			<vertex x="1300" y="650"></vertex>
+			<vertex x="2250" y="500"></vertex>
+			<vertex x="2375" y="500"></vertex>
+			<vertex x="2375" y="625"></vertex>
+			<vertex x="2250" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="123">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1507" y="562"></vertex>
-			<vertex x="1637" y="562"></vertex>
-			<vertex x="1637" y="692"></vertex>
-			<vertex x="1507" y="692"></vertex>
+			<vertex x="2508" y="549"></vertex>
+			<vertex x="2633" y="549"></vertex>
+			<vertex x="2633" y="674"></vertex>
+			<vertex x="2508" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1430" y="520"></vertex>
-			<vertex x="1560" y="520"></vertex>
-			<vertex x="1560" y="650"></vertex>
-			<vertex x="1430" y="650"></vertex>
+			<vertex x="2375" y="500"></vertex>
+			<vertex x="2500" y="500"></vertex>
+			<vertex x="2500" y="625"></vertex>
+			<vertex x="2375" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="124">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1644" y="562"></vertex>
-			<vertex x="1774" y="562"></vertex>
-			<vertex x="1774" y="692"></vertex>
-			<vertex x="1644" y="692"></vertex>
+			<vertex x="2640" y="549"></vertex>
+			<vertex x="2765" y="549"></vertex>
+			<vertex x="2765" y="674"></vertex>
+			<vertex x="2640" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1560" y="520"></vertex>
-			<vertex x="1690" y="520"></vertex>
-			<vertex x="1690" y="650"></vertex>
-			<vertex x="1560" y="650"></vertex>
+			<vertex x="2500" y="500"></vertex>
+			<vertex x="2625" y="500"></vertex>
+			<vertex x="2625" y="625"></vertex>
+			<vertex x="2500" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="125">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1781" y="562"></vertex>
-			<vertex x="1911" y="562"></vertex>
-			<vertex x="1911" y="692"></vertex>
-			<vertex x="1781" y="692"></vertex>
+			<vertex x="2772" y="549"></vertex>
+			<vertex x="2897" y="549"></vertex>
+			<vertex x="2897" y="674"></vertex>
+			<vertex x="2772" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1690" y="520"></vertex>
-			<vertex x="1820" y="520"></vertex>
-			<vertex x="1820" y="650"></vertex>
-			<vertex x="1690" y="650"></vertex>
+			<vertex x="2625" y="500"></vertex>
+			<vertex x="2750" y="500"></vertex>
+			<vertex x="2750" y="625"></vertex>
+			<vertex x="2625" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="126">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1918" y="562"></vertex>
-			<vertex x="2048" y="562"></vertex>
-			<vertex x="2048" y="692"></vertex>
-			<vertex x="1918" y="692"></vertex>
+			<vertex x="2904" y="549"></vertex>
+			<vertex x="3029" y="549"></vertex>
+			<vertex x="3029" y="674"></vertex>
+			<vertex x="2904" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1820" y="520"></vertex>
-			<vertex x="1950" y="520"></vertex>
-			<vertex x="1950" y="650"></vertex>
-			<vertex x="1820" y="650"></vertex>
+			<vertex x="2750" y="500"></vertex>
+			<vertex x="2875" y="500"></vertex>
+			<vertex x="2875" y="625"></vertex>
+			<vertex x="2750" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="127">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2055" y="562"></vertex>
-			<vertex x="2185" y="562"></vertex>
-			<vertex x="2185" y="692"></vertex>
-			<vertex x="2055" y="692"></vertex>
+			<vertex x="3036" y="549"></vertex>
+			<vertex x="3161" y="549"></vertex>
+			<vertex x="3161" y="674"></vertex>
+			<vertex x="3036" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1950" y="520"></vertex>
-			<vertex x="2080" y="520"></vertex>
-			<vertex x="2080" y="650"></vertex>
-			<vertex x="1950" y="650"></vertex>
+			<vertex x="2875" y="500"></vertex>
+			<vertex x="3000" y="500"></vertex>
+			<vertex x="3000" y="625"></vertex>
+			<vertex x="2875" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="128">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2192" y="562"></vertex>
-			<vertex x="2322" y="562"></vertex>
-			<vertex x="2322" y="692"></vertex>
-			<vertex x="2192" y="692"></vertex>
+			<vertex x="3168" y="549"></vertex>
+			<vertex x="3293" y="549"></vertex>
+			<vertex x="3293" y="674"></vertex>
+			<vertex x="3168" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2080" y="520"></vertex>
-			<vertex x="2210" y="520"></vertex>
-			<vertex x="2210" y="650"></vertex>
-			<vertex x="2080" y="650"></vertex>
+			<vertex x="3000" y="500"></vertex>
+			<vertex x="3125" y="500"></vertex>
+			<vertex x="3125" y="625"></vertex>
+			<vertex x="3000" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="129">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2329" y="562"></vertex>
-			<vertex x="2459" y="562"></vertex>
-			<vertex x="2459" y="692"></vertex>
-			<vertex x="2329" y="692"></vertex>
+			<vertex x="3300" y="549"></vertex>
+			<vertex x="3425" y="549"></vertex>
+			<vertex x="3425" y="674"></vertex>
+			<vertex x="3300" y="674"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2210" y="520"></vertex>
-			<vertex x="2340" y="520"></vertex>
-			<vertex x="2340" y="650"></vertex>
-			<vertex x="2210" y="650"></vertex>
+			<vertex x="3125" y="500"></vertex>
+			<vertex x="3250" y="500"></vertex>
+			<vertex x="3250" y="625"></vertex>
+			<vertex x="3125" y="625"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="130">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2466" y="562"></vertex>
-			<vertex x="2596" y="562"></vertex>
-			<vertex x="2596" y="692"></vertex>
-			<vertex x="2466" y="692"></vertex>
+			<vertex x="0" y="696"></vertex>
+			<vertex x="125" y="696"></vertex>
+			<vertex x="125" y="821"></vertex>
+			<vertex x="0" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2340" y="520"></vertex>
-			<vertex x="2470" y="520"></vertex>
-			<vertex x="2470" y="650"></vertex>
-			<vertex x="2340" y="650"></vertex>
+			<vertex x="0" y="625"></vertex>
+			<vertex x="125" y="625"></vertex>
+			<vertex x="125" y="750"></vertex>
+			<vertex x="0" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="131">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2603" y="562"></vertex>
-			<vertex x="2733" y="562"></vertex>
-			<vertex x="2733" y="692"></vertex>
-			<vertex x="2603" y="692"></vertex>
+			<vertex x="132" y="696"></vertex>
+			<vertex x="257" y="696"></vertex>
+			<vertex x="257" y="821"></vertex>
+			<vertex x="132" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2470" y="520"></vertex>
-			<vertex x="2600" y="520"></vertex>
-			<vertex x="2600" y="650"></vertex>
-			<vertex x="2470" y="650"></vertex>
+			<vertex x="125" y="625"></vertex>
+			<vertex x="250" y="625"></vertex>
+			<vertex x="250" y="750"></vertex>
+			<vertex x="125" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="132">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2740" y="562"></vertex>
-			<vertex x="2870" y="562"></vertex>
-			<vertex x="2870" y="692"></vertex>
-			<vertex x="2740" y="692"></vertex>
+			<vertex x="264" y="696"></vertex>
+			<vertex x="389" y="696"></vertex>
+			<vertex x="389" y="821"></vertex>
+			<vertex x="264" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2600" y="520"></vertex>
-			<vertex x="2730" y="520"></vertex>
-			<vertex x="2730" y="650"></vertex>
-			<vertex x="2600" y="650"></vertex>
+			<vertex x="250" y="625"></vertex>
+			<vertex x="375" y="625"></vertex>
+			<vertex x="375" y="750"></vertex>
+			<vertex x="250" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="133">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2877" y="562"></vertex>
-			<vertex x="3007" y="562"></vertex>
-			<vertex x="3007" y="692"></vertex>
-			<vertex x="2877" y="692"></vertex>
+			<vertex x="396" y="696"></vertex>
+			<vertex x="521" y="696"></vertex>
+			<vertex x="521" y="821"></vertex>
+			<vertex x="396" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2730" y="520"></vertex>
-			<vertex x="2860" y="520"></vertex>
-			<vertex x="2860" y="650"></vertex>
-			<vertex x="2730" y="650"></vertex>
+			<vertex x="375" y="625"></vertex>
+			<vertex x="500" y="625"></vertex>
+			<vertex x="500" y="750"></vertex>
+			<vertex x="375" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="134">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3014" y="562"></vertex>
-			<vertex x="3144" y="562"></vertex>
-			<vertex x="3144" y="692"></vertex>
-			<vertex x="3014" y="692"></vertex>
+			<vertex x="528" y="696"></vertex>
+			<vertex x="653" y="696"></vertex>
+			<vertex x="653" y="821"></vertex>
+			<vertex x="528" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2860" y="520"></vertex>
-			<vertex x="2990" y="520"></vertex>
-			<vertex x="2990" y="650"></vertex>
-			<vertex x="2860" y="650"></vertex>
+			<vertex x="500" y="625"></vertex>
+			<vertex x="625" y="625"></vertex>
+			<vertex x="625" y="750"></vertex>
+			<vertex x="500" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="135">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3151" y="562"></vertex>
-			<vertex x="3281" y="562"></vertex>
-			<vertex x="3281" y="692"></vertex>
-			<vertex x="3151" y="692"></vertex>
+			<vertex x="660" y="696"></vertex>
+			<vertex x="785" y="696"></vertex>
+			<vertex x="785" y="821"></vertex>
+			<vertex x="660" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="2990" y="520"></vertex>
-			<vertex x="3120" y="520"></vertex>
-			<vertex x="3120" y="650"></vertex>
-			<vertex x="2990" y="650"></vertex>
+			<vertex x="625" y="625"></vertex>
+			<vertex x="750" y="625"></vertex>
+			<vertex x="750" y="750"></vertex>
+			<vertex x="625" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="136">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3288" y="562"></vertex>
-			<vertex x="3418" y="562"></vertex>
-			<vertex x="3418" y="692"></vertex>
-			<vertex x="3288" y="692"></vertex>
+			<vertex x="792" y="696"></vertex>
+			<vertex x="917" y="696"></vertex>
+			<vertex x="917" y="821"></vertex>
+			<vertex x="792" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3120" y="520"></vertex>
-			<vertex x="3250" y="520"></vertex>
-			<vertex x="3250" y="650"></vertex>
-			<vertex x="3120" y="650"></vertex>
+			<vertex x="750" y="625"></vertex>
+			<vertex x="875" y="625"></vertex>
+			<vertex x="875" y="750"></vertex>
+			<vertex x="750" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="137">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3425" y="562"></vertex>
-			<vertex x="3555" y="562"></vertex>
-			<vertex x="3555" y="692"></vertex>
-			<vertex x="3425" y="692"></vertex>
+			<vertex x="924" y="696"></vertex>
+			<vertex x="1049" y="696"></vertex>
+			<vertex x="1049" y="821"></vertex>
+			<vertex x="924" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3250" y="520"></vertex>
-			<vertex x="3380" y="520"></vertex>
-			<vertex x="3380" y="650"></vertex>
-			<vertex x="3250" y="650"></vertex>
+			<vertex x="875" y="625"></vertex>
+			<vertex x="1000" y="625"></vertex>
+			<vertex x="1000" y="750"></vertex>
+			<vertex x="875" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="138">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3562" y="562"></vertex>
-			<vertex x="3692" y="562"></vertex>
-			<vertex x="3692" y="692"></vertex>
-			<vertex x="3562" y="692"></vertex>
+			<vertex x="1056" y="696"></vertex>
+			<vertex x="1181" y="696"></vertex>
+			<vertex x="1181" y="821"></vertex>
+			<vertex x="1056" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3380" y="520"></vertex>
-			<vertex x="3510" y="520"></vertex>
-			<vertex x="3510" y="650"></vertex>
-			<vertex x="3380" y="650"></vertex>
+			<vertex x="1000" y="625"></vertex>
+			<vertex x="1125" y="625"></vertex>
+			<vertex x="1125" y="750"></vertex>
+			<vertex x="1000" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="139">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="3699" y="562"></vertex>
-			<vertex x="3829" y="562"></vertex>
-			<vertex x="3829" y="692"></vertex>
-			<vertex x="3699" y="692"></vertex>
+			<vertex x="1188" y="696"></vertex>
+			<vertex x="1313" y="696"></vertex>
+			<vertex x="1313" y="821"></vertex>
+			<vertex x="1188" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="3510" y="520"></vertex>
-			<vertex x="3640" y="520"></vertex>
-			<vertex x="3640" y="650"></vertex>
-			<vertex x="3510" y="650"></vertex>
+			<vertex x="1125" y="625"></vertex>
+			<vertex x="1250" y="625"></vertex>
+			<vertex x="1250" y="750"></vertex>
+			<vertex x="1125" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="140">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="0" y="699"></vertex>
-			<vertex x="130" y="699"></vertex>
-			<vertex x="130" y="829"></vertex>
-			<vertex x="0" y="829"></vertex>
+			<vertex x="1320" y="696"></vertex>
+			<vertex x="1445" y="696"></vertex>
+			<vertex x="1445" y="821"></vertex>
+			<vertex x="1320" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="0" y="650"></vertex>
-			<vertex x="130" y="650"></vertex>
-			<vertex x="130" y="780"></vertex>
-			<vertex x="0" y="780"></vertex>
+			<vertex x="1250" y="625"></vertex>
+			<vertex x="1375" y="625"></vertex>
+			<vertex x="1375" y="750"></vertex>
+			<vertex x="1250" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="141">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="137" y="699"></vertex>
-			<vertex x="267" y="699"></vertex>
-			<vertex x="267" y="829"></vertex>
-			<vertex x="137" y="829"></vertex>
+			<vertex x="1452" y="696"></vertex>
+			<vertex x="1577" y="696"></vertex>
+			<vertex x="1577" y="821"></vertex>
+			<vertex x="1452" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="130" y="650"></vertex>
-			<vertex x="260" y="650"></vertex>
-			<vertex x="260" y="780"></vertex>
-			<vertex x="130" y="780"></vertex>
+			<vertex x="1375" y="625"></vertex>
+			<vertex x="1500" y="625"></vertex>
+			<vertex x="1500" y="750"></vertex>
+			<vertex x="1375" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="142">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="274" y="699"></vertex>
-			<vertex x="404" y="699"></vertex>
-			<vertex x="404" y="829"></vertex>
-			<vertex x="274" y="829"></vertex>
+			<vertex x="1584" y="696"></vertex>
+			<vertex x="1709" y="696"></vertex>
+			<vertex x="1709" y="821"></vertex>
+			<vertex x="1584" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="260" y="650"></vertex>
-			<vertex x="390" y="650"></vertex>
-			<vertex x="390" y="780"></vertex>
-			<vertex x="260" y="780"></vertex>
+			<vertex x="1500" y="625"></vertex>
+			<vertex x="1625" y="625"></vertex>
+			<vertex x="1625" y="750"></vertex>
+			<vertex x="1500" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="143">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="411" y="699"></vertex>
-			<vertex x="541" y="699"></vertex>
-			<vertex x="541" y="829"></vertex>
-			<vertex x="411" y="829"></vertex>
+			<vertex x="1716" y="696"></vertex>
+			<vertex x="1841" y="696"></vertex>
+			<vertex x="1841" y="821"></vertex>
+			<vertex x="1716" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="390" y="650"></vertex>
-			<vertex x="520" y="650"></vertex>
-			<vertex x="520" y="780"></vertex>
-			<vertex x="390" y="780"></vertex>
+			<vertex x="1625" y="625"></vertex>
+			<vertex x="1750" y="625"></vertex>
+			<vertex x="1750" y="750"></vertex>
+			<vertex x="1625" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="144">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="548" y="699"></vertex>
-			<vertex x="678" y="699"></vertex>
-			<vertex x="678" y="829"></vertex>
-			<vertex x="548" y="829"></vertex>
+			<vertex x="1848" y="696"></vertex>
+			<vertex x="1973" y="696"></vertex>
+			<vertex x="1973" y="821"></vertex>
+			<vertex x="1848" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="520" y="650"></vertex>
-			<vertex x="650" y="650"></vertex>
-			<vertex x="650" y="780"></vertex>
-			<vertex x="520" y="780"></vertex>
+			<vertex x="1750" y="625"></vertex>
+			<vertex x="1875" y="625"></vertex>
+			<vertex x="1875" y="750"></vertex>
+			<vertex x="1750" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="145">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="685" y="699"></vertex>
-			<vertex x="815" y="699"></vertex>
-			<vertex x="815" y="829"></vertex>
-			<vertex x="685" y="829"></vertex>
+			<vertex x="1980" y="696"></vertex>
+			<vertex x="2105" y="696"></vertex>
+			<vertex x="2105" y="821"></vertex>
+			<vertex x="1980" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="650" y="650"></vertex>
-			<vertex x="780" y="650"></vertex>
-			<vertex x="780" y="780"></vertex>
-			<vertex x="650" y="780"></vertex>
+			<vertex x="1875" y="625"></vertex>
+			<vertex x="2000" y="625"></vertex>
+			<vertex x="2000" y="750"></vertex>
+			<vertex x="1875" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="146">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="822" y="699"></vertex>
-			<vertex x="952" y="699"></vertex>
-			<vertex x="952" y="829"></vertex>
-			<vertex x="822" y="829"></vertex>
+			<vertex x="2112" y="696"></vertex>
+			<vertex x="2237" y="696"></vertex>
+			<vertex x="2237" y="821"></vertex>
+			<vertex x="2112" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="780" y="650"></vertex>
-			<vertex x="910" y="650"></vertex>
-			<vertex x="910" y="780"></vertex>
-			<vertex x="780" y="780"></vertex>
+			<vertex x="2000" y="625"></vertex>
+			<vertex x="2125" y="625"></vertex>
+			<vertex x="2125" y="750"></vertex>
+			<vertex x="2000" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="147">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="959" y="699"></vertex>
-			<vertex x="1089" y="699"></vertex>
-			<vertex x="1089" y="829"></vertex>
-			<vertex x="959" y="829"></vertex>
+			<vertex x="2244" y="696"></vertex>
+			<vertex x="2369" y="696"></vertex>
+			<vertex x="2369" y="821"></vertex>
+			<vertex x="2244" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="910" y="650"></vertex>
-			<vertex x="1040" y="650"></vertex>
-			<vertex x="1040" y="780"></vertex>
-			<vertex x="910" y="780"></vertex>
+			<vertex x="2125" y="625"></vertex>
+			<vertex x="2250" y="625"></vertex>
+			<vertex x="2250" y="750"></vertex>
+			<vertex x="2125" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="148">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1096" y="699"></vertex>
-			<vertex x="1226" y="699"></vertex>
-			<vertex x="1226" y="829"></vertex>
-			<vertex x="1096" y="829"></vertex>
+			<vertex x="2376" y="696"></vertex>
+			<vertex x="2501" y="696"></vertex>
+			<vertex x="2501" y="821"></vertex>
+			<vertex x="2376" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1040" y="650"></vertex>
-			<vertex x="1170" y="650"></vertex>
-			<vertex x="1170" y="780"></vertex>
-			<vertex x="1040" y="780"></vertex>
+			<vertex x="2250" y="625"></vertex>
+			<vertex x="2375" y="625"></vertex>
+			<vertex x="2375" y="750"></vertex>
+			<vertex x="2250" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="149">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1233" y="699"></vertex>
-			<vertex x="1363" y="699"></vertex>
-			<vertex x="1363" y="829"></vertex>
-			<vertex x="1233" y="829"></vertex>
+			<vertex x="2508" y="696"></vertex>
+			<vertex x="2633" y="696"></vertex>
+			<vertex x="2633" y="821"></vertex>
+			<vertex x="2508" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1170" y="650"></vertex>
-			<vertex x="1300" y="650"></vertex>
-			<vertex x="1300" y="780"></vertex>
-			<vertex x="1170" y="780"></vertex>
+			<vertex x="2375" y="625"></vertex>
+			<vertex x="2500" y="625"></vertex>
+			<vertex x="2500" y="750"></vertex>
+			<vertex x="2375" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="150">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1370" y="699"></vertex>
-			<vertex x="1500" y="699"></vertex>
-			<vertex x="1500" y="829"></vertex>
-			<vertex x="1370" y="829"></vertex>
+			<vertex x="2640" y="696"></vertex>
+			<vertex x="2765" y="696"></vertex>
+			<vertex x="2765" y="821"></vertex>
+			<vertex x="2640" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1300" y="650"></vertex>
-			<vertex x="1430" y="650"></vertex>
-			<vertex x="1430" y="780"></vertex>
-			<vertex x="1300" y="780"></vertex>
+			<vertex x="2500" y="625"></vertex>
+			<vertex x="2625" y="625"></vertex>
+			<vertex x="2625" y="750"></vertex>
+			<vertex x="2500" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="151">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1507" y="699"></vertex>
-			<vertex x="1637" y="699"></vertex>
-			<vertex x="1637" y="829"></vertex>
-			<vertex x="1507" y="829"></vertex>
+			<vertex x="2772" y="696"></vertex>
+			<vertex x="2897" y="696"></vertex>
+			<vertex x="2897" y="821"></vertex>
+			<vertex x="2772" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1430" y="650"></vertex>
-			<vertex x="1560" y="650"></vertex>
-			<vertex x="1560" y="780"></vertex>
-			<vertex x="1430" y="780"></vertex>
+			<vertex x="2625" y="625"></vertex>
+			<vertex x="2750" y="625"></vertex>
+			<vertex x="2750" y="750"></vertex>
+			<vertex x="2625" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="152">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1644" y="699"></vertex>
-			<vertex x="1774" y="699"></vertex>
-			<vertex x="1774" y="829"></vertex>
-			<vertex x="1644" y="829"></vertex>
+			<vertex x="2904" y="696"></vertex>
+			<vertex x="3029" y="696"></vertex>
+			<vertex x="3029" y="821"></vertex>
+			<vertex x="2904" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1560" y="650"></vertex>
-			<vertex x="1690" y="650"></vertex>
-			<vertex x="1690" y="780"></vertex>
-			<vertex x="1560" y="780"></vertex>
+			<vertex x="2750" y="625"></vertex>
+			<vertex x="2875" y="625"></vertex>
+			<vertex x="2875" y="750"></vertex>
+			<vertex x="2750" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="153">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1781" y="699"></vertex>
-			<vertex x="1911" y="699"></vertex>
-			<vertex x="1911" y="829"></vertex>
-			<vertex x="1781" y="829"></vertex>
+			<vertex x="3036" y="696"></vertex>
+			<vertex x="3161" y="696"></vertex>
+			<vertex x="3161" y="821"></vertex>
+			<vertex x="3036" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1690" y="650"></vertex>
-			<vertex x="1820" y="650"></vertex>
-			<vertex x="1820" y="780"></vertex>
-			<vertex x="1690" y="780"></vertex>
+			<vertex x="2875" y="625"></vertex>
+			<vertex x="3000" y="625"></vertex>
+			<vertex x="3000" y="750"></vertex>
+			<vertex x="2875" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="154">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="1918" y="699"></vertex>
-			<vertex x="2048" y="699"></vertex>
-			<vertex x="2048" y="829"></vertex>
-			<vertex x="1918" y="829"></vertex>
+			<vertex x="3168" y="696"></vertex>
+			<vertex x="3293" y="696"></vertex>
+			<vertex x="3293" y="821"></vertex>
+			<vertex x="3168" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1820" y="650"></vertex>
-			<vertex x="1950" y="650"></vertex>
-			<vertex x="1950" y="780"></vertex>
-			<vertex x="1820" y="780"></vertex>
+			<vertex x="3000" y="625"></vertex>
+			<vertex x="3125" y="625"></vertex>
+			<vertex x="3125" y="750"></vertex>
+			<vertex x="3000" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 	<shape id="155">
 		<setting key="type">quad</setting>
 		<outputVertices>
-			<vertex x="2055" y="699"></vertex>
-			<vertex x="2185" y="699"></vertex>
-			<vertex x="2185" y="829"></vertex>
-			<vertex x="2055" y="829"></vertex>
+			<vertex x="3300" y="696"></vertex>
+			<vertex x="3425" y="696"></vertex>
+			<vertex x="3425" y="821"></vertex>
+			<vertex x="3300" y="821"></vertex>
 		</outputVertices>
 		<inputPolygon>
-			<vertex x="1950" y="650"></vertex>
-			<vertex x="2080" y="650"></vertex>
-			<vertex x="2080" y="780"></vertex>
-			<vertex x="1950" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="156">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="2192" y="699"></vertex>
-			<vertex x="2322" y="699"></vertex>
-			<vertex x="2322" y="829"></vertex>
-			<vertex x="2192" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2080" y="650"></vertex>
-			<vertex x="2210" y="650"></vertex>
-			<vertex x="2210" y="780"></vertex>
-			<vertex x="2080" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="157">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="2329" y="699"></vertex>
-			<vertex x="2459" y="699"></vertex>
-			<vertex x="2459" y="829"></vertex>
-			<vertex x="2329" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2210" y="650"></vertex>
-			<vertex x="2340" y="650"></vertex>
-			<vertex x="2340" y="780"></vertex>
-			<vertex x="2210" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="158">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="2466" y="699"></vertex>
-			<vertex x="2596" y="699"></vertex>
-			<vertex x="2596" y="829"></vertex>
-			<vertex x="2466" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2340" y="650"></vertex>
-			<vertex x="2470" y="650"></vertex>
-			<vertex x="2470" y="780"></vertex>
-			<vertex x="2340" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="159">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="2603" y="699"></vertex>
-			<vertex x="2733" y="699"></vertex>
-			<vertex x="2733" y="829"></vertex>
-			<vertex x="2603" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2470" y="650"></vertex>
-			<vertex x="2600" y="650"></vertex>
-			<vertex x="2600" y="780"></vertex>
-			<vertex x="2470" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="160">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="2740" y="699"></vertex>
-			<vertex x="2870" y="699"></vertex>
-			<vertex x="2870" y="829"></vertex>
-			<vertex x="2740" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2600" y="650"></vertex>
-			<vertex x="2730" y="650"></vertex>
-			<vertex x="2730" y="780"></vertex>
-			<vertex x="2600" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="161">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="2877" y="699"></vertex>
-			<vertex x="3007" y="699"></vertex>
-			<vertex x="3007" y="829"></vertex>
-			<vertex x="2877" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2730" y="650"></vertex>
-			<vertex x="2860" y="650"></vertex>
-			<vertex x="2860" y="780"></vertex>
-			<vertex x="2730" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="162">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="3014" y="699"></vertex>
-			<vertex x="3144" y="699"></vertex>
-			<vertex x="3144" y="829"></vertex>
-			<vertex x="3014" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2860" y="650"></vertex>
-			<vertex x="2990" y="650"></vertex>
-			<vertex x="2990" y="780"></vertex>
-			<vertex x="2860" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="163">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="3151" y="699"></vertex>
-			<vertex x="3281" y="699"></vertex>
-			<vertex x="3281" y="829"></vertex>
-			<vertex x="3151" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="2990" y="650"></vertex>
-			<vertex x="3120" y="650"></vertex>
-			<vertex x="3120" y="780"></vertex>
-			<vertex x="2990" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="164">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="3288" y="699"></vertex>
-			<vertex x="3418" y="699"></vertex>
-			<vertex x="3418" y="829"></vertex>
-			<vertex x="3288" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="3120" y="650"></vertex>
-			<vertex x="3250" y="650"></vertex>
-			<vertex x="3250" y="780"></vertex>
-			<vertex x="3120" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="165">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="3425" y="699"></vertex>
-			<vertex x="3555" y="699"></vertex>
-			<vertex x="3555" y="829"></vertex>
-			<vertex x="3425" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="3250" y="650"></vertex>
-			<vertex x="3380" y="650"></vertex>
-			<vertex x="3380" y="780"></vertex>
-			<vertex x="3250" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="166">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="3562" y="699"></vertex>
-			<vertex x="3692" y="699"></vertex>
-			<vertex x="3692" y="829"></vertex>
-			<vertex x="3562" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="3380" y="650"></vertex>
-			<vertex x="3510" y="650"></vertex>
-			<vertex x="3510" y="780"></vertex>
-			<vertex x="3380" y="780"></vertex>
-		</inputPolygon>
-	</shape>
-	<shape id="167">
-		<setting key="type">quad</setting>
-		<outputVertices>
-			<vertex x="3699" y="699"></vertex>
-			<vertex x="3829" y="699"></vertex>
-			<vertex x="3829" y="829"></vertex>
-			<vertex x="3699" y="829"></vertex>
-		</outputVertices>
-		<inputPolygon>
-			<vertex x="3510" y="650"></vertex>
-			<vertex x="3640" y="650"></vertex>
-			<vertex x="3640" y="780"></vertex>
-			<vertex x="3510" y="780"></vertex>
+			<vertex x="3125" y="625"></vertex>
+			<vertex x="3250" y="625"></vertex>
+			<vertex x="3250" y="750"></vertex>
+			<vertex x="3125" y="750"></vertex>
 		</inputPolygon>
 	</shape>
 </root>

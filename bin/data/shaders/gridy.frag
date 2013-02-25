@@ -1,4 +1,4 @@
-
+uniform float alpha;
 uniform vec2  BrickSize;
 uniform vec2  BrickPct;
 uniform float time;
@@ -59,6 +59,6 @@ void main()
 	float off = noise(position2.xyx + time);
 	vec4 c  = pattern(Distort(position2+off+offset.xy));
 
-	color.a = min(color.a, pow(c.a, 2.));
+	color.a = min(color.a, pow(c.a, 2.)) * alpha;
     gl_FragColor = color;
 }

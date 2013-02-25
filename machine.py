@@ -1,12 +1,13 @@
 #variables
-nameToWrite = "north.xml"
-panelsWide = 28 #28 #23
+nameToWrite = "shapes.xml"
+panelsWide = 26 #19 #with half panels #28 #23
 panelsHigh = 6
  #in pixels, must be recaclulated per resolution
-panelSize = 130
-panelPartial = 100
-panelGap =  7  
-panelSplit = panelGap*2
+panelSize = 125 #95 #130
+panelTex = 125
+panelGap =  7  #7
+panelSplit = 21 #panelGap *7
+panelSplitSmall = 15
 panelOffset = 0
 
 #shorthand xml tags
@@ -37,19 +38,23 @@ for i in range( panelsHigh ):
         toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap) + dE
         toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap) + dE
         toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap) + dE
-    else:
+    elif i < 5:
         toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap + panelSplit) + dE
         toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap + panelSplit) + dE
         toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap + panelSplit) + dE
         toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap + panelSplit) + dE
-
+    else:
+        toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap + panelSplit + panelSplitSmall) + dE
+        toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + i*panelGap + panelSplit + panelSplitSmall) + dE
+        toWrite += dS + str(j*panelSize + panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap + panelSplit + panelSplitSmall) + dE
+        toWrite += dS + str(j*panelSize + j*panelGap) +dM+ str(i*panelSize + panelSize + i*panelGap + panelSplit + panelSplitSmall) + dE
 
     toWrite += vE + pS
     #texture verts
-    toWrite += dS + str(j*panelSize) + dM + str(i*panelSize) + dE
-    toWrite += dS + str(j*panelSize + panelSize) + dM + str(i*panelSize) + dE
-    toWrite += dS + str(j*panelSize + panelSize) + dM + str(i*panelSize + panelSize) + dE
-    toWrite += dS + str(j*panelSize) + dM + str(i*panelSize + panelSize) + dE
+    toWrite += dS + str(j*panelTex) + dM + str(i*panelTex) + dE
+    toWrite += dS + str(j*panelTex + panelTex) + dM + str(i*panelTex) + dE
+    toWrite += dS + str(j*panelTex + panelTex) + dM + str(i*panelTex + panelTex) + dE
+    toWrite += dS + str(j*panelTex) + dM + str(i*panelTex + panelTex) + dE
 
     toWrite += pE + sE
     idCounter += 1

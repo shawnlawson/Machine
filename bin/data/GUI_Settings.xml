@@ -1,0 +1,23 @@
+<Widget>
+    <Kind>2</Kind>
+    <Name>background</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>11</Kind>
+    <Name>North</Name>
+    <XValue>1993.300537109</XValue>
+    <YValue>1312.758666992</YValue>
+</Widget>
+<Widget>
+    <Kind>11</Kind>
+    <Name>East</Name>
+    <XValue>0.000000000</XValue>
+    <YValue>270.000000000</YValue>
+</Widget>
+<Widget>
+    <Kind>11</Kind>
+    <Name>South</Name>
+    <XValue>1993.300537109</XValue>
+    <YValue>204.827590942</YValue>
+</Widget>
