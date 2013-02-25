@@ -13,15 +13,17 @@
 
 class Banner{
 public:
-    float targets[10];
-
     ofxAnimatableFloat alpha;
     ofShader waves;
 
+    float timeScaler;
 
     Banner( int width, int height );
     
     void loadShaders();
-    void update(int showState);
-    void draw(float time, int offsetX, int height);
+    void fadeOut();
+    void fadeIn();
+    void fadePartial(float newAlpha);
+    void update(float dt);
+    void draw(float time, int offsetX, int width, int height);
 };

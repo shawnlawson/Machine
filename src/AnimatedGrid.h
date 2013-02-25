@@ -13,14 +13,18 @@
 
 class AnimatedGrid{
 public:
-    ofxAnimatableFloat alpha, gWidth, gHeight;
+    ofxAnimatableFloat alpha;
     ofShader grid;
     
+    float timeScaler;
     
     AnimatedGrid( int width, int height );
     
     void loadShaders();
-    void update(int showState, float dt);
-    void draw(float time, int offsetX, int height);
+    void fadeOut();
+    void fadeIn();
+    void fadePartial(float newAlpha);
+    void update(float dt);
+    void draw(float time, int offsetX, int width, int height);
     
 };

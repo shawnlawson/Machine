@@ -11,20 +11,20 @@
 
 #include "face.h"
 
-#define NUM_PANELS 20 //72
 
 class faceController{
     
 public:
     vector <face> allFaces;
-    face* facesOnScreen[NUM_PANELS] = {NULL};
-    int faceToSwap = -1;
+    face* facesOnScreen[NUM_PANELS];
+    int faceToSwap;
 
 //--------------------------------------------------------------
     faceController(){}
     
 //--------------------------------------------------------------
     void loadFaces( string path){
+        faceToSwap = -1;
         ofDirectory dirImage, dirMesh;
         dirImage.allowExt("png");
         dirMesh.allowExt("txt");
@@ -44,7 +44,7 @@ public:
     }
     
 //--------------------------------------------------------------
-    void updateShowState( int showState ){
+    void updateShowState( int showState, float dt ){
         
         switch ( showState ) {
             //delete everything
@@ -115,6 +115,11 @@ public:
             default:
                 break;
         }
+        
+        for(int i=0; i<NUM_PANELS; i++){
+            facesOnScreen[i]->update(dt);
+        }
+        
     }
 
     
@@ -173,24 +178,20 @@ private:
     void addFaceAtPlace(int place, int faceToUse){
         
         float posY, posX;
-        int fPanel = 130.0; //change when we know
-        int hPanel = 130.0; //change when we know
         
-        if(place<36)    //top half
-            posY = 390.0f;
+        if(place<35)    //top half
+            posY = TILE_SIZE*3.0;
         else        //bottom half
-            posY = 650.0f;
+            posY = TILE_SIZE*5.0;
         
-        int tempX = place%36;
+        int tempX = place%35;
         
-        if( tempX < 13 ) // north wall
-            posX = hPanel+fPanel + tempX*fPanel*2;
-        else if( tempX < 18 ) //east wall left
-            posX = hPanel+fPanel + hPanel*2 + tempX*fPanel*2;
-        else if( tempX < 23)
-            posX = hPanel+fPanel + hPanel*2 + fPanel + tempX*fPanel*2;
-        else
-            posX = hPanel+fPanel + hPanel*2 + fPanel + hPanel*2 + tempX*fPanel*2;
+        if( tempX < 18 ) //east wall left
+            posX = TILE_SIZE + tempX*TILE_SIZE*2;
+        else if( tempX < 22) //east wall right
+            posX = TILE_SIZE + TILE_SIZE + tempX*TILE_SIZE*2;
+        else //south wall
+            posX = TILE_SIZE/2 +TILE_SIZE + TILE_SIZE + tempX*TILE_SIZE*2;
         
         facesOnScreen[place] = &allFaces[faceToUse];
         facesOnScreen[place]->setPosition(posX, posY, 0.0f);

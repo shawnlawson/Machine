@@ -6,7 +6,7 @@ void testApp::setup(){
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 	ofSetFrameRate(30);
 	ofSetVerticalSync(true);
-    ofSetCoordHandedness(OF_RIGHT_HANDED);
+ //   ofSetCoordHandedness(OF_RIGHT_HANDED);
    //   ofSetLogLevel(OF_LOG_VERBOSE);
     
     northMapping = new MachineMapping2D();
@@ -16,61 +16,45 @@ void testApp::setup(){
     eastMapping = new MachineMapping2D();
     eastMapping->init(SHORT_WALL, HEIGHT_WALL, "mapping/xml/east.xml");
     
-//    fController = faceController();
-//    fController.loadFaces("night1");
-//    fController.updateShowState(1);
-//    fController.updateShowState(3);
-
+    fController = faceController();
+    fController.loadFaces("night1");
+    fController.updateShowState(1, 0.0);
+    fController.updateShowState(3, 0.0);
 
     pController = PolygonController();
-    pController.update(4);
+    pController.update(RandomFadeIn, 0.0);
     
-    banner = new Banner(LONG_WALL, 260);
+    banner = new Banner(LONG_WALL, TILE_SIZE*2);
     banner->loadShaders();
 
     aGrid = new AnimatedGrid( 0, 0);
     aGrid->loadShaders();
     
-    myLoadSettings();
+    blackNorthWest = BlackScreen();
+    blackNorthEast = BlackScreen();
+    blackEast = BlackScreen();
+    blackSouthEast = BlackScreen();
+    blackSouthWest = BlackScreen();
     
-   receiver.setup(PORT);
-
-    blackScreen = BlackScreen();
-    
-    grid = MyGrid(400, 20);
-    grid.loadShader();
+    buildGUI();
     
     myZoom = false;
-        
+    bInit = false;
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+    if(!bInit){
 
-	while(receiver.hasWaitingMessages()){
-		ofxOscMessage m;
-		receiver.getNextMessage(&m);
-        
-		// check for mouse moved message
-		if(m.getAddress() == "/mouse/position"){
-			// both the arguments are int32's
-//			mouseX = m.getArgAsInt32(0);
-//			mouseY = m.getArgAsInt32(1);
-		}else if(m.getAddress() == "/mouse/button"){
-			//mouseButtonState = m.getArgAsString(0);
-		}
-		else{
-			cout << "message unknown " << m.getAddress() << endl;
-		}
-	}
+    }
 
     float dt  = ofGetLastFrameTime();
-    float time = ofGetElapsedTimef()*.1;
+    float time = ofGetElapsedTimef();
     
-//    pController.update(0);
-//    fController.updateShowState(8);
-//    banner->update(0);
-      aGrid->update(10, dt);
+//    pController.update(0, dt);
+    fController.updateShowState(SwapFaces, dt);
+    banner->update(dt);
+    aGrid->update(dt);
 
 
 
@@ -78,7 +62,7 @@ void testApp::update(){
     ofPushView();
     ofViewport(0, 0, LONG_WALL, ofGetHeight());
     ofSetupScreenOrtho(LONG_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
-    scene(0, time);
+    scene(0, LONG_WALL, time);
     ofPopView();
     northMapping->unbind();
     
@@ -87,7 +71,7 @@ void testApp::update(){
     ofViewport(0, 0, SHORT_WALL, ofGetHeight());
     ofSetupScreenOrtho(SHORT_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-LONG_WALL, 0);
-    scene(LONG_WALL, time);
+    scene(LONG_WALL, SHORT_WALL, time);
     ofPopView();
     eastMapping->unbind();
     
@@ -96,33 +80,27 @@ void testApp::update(){
     ofViewport(0, 0, LONG_WALL, ofGetHeight());
     ofSetupScreenOrtho(LONG_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-LONG_WALL-SHORT_WALL, 0);
-    scene(LONG_WALL+SHORT_WALL, time);
+    scene(LONG_WALL+SHORT_WALL, LONG_WALL, time);
     ofPopView();
     southMapping->unbind();
 }
 
-void testApp::scene(int leftSide, float time){
+void testApp::scene(int leftSide, int width, float time){
 //    ofDisableAlphaBlending();
-//    glLineWidth(1.5);
-//    grid.customDraw();
 
-//    ofEnableBlendMode(OF_BLENDMODE_ADD);
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
+    banner->draw(time, leftSide, width, 300);
+    aGrid->draw(time, leftSide, width, HEIGHT_WALL);
 //    glLineWidth(1.0);
-//    pController.draw();
+    pController.draw();
 
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-//    glEnable(GL_DEPTH_TEST);
-//    glPointSize(4);
-//    fController.draw();
-//    glDisable(GL_DEPTH_TEST);
-    
-    aGrid->draw(time, leftSide, 780);
-    ofEnableBlendMode(OF_BLENDMODE_ADD);
-banner->draw(time, leftSide, 260);
+    glEnable(GL_DEPTH_TEST);
+ //   glPointSize(4);
+    fController.draw();
+    glDisable(GL_DEPTH_TEST);
     
 
-    
-    
 }
 
 //--------------------------------------------------------------
@@ -133,25 +111,24 @@ void testApp::draw(){
     if (!myZoom)
         ofScale( .25, .25);
     else
-        ofScale(.9, .9);
+        ofScale(1.0,1.0);
 
     ofBackground(0, 0, 0);
         
         if(drawBackground){
             ofSetColor(128, 0, 0);
-            ofRect(0, 0, 1920, 1080);
+            ofRect(0, 0, DIM_WIDTH, DIM_HEIGHT);
             ofSetColor(0, 128, 0);
-            ofRect(1920, 0, 1920, 1080);
-
+            ofRect(DIM_WIDTH, 0, DIM_WIDTH, DIM_HEIGHT);
             ofSetColor(0, 0, 128);
-            ofRect(0, 1080, 1920, 1080);
-            ofSetColor(128, 128, 0);
-            ofRect(1920, 1080, 1920, 1080);
+            ofRect(DIM_WIDTH*2, 0, DIM_WIDTH, DIM_HEIGHT);
 
             ofSetColor(128, 0, 128);
-            ofRect(0, 2160, 1920, 1080);
+            ofRect(0, DIM_HEIGHT, DIM_WIDTH, DIM_HEIGHT);
             ofSetColor(0, 128, 128);
-            ofRect(1920, 2160, 1920, 1080);
+            ofRect(DIM_WIDTH, DIM_HEIGHT, DIM_WIDTH, DIM_HEIGHT);
+            ofSetColor(128, 128, 0);
+            ofRect(DIM_WIDTH*2, DIM_HEIGHT, DIM_WIDTH, DIM_HEIGHT);
         }
        ofDisableAlphaBlending();
     
@@ -172,12 +149,15 @@ void testApp::draw(){
     
       ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 
+    float dt = ofGetLastFrameTime();
+
+    blackNorthWest.draw(dt, 0, 0);
+    blackNorthEast.draw(dt, DIM_WIDTH, 0);
+    blackEast.draw(dt, DIM_WIDTH*2, 0);
+    blackSouthEast.draw(dt, DIM_WIDTH, DIM_HEIGHT);
+    blackSouthWest.draw(dt, DIM_WIDTH*2, DIM_HEIGHT);
     
     ofPopMatrix();
-    float deltaTime = ofGetLastFrameTime();
-    
- //   blackScreen.draw(deltaTime);
-
 
 }
 
@@ -194,59 +174,30 @@ void testApp::keyPressed(int key){
             ofSetFullscreen(fullscreen);
             break;
             
-        case 'w':
-            XML.setValue("mapping:north:x", northPos.x);
-            XML.setValue("mapping:north:y", northPos.y);
-            XML.setValue("mapping:east:x", eastPos.x);
-            XML.setValue("mapping:east:y", eastPos.y);
-            XML.setValue("mapping:south:x", southPos.x);
-            XML.setValue("mapping:south:y", southPos.y);
-            XML.setValue("background:draw", drawBackground);
-            XML.setValue("fullscreen", fullscreen);
-            XML.saveFile("settings.xml");
+        case 'g':
+            gui->toggleVisible();
+            gui2->toggleVisible();
+            gui3->toggleVisible();
+            break;
+            
+        case 's':
+            gui->saveSettings("GUI_Settings.xml");
+            gui2->saveSettings("GUI_Settings2.xml");
+            gui3->saveSettings("GUI_Settings3.xml");
             cout << "settings saved" << endl;
             break;
             
         case 'l':
-            myLoadSettings();
+            gui->loadSettings("GUI_Settings.xml");
+            gui2->loadSettings("GUI_Settings2.xml");
+            gui3->loadSettings("GUI_Settings3.xml");
+            cout << "settings loaded" << endl;
             break;
             
         case 'b':
             drawBackground = !drawBackground;
             break;
-            
-        case 'h':
-            blackScreen.fadeOut();
-            break;
-            
-        case 'z':
-            myMoveMapping = zero;
-            break;
-            
-        case 'n':
-            myMoveMapping = north;
-            break;
-            
-        case 'e':
-            myMoveMapping = east;
-            break;
-            
-        case 's':
-            myMoveMapping = south;
-            break;
-            
-        case 356: // arrow left
-			nudgeMappings( 0 );
-			break;
-		case 358: // arrow right
-			nudgeMappings( 1 );
-			break;
-		case 357: // arrow up
-			nudgeMappings( 2 );
-			break;
-		case 359: // arrow down
-			nudgeMappings( 3 );
-			break;     
+
         default:
             break;
             
@@ -278,57 +229,155 @@ void testApp::mouseReleased(int x, int y, int button){
 
 }
 
-void testApp::nudgeMappings( int direction ){
-    if(direction == 0){
-        if(north == myMoveMapping)
-            northPos.x -= 1.0;
-        else if(east == myMoveMapping)
-            eastPos.x -= 1.0;
-        else if (south == myMoveMapping)
-            southPos.x -= 1.0;
-        
-    }else if(direction == 1){
-        if(north == myMoveMapping)
-            northPos.x += 1.0;
-        else if(east == myMoveMapping)
-            eastPos.x += 1.0;
-        else if (south == myMoveMapping)
-            southPos.x += 1.0;
-        
-    }else if(direction == 2){
-        if(north == myMoveMapping)
-            northPos.y -= 1.0;
-        else if(east == myMoveMapping)
-            eastPos.y -= 1.0;
-        else if (south == myMoveMapping)
-            southPos.y -= 1.0;
-        
-    }else if(direction == 3){
-        if(north == myMoveMapping)
-            northPos.y += 1.0;
-        else if(east == myMoveMapping)
-            eastPos.y += 1.0;
-        else if (south == myMoveMapping)
-            southPos.y += 1.0;
+//--------------------------------------------------------------
+void testApp::buildGUI()
+{ gui = new ofxUICanvas();
+    gui->addLabel("The Machine");
+    gui->addSpacer();
+    gui->addFPS();
+    gui->addSpacer();
+    gui->addToggle("background", &drawBackground);
+    gui->addSpacer();
+    gui->add2DPad("North", ofPoint(DIM_WIDTH, DIM_WIDTH+DIM_WIDTH/4),
+                  ofPoint(DIM_HEIGHT, DIM_HEIGHT+DIM_HEIGHT/4)
+                  , &northPos);
+    ((ofxUI2DPad *) gui->getWidget("North"))->setIncrement(1.0);
+    gui->add2DPad("East", ofPoint(0, DIM_WIDTH/4),
+                  ofPoint(0, DIM_HEIGHT/4), &eastPos);
+    ((ofxUI2DPad *) gui->getWidget("East"))->setIncrement(1.0);
+    gui->add2DPad("South", ofPoint(DIM_WIDTH, DIM_WIDTH+DIM_WIDTH/4),
+                  ofPoint(0, DIM_HEIGHT/4), &southPos);
+    ((ofxUI2DPad *) gui->getWidget("South"))->setIncrement(1.0);
+    gui->autoSizeToFitWidgets();
+    ofAddListener(gui->newGUIEvent,this,&testApp::guiEvent);
+    //    gui->setPosition(10, ofGetHeight()-700);
+    
+    
+    gui2 = new ofxUICanvas(OFX_UI_GLOBAL_CANVAS_WIDTH, 0,
+                           OFX_UI_GLOBAL_CANVAS_WIDTH, 0);
+    gui2->addLabel("Show Control");
+    gui2->addSpacer();
+    
+    gui2->autoSizeToFitWidgets();
+    ofAddListener(gui2->newGUIEvent, this, &testApp::guiEvent);
+    
+    gui3 = new ofxUICanvas(OFX_UI_GLOBAL_CANVAS_WIDTH*2, 0,
+                           OFX_UI_GLOBAL_CANVAS_WIDTH, 0);
+    gui3->addLabel("Blackout");
+    vector<string> names;
+    names.push_back("offNW");     names.push_back("partialNW");     names.push_back("onNW");
+    gui3->addRadio("North_West", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    
+    names.clear();
+    names.push_back("offNE");     names.push_back("partialNE");     names.push_back("onNE");
+    gui3->addRadio("North_East", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    names.clear();
+    names.push_back("offE");     names.push_back("partialE");     names.push_back("onE");
+    gui3->addRadio("East", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    names.clear();
+    names.push_back("offSE");     names.push_back("partialSE");     names.push_back("onSE");
+    gui3->addRadio("South_East", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    names.clear();
+    names.push_back("offSW");     names.push_back("partialSW");     names.push_back("onSW");
+    gui3->addRadio("South_West", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    gui3->addSpacer(0, 30);
+    gui3->addLabel("Banner");
+    gui3->addSlider("Banner_Speed", .01, 1.0, &banner->timeScaler);
+    names.clear();
+    names.push_back("offB");     names.push_back("partialB");     names.push_back("onB");
+    gui3->addRadio("Banner_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    gui3->addSpacer(0, 30);
+    gui3->addLabel("Grid");
+    gui3->addSlider("Grid_Speed", .01, 1.0, &aGrid->timeScaler);
+    names.clear();
+    names.push_back("offG");     names.push_back("partialG");     names.push_back("onG");
+    gui3->addRadio("Grid_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
+        gui3->addSpacer(0, 30);
+    gui3->autoSizeToFitWidgets();
+    ofAddListener(gui3->newGUIEvent, this, &testApp::guiEvent);
+    
+    
+    gui->loadSettings("GUI_Settings.xml");
+    gui2->loadSettings("GUI_Settings2.xml");
+    gui3->loadSettings("GUI_Settings3.xml");
+    
 
+    
+}
+//--------------------------------------------------------------
+void testApp::guiEvent(ofxUIEventArgs &e)
+{
+	string name = e.widget->getName();
+//    	cout << "got event from: " << name << endl;
+    if( name == "offNW" ){
+        blackNorthWest.fadeOut();
+    }
+    else if( name == "partialNW" ){
+        blackNorthWest.fadePartial(128.0);
+    }
+    else if( name == "onNW" ){
+        blackNorthWest.fadeIn();
+    }
+    else if( name == "offNE" ){
+        blackNorthEast.fadeOut();
+    }
+    else if( name == "partialNE" ){
+        blackNorthEast.fadePartial(128.0);
+    }
+    else if( name == "onNE" ){
+        blackNorthEast.fadeIn();
+    }
+    else if( name == "offE" ){
+        blackEast.fadeOut();
+    }
+    else if( name == "partialE" ){
+        blackEast.fadePartial(128.0);
+    }
+    else if( name == "onE" ){
+        blackEast.fadeIn();
+    }
+    else if( name == "offSW" ){
+        blackSouthWest.fadeOut();
+    }
+    else if( name == "partialSW" ){
+        blackSouthWest.fadePartial(128.0);
+    }
+    else if( name == "onSW" ){
+        blackSouthWest.fadeIn();
+    }
+    else if( name == "offSE" ){
+        blackSouthEast.fadeOut();
+    }
+    else if( name == "partialSE" ){
+        blackSouthEast.fadePartial(128.0);
+    }
+    else if( name == "onSE" ){
+        blackSouthEast.fadeIn();
+    }
+    else if( name == "offB" ){
+        banner->fadeOut();
+    }
+    else if( name == "partialB" ){
+        banner->fadePartial(0.5);
+    }
+    else if( name == "onB" ){
+        banner->fadeIn();
+    }
+    else if( name == "offG" ){
+        aGrid->fadeOut();
+    }
+    else if( name == "partialG" ){
+        aGrid->fadePartial(0.5);
+    }
+    else if( name == "onG" ){
+        aGrid->fadeIn();
     }
 }
-
-void testApp::myLoadSettings(){
-    if( XML.loadFile("settings.xml") )
-		cout << "settings.xml loaded!" << endl;
-	else
-        cout <<  "unable to load mySettings.xml ... assigned defaults" << endl;
-    
-    northPos.x = XML.getValue("mapping:north:x", 0);
-    northPos.y = XML.getValue("mapping:north:y", 0);
-    eastPos.x = XML.getValue("mapping:east:x", 0);
-    eastPos.y = XML.getValue("mapping:east:y", 1080);
-    southPos.x = XML.getValue("mapping:south:x", 0);
-    southPos.y = XML.getValue("mapping:south:y", 2160);
-    drawBackground = XML.getValue("background:draw", 1);
-    fullscreen = XML.getValue("fullscreen", 0);
-    
-    myMoveMapping = zero;
-    
+//--------------------------------------------------------------
+void testApp::exit()
+{
+    gui->saveSettings("GUI_Settings.xml");
+    gui2->saveSettings("GUI_Settings2.xml");
+    gui3->saveSettings("GUI_Settings3.xml");
+    delete gui;
 }

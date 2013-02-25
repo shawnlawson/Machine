@@ -1,36 +1,23 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxOsc.h"
 #include "ofxXmlSettings.h"
+#include "ofxUI.h"
 
+#include "MyConstants.h"
 #include "BlackScreen.h"
-#include "MyGrid.h"
 #include "PolygonController.h"
 #include "faceController.h"
 #include "Banner.h"
 #include "AnimatedGrid.h"
 #include "MachineMapping2D.h"
 
-// listen on port 12345
-#define PORT 12345
-#define LONG_WALL 3640
-#define SHORT_WALL 2990
-#define HEIGHT_WALL 780
-
-
-enum moveMapping{
-    zero,
-    north,
-    east,
-    south
-};
-
 class testApp : public ofBaseApp{
 	public:
 		void setup();
 		void update();
 		void draw();
+        void exit();
 
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -40,14 +27,11 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 
 
-    void scene( int leftSide, float time );
-    void nudgeMappings( int direction );
-    void myLoadSettings();
-    
-    ofxOscReceiver receiver;
+    void scene( int leftSide, int width, float time );
+    void buildGUI();
 
-    BlackScreen     blackScreen;
-    MyGrid          grid;
+
+    BlackScreen     blackNorthWest, blackNorthEast, blackEast, blackSouthEast, blackSouthWest;
     PolygonController     pController;
     
     MachineMapping2D *northMapping, *eastMapping, *southMapping;
@@ -55,15 +39,17 @@ class testApp : public ofBaseApp{
     
     Banner *banner;
     AnimatedGrid *aGrid;
-    
-    moveMapping myMoveMapping;
 
-    ofVec2f northPos, eastPos, southPos;
+    ofPoint northPos, eastPos, southPos;
     bool    drawBackground, fullscreen;
     
+    
+    ofxUICanvas *gui, *gui2, *gui3;
+	void guiEvent(ofxUIEventArgs &e);
+
     ofxXmlSettings XML;
     
-    bool    myZoom;
+    bool    myZoom, bInit;
     
     
    

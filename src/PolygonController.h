@@ -12,7 +12,6 @@
 
 #include "PolygonEDF0.h"
 
-#define NUM_FRAMES 60
 
 class myNode:public ofNode
 {
@@ -28,16 +27,18 @@ public:
     PolygonEDF0     *edf0;
     ofFbo           polyFbo[NUM_FRAMES];
     vector<myNode>  nodes;
-    int whichFrame = 0;
+    int whichFrame;
     
     PolygonController(){
+        whichFrame = 0;
+        
         for(int i=0;i<6;i++){
             float x = cos(ofDegToRad(i*60.0f))*295.0f; //radius of hexagon
             float y = sin(ofDegToRad(i*60.0f))*295.0f; //radius of hexagon
             startingNodes[i] = ofPoint(x,y);
         }
         
-         edf0 = new PolygonEDF0(0,0,4); // , , recursive maxLevel
+         edf0 = new PolygonEDF0(0,0,3); // , , recursive maxLevel
         
         for (int i =0; i<NUM_FRAMES; i++) {
             polyFbo[i].allocate(520, 520, GL_RGBA, 4);
@@ -53,11 +54,11 @@ public:
         }
 
         for (int i=0; i<NUM_FRAMES-1; i++) {
-            update(0);
+            update(0, 0.0);
         }
     }
     
-    void update(int showState){
+    void update(int showState, float dt){
         edf0->update(startingNodes, ofGetFrameNum()*0.01f);
         
         polyFbo[whichFrame].begin();
@@ -79,8 +80,8 @@ public:
         whichFrame %= NUM_FRAMES;
 
         for (int i=0; i<nodes.size(); i++) {
-            nodes[i].rotate(.1, 0, 0, 1);
-            nodes[i].alpha.update(ofGetLastFrameTime());
+     //       nodes[i].rotate(.1, 0, 0, 1);
+            nodes[i].alpha.update(dt);
             nodes[i].frame += 1;
             nodes[i].frame %= NUM_FRAMES;
         }

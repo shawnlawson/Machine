@@ -17,9 +17,10 @@ class face : public ofNode, ofVboMesh{
 public:
     ofImage image;
     ofxAnimatableFloat alpha;
-    bool inUse = false;
+    bool inUse;
     
     face(){
+        inUse = false;
         alpha.reset(0.0);
         alpha.setDuration(5.0);
     }
@@ -116,17 +117,14 @@ public:
     }
     
     //--------------------------------------------------------------
-    void update(){
-    
+    void update(float dt ){
+        alpha.update(dt);
     }
 
     //--------------------------------------------------------------
     void customDraw(){
         //just image
      //   image.draw(position);
-        
-      //  if(alpha.isAnimating())
-            alpha.update(ofGetLastFrameTime());
         
         ofSetColor(255, 255, 255, alpha.val()*255);
 

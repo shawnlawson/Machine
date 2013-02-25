@@ -7,6 +7,7 @@
 //
 #pragma mark once
 #include "ofMain.h"
+
 #include "ofxAnimatableFloat.h"
 
 class BlackScreen{
@@ -15,7 +16,7 @@ public:
     ofxAnimatableFloat alpha;
     
     BlackScreen(){
-        alpha.reset(255);
+        alpha.reset(0.0);
         alpha.setDuration(5.0f);
     }
    
@@ -24,15 +25,18 @@ public:
     }
     
     void fadeIn(){
-            alpha.animateTo(255);
+        alpha.animateTo(255);
     }
     
-    void draw( float dt ){
-        if(alpha.isAnimating())
-            alpha.update( dt );
+    void fadePartial(float newAlpha){
+        alpha.animateTo(newAlpha);
+    }
+    
+    void draw( float dt , int x, int y){
+        alpha.update( dt );
         
         ofSetColor(0, 0, 0, alpha.val());
-        ofRect(0, 0, ofGetWidth(), ofGetHeight());
+        ofRect(x, y, 1920, 1080);
     }
     
 };
