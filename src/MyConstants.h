@@ -6,7 +6,7 @@
 //
 //
 
-#pragma mark once
+#pragma once
 #include "ofMain.h"
 
 #define DIM_WIDTH 1920
@@ -15,7 +15,7 @@
 #define SHORT_WALL 2450
 #define HEIGHT_WALL 750
 #define TILE_SIZE 125
-#define NUM_PANELS 15 //max 70
+#define NUM_PANELS 1 //max 70
 #define NUM_FRAMES 60
 
 //Raven controller, face controller

@@ -6,7 +6,7 @@
 //
 //
 
-#pragma mark once
+#pragma once
 #include "ofMain.h"
 
 #define toClose 350

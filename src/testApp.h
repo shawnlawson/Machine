@@ -9,6 +9,7 @@
 #include "PolygonController.h"
 #include "faceController.h"
 #include "Banner.h"
+#include "GameOfLife.h"
 #include "AnimatedGrid.h"
 #include "MachineMapping2D.h"
 
@@ -39,6 +40,7 @@ class testApp : public ofBaseApp{
     
     Banner *banner;
     AnimatedGrid *aGrid;
+    GameOfLife *northGame, *eastGame, *southGame;
 
     ofPoint northPos, eastPos, southPos;
     bool    drawBackground, fullscreen;

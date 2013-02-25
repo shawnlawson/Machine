@@ -5,7 +5,7 @@
 //  Created by Shawn Lawson on 2/3/13.
 //
 //
-#pragma mark once
+#pragma once
 #include "ofMain.h"
 
 #include "ofxAnimatableFloat.h"

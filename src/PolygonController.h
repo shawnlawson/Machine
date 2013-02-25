@@ -60,6 +60,12 @@ public:
         }
     }
     
+    void assignAlpha(float newAlpha){
+        for (int i=0; i<nodes.size(); i++) {
+            nodes[i].alpha.reset(newAlpha);
+        }
+    }
+    
     void fadeOut()
     {
         for (int i=0; i<nodes.size(); i++) {

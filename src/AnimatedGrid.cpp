@@ -62,7 +62,7 @@ void AnimatedGrid::draw(float time, int offsetX, int width, int height)
 {
     grid.begin();
     grid.setUniform1f("alpha", alpha.val());
-    grid.setUniform1f("waveAlpha", waveAlpha);
+    grid.setUniform1f("waveAlpha", waveAlpha.val());
     grid.setUniform2f("BrickPct", 0.05, 0.05);
     grid.setUniform2f("BrickSize", 15.0, 15.0);
     grid.setUniform2f("resolution", 512.0, 512.0);

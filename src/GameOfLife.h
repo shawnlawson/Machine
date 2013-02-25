@@ -1,8 +1,8 @@
 //
-//  EffectController.h
+//  GameOfLife.h
 //  TheMachine
 //
-//  Created by Shawn Lawson on 2/9/13.
+//  Created by Shawn Lawson on 2/25/13.
 //
 //
 
@@ -11,19 +11,22 @@
 
 #include "ofxAnimatableFloat.h"
 
-class Banner{
-public:
-    ofxAnimatableFloat alpha;
-    ofShader waves;
 
-    float timeScaler;
-
-    Banner( int width, int height );
+class GameOfLife{
     
-    void loadShaders();
+public:
+    ofFbo fbo;
+    ofShader gol, colorNoise;
+    ofxAnimatableFloat alpha;
+    bool bFront;
+    
+    
+    GameOfLife(int width, int height);
+    
+    void loadShader();
     void fadeOut();
     void fadeIn();
     void fadePartial(float newAlpha);
     void update(float dt);
-    void draw(float time, int offsetX, int width, int height);
+    void draw(int x, int y);
 };

@@ -36,6 +36,14 @@ void testApp::setup(){
     blackSouthEast = BlackScreen();
     blackSouthWest = BlackScreen();
     
+    northGame = new GameOfLife(LONG_WALL, HEIGHT_WALL);
+    eastGame  = new GameOfLife(SHORT_WALL, HEIGHT_WALL);
+    southGame = new GameOfLife(LONG_WALL, HEIGHT_WALL);
+    northGame->loadShader();
+    eastGame->loadShader();
+    southGame->loadShader();
+    
+    
     buildGUI();
     
     myZoom = false;
@@ -43,7 +51,8 @@ void testApp::setup(){
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void testApp::update()
+{
     float dt  = ofGetLastFrameTime();
     float time = ofGetElapsedTimef();
 
@@ -51,13 +60,16 @@ void testApp::update(){
         
         bInit = true;
     }
-
     
     pController.update(0, dt);
     fController.updateShowState(SwapFaces, dt);
     banner->update(dt);
     aGrid->update(dt);
 
+    northGame->update(dt);
+    eastGame->update(dt);
+    southGame->update(dt);
+    
 
 
     northMapping->bind();
@@ -65,15 +77,19 @@ void testApp::update(){
     ofViewport(0, 0, LONG_WALL, ofGetHeight());
     ofSetupScreenOrtho(LONG_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     scene(0, LONG_WALL, time);
+    
+    northGame->draw(0, 0);
     ofPopView();
     northMapping->unbind();
-    
+        ofSetColor(255);
     eastMapping->bind();
     ofPushView();
     ofViewport(0, 0, SHORT_WALL, ofGetHeight());
     ofSetupScreenOrtho(SHORT_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-LONG_WALL, 0);
     scene(LONG_WALL, SHORT_WALL, time);
+    ofSetColor(255);
+    eastGame->draw(LONG_WALL, 0);
     ofPopView();
     eastMapping->unbind();
     
@@ -83,6 +99,8 @@ void testApp::update(){
     ofSetupScreenOrtho(LONG_WALL, ofGetHeight(), OF_ORIENTATION_DEFAULT, false, -1000, 3000);
     ofTranslate(-LONG_WALL-SHORT_WALL, 0);
     scene(LONG_WALL+SHORT_WALL, LONG_WALL, time);
+    ofSetColor(255);
+    southGame->draw(LONG_WALL+SHORT_WALL, 0);
     ofPopView();
     southMapping->unbind();
 }
@@ -105,8 +123,8 @@ void testApp::scene(int leftSide, int width, float time){
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
-  
+void testApp::draw()
+{  
     ofPushMatrix();
     
     if (!myZoom)
@@ -159,7 +177,6 @@ void testApp::draw(){
     blackSouthWest.draw(dt, DIM_WIDTH*2, DIM_HEIGHT);
     
     ofPopMatrix();
-
 }
 
 //--------------------------------------------------------------
@@ -203,7 +220,6 @@ void testApp::keyPressed(int key){
 
         default:
             break;
-            
     }
 }
 
@@ -287,26 +303,18 @@ void testApp::buildGUI()
     
     gui3->addLabel("Banner");
     gui3->addSlider("Banner_Speed", .01, 5.0, &banner->timeScaler);
-    names.clear();
-    names.push_back("offB");     names.push_back("partialB");     names.push_back("onB");
-    gui3->addRadio("Banner_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    gui3->addSlider("Banner_Alpha", 0.0, 1.0, 1.0);
     gui3->addSpacer();gui3->addSpacer();
     
     gui3->addLabel("Grid");
     gui3->addSlider("Grid_Speed", .01, 2.0, &aGrid->timeScaler);
-    names.clear();
-    names.push_back("offWG");     names.push_back("partialWG");     names.push_back("onWG");
-    gui3->addRadio("GridWave_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
-    names.clear();
-    names.push_back("offG");     names.push_back("partialG");     names.push_back("onG");
-    gui3->addRadio("Grid_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    gui3->addSlider("GridWave_Alpha", 0.0, 8.0, 2.0);
+    gui3->addSlider("Grid_Alpha", 0.0, 1.0, 1.0);
     gui3->addSpacer();gui3->addSpacer();
     
     gui3->addLabel("Raven");
     gui3->addSlider("Raven_Speed", .001, .1, &pController.timeScaler);
-    names.clear();
-    names.push_back("offR");     names.push_back("partialR");     names.push_back("onR");
-    gui3->addRadio("Raven_Alpha", names, OFX_UI_ORIENTATION_HORIZONTAL );
+    gui3->addSlider("Raven_Alpha", 0.0, 1.0, 1.0);
     gui3->addSpacer();gui3->addSpacer();
     
     gui3->addLabel("Faces");
@@ -382,42 +390,21 @@ void testApp::guiEvent(ofxUIEventArgs &e)
     else if( name == "onSE" ){
         blackSouthEast.fadeIn();
     }
-    else if( name == "offB" ){
-        banner->fadeOut();
+    else if( name == "Banner_Alpha" ){
+        banner->alpha.reset( ((ofxUISlider *)e.widget)->getValue());
     }
-    else if( name == "partialB" ){
-        banner->fadePartial(0.5);
+    else if( name == "Grid_Alpha" ){
+        aGrid->alpha.reset( ((ofxUISlider *)e.widget)->getValue() );
     }
-    else if( name == "onB" ){
-        banner->fadeIn();
+    else if( name == "GridWave_Alpha" ){
+        cout << ((ofxUISlider *)e.widget)->getValue() << endl;
+        aGrid->waveAlpha.reset( ((ofxUISlider *)e.widget)->getValue());
+        
     }
-    else if( name == "offG" ){
-        aGrid->fadeOut();
+    else if( name == "Raven_Alpha" ){
+        pController.assignAlpha(((ofxUISlider *)e.widget)->getValue());
     }
-    else if( name == "partialG" ){
-        aGrid->fadePartial(0.5);
-    }
-    else if( name == "onG" ){
-        aGrid->fadeIn();
-    }
-    else if( name == "offWG" ){
-        aGrid->fadeOutWave();
-    }
-    else if( name == "partialWG" ){
-        aGrid->fadePartialWave(2.0);
-    }
-    else if( name == "onWG" ){
-        aGrid->fadeInWave();
-    }
-    else if( name == "offR" ){
-        pController.fadeOut();
-    }
-    else if( name == "partialR" ){
-        pController.fadePartial(0.5);
-    }
-    else if( name == "onR" ){
-        pController.fadeIn();
-    }
+
     else if( name == "colorF" ){
         if( ((ofxUIToggle *)e.widget)->getValue() )
             fController.whiteOut.animateTo(0.0);
@@ -437,8 +424,5 @@ void testApp::guiEvent(ofxUIEventArgs &e)
 //--------------------------------------------------------------
 void testApp::exit()
 {
-//    gui->saveSettings("GUI_Settings.xml");
-//    gui2->saveSettings("GUI_Settings2.xml");
-//    gui3->saveSettings("GUI_Settings3.xml");
-    delete gui, gui2, gui3, gui4, northMapping, southMapping, eastMapping, banner, aGrid;
+    delete gui, gui2, gui3, gui4, northMapping, southMapping, eastMapping, banner, aGrid, northGame, eastGame, southGame;
 }

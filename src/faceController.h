@@ -6,7 +6,7 @@
 //
 //
 
-#pragma mark once
+#pragma once
 #include "ofMain.h"
 
 #include "ofxAnimatableFloat.h"
@@ -134,9 +134,7 @@ public:
     void draw(){
         glLineWidth(lineWidth);
         glPointSize(vertexSize);
-        cout << whiteOut.val() << endl;
-        fader.begin();
-        
+        fader.begin();        
         for (int i=0; i<NUM_PANELS; i++) {
             fader.setUniform1f("multiplier", whiteOut.val());
             fader.setUniformTexture("tex", facesOnScreen[i]->image.getTextureReference(), 0);
