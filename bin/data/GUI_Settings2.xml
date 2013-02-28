@@ -1,0 +1,115 @@
+<Widget>
+    <Kind>2</Kind>
+    <Name>reset_all</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>present_scene4</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>grid_emerge</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>pattern_emerge</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>raven_emerge</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>faces_emerge</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>scrim_black</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>failing_machine</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>blackout_now</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>joanna_emerge</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>faces_reemerge</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>gol_emerge</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>aGridDur</Name>
+    <Value>60.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>aGridWaveDur</Name>
+    <Value>60.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>ravenDur</Name>
+    <Value>45.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>faceWhiteDur</Name>
+    <Value>10.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>faceVertexDur</Name>
+    <Value>10.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>faceRandomDur</Name>
+    <Value>15.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>jWhiteDur</Name>
+    <Value>5.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>jVertexDur</Name>
+    <Value>5.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>faceReEmergeDur</Name>
+    <Value>15.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>jRandomOutDur</Name>
+    <Value>15.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>GOLDur</Name>
+    <Value>15.000000000</Value>
+</Widget>

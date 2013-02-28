@@ -11,7 +11,8 @@
 
 Banner::Banner( int width, int height )
 {
-    alpha.reset(1.0);
+    alpha.reset(0.0);
+    alpha.setDuration(60.0);
     timeScaler = 0.1;
 }
 

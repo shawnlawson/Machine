@@ -14,7 +14,9 @@ vec2 p = gl_FragCoord.xy;
 	seed += p.y * vec2(ofs, 0.0);
 //	seed = floor(seed * resolution);
 	vec3 rnd = nrand3( seed ) ;
+float value = pow(rnd.g, 8.0);
+//rnd = vec3(pow(rnd.r, 8.0), pow(rnd.g, 8.0), pow(rnd.b, 8.0));
 
-rnd = vec3(pow(rnd.r, 8.0), pow(rnd.g, 8.0), pow(rnd.b, 8.0));
-	gl_FragColor = vec4(rnd, 1.0);
+//	gl_FragColor = vec4(rnd, 1.0);
+gl_FragColor = vec4(value, value, value, 1.0);
 }

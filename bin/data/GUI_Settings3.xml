@@ -1,152 +1,67 @@
 <Widget>
     <Kind>2</Kind>
-    <Name>offNW</Name>
-    <Value>1</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>partialNW</Name>
+    <Name>Banner_On_Off</Name>
     <Value>0</Value>
 </Widget>
 <Widget>
-    <Kind>2</Kind>
-    <Name>onNW</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>offNE</Name>
-    <Value>1</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>partialNE</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>onNE</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>offE</Name>
-    <Value>1</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>partialE</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>onE</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>offSE</Name>
-    <Value>1</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>partialSE</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>onSE</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>offSW</Name>
-    <Value>1</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>partialSW</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>onSW</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
+    <Kind>25</Kind>
     <Name>Banner_Speed</Name>
-    <Value>0.097783245</Value>
+    <Value>0.100000001</Value>
 </Widget>
 <Widget>
-    <Kind>4</Kind>
+    <Kind>25</Kind>
     <Name>Banner_Alpha</Name>
-    <Value>1.000000000</Value>
+    <Value>0.000000000</Value>
 </Widget>
 <Widget>
-    <Kind>4</Kind>
+    <Kind>2</Kind>
+    <Name>Grid_On_Off</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
     <Name>Grid_Speed</Name>
-    <Value>0.102660097</Value>
+    <Value>0.100000001</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>Grid_Alpha</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>25</Kind>
+    <Name>GridWave_Alpha</Name>
+    <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>2</Kind>
-    <Name>offWG</Name>
+    <Name>Raven_On_Off</Name>
     <Value>0</Value>
 </Widget>
 <Widget>
-    <Kind>2</Kind>
-    <Name>partialWG</Name>
-    <Value>1</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>onWG</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>offG</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>partialG</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>onG</Name>
-    <Value>1</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
+    <Kind>25</Kind>
     <Name>Raven_Speed</Name>
     <Value>0.010000000</Value>
 </Widget>
 <Widget>
-    <Kind>2</Kind>
-    <Name>offR</Name>
-    <Value>1</Value>
+    <Kind>25</Kind>
+    <Name>Raven_Alpha</Name>
+    <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>2</Kind>
-    <Name>partialR</Name>
+    <Name>Faces_On_Off</Name>
     <Value>0</Value>
 </Widget>
 <Widget>
-    <Kind>2</Kind>
-    <Name>onR</Name>
-    <Value>0</Value>
-</Widget>
-<Widget>
-    <Kind>2</Kind>
-    <Name>colorF</Name>
-    <Value>0</Value>
+    <Kind>25</Kind>
+    <Name>Faces Bright</Name>
+    <Value>1.000000000</Value>
 </Widget>
 <Widget>
     <Kind>2</Kind>
     <Name>pointF</Name>
-    <Value>0</Value>
+    <Value>1</Value>
 </Widget>
 <Widget>
     <Kind>2</Kind>
@@ -156,15 +71,50 @@
 <Widget>
     <Kind>2</Kind>
     <Name>triF</Name>
-    <Value>1</Value>
+    <Value>0</Value>
 </Widget>
 <Widget>
-    <Kind>4</Kind>
+    <Kind>25</Kind>
     <Name>pointSizeF</Name>
-    <Value>0.985221624</Value>
+    <Value>0.935960531</Value>
 </Widget>
 <Widget>
-    <Kind>4</Kind>
+    <Kind>25</Kind>
     <Name>lineWidthF</Name>
-    <Value>0.985221624</Value>
+    <Value>1.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>Swap Faces</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>17</Kind>
+    <Name>Now Transparent F</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>17</Kind>
+    <Name>Now Opaque F</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>17</Kind>
+    <Name>Random Transparent F</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>17</Kind>
+    <Name>Random Opaque F</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>17</Kind>
+    <Name>Gradual Transparent F</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>17</Kind>
+    <Name>Gradual Opaque F</Name>
+    <Value>0</Value>
 </Widget>

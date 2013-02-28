@@ -36,11 +36,11 @@ public:
     void drawFbo();
     void draw();
      
-    
+    ofFbo _fbo;
 private:
 
     string _mappingXmlFilePath;
-    ofFbo _fbo;
+    
     ofxXmlSettings _shapesListXML;
 //    list<ofxMtlMapping2DShape*>::iterator iteratorForShapeWithId(int shapeId);
     list<ofxMtlMapping2DShape*> pmShapes;

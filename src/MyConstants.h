@@ -12,10 +12,10 @@
 #define DIM_WIDTH 1920
 #define DIM_HEIGHT 1080
 #define LONG_WALL 3250
-#define SHORT_WALL 2450
+#define SHORT_WALL 2375
 #define HEIGHT_WALL 750
 #define TILE_SIZE 125
-#define NUM_PANELS 1 //max 70
+#define NUM_PANELS 10 //max 70
 #define NUM_FRAMES 60
 
 //Raven controller, face controller

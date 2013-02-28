@@ -11,6 +11,7 @@
 #include "Banner.h"
 #include "GameOfLife.h"
 #include "AnimatedGrid.h"
+#include "Joanna.h"
 #include "MachineMapping2D.h"
 
 class testApp : public ofBaseApp{
@@ -41,17 +42,23 @@ class testApp : public ofBaseApp{
     Banner *banner;
     AnimatedGrid *aGrid;
     GameOfLife *northGame, *eastGame, *southGame;
+    
+    Joanna joanna;
+    
+    float aGridDur, aGridWaveDur, ravenDur, faceWhiteDur, faceVertexDur, faceRandomDur, jWhiteDur, jVertexDur, jRandomDur, faceReEmergeDur, jRandomOutDur, GOLDur;
 
     ofPoint northPos, eastPos, southPos;
-    bool    drawBackground, fullscreen;
+    bool    drawBackground, fullscreen, bBannerOn, bGridOn, bRavenOn, bGameOn, bFacesOn, bJoannaOn, bPixelateOn, facesLoading;
     
+    ofShader pixelate;
+    float pixelSize;
     
     ofxUICanvas *gui, *gui2, *gui3, *gui4;
 	void guiEvent(ofxUIEventArgs &e);
 
     ofxXmlSettings XML;
     
-    bool    myZoom, bInit;
+    bool    myZoom;
     
     
    

@@ -16,7 +16,7 @@ class GameOfLife{
     
 public:
     ofFbo fbo;
-    ofShader gol, colorNoise;
+    ofShader gol, colorNoise, bwNoise;
     ofxAnimatableFloat alpha;
     bool bFront;
     
@@ -27,6 +27,7 @@ public:
     void fadeOut();
     void fadeIn();
     void fadePartial(float newAlpha);
+    void regenerate();
     void update(float dt);
     void draw(int x, int y);
 };

@@ -3,7 +3,7 @@
 #extension GL_ARB_texture_rectangle: enable
 
 uniform sampler2DRect tex0;
-uniform vec2 pixel;
+uniform float alpha;
 
 void main() {
 	// retrieve the texture coordinate
@@ -36,5 +36,5 @@ void main() {
 	current -= vec3(greaterThan(current, vec3(0.4)))*0.05;
 
 	// write out the pixel
-	gl_FragColor = vec4(current, 1.0);
+	gl_FragColor = vec4(current, alpha);
 }

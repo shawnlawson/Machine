@@ -18,40 +18,56 @@ class faceController{
 public:
     vector <face> allFaces;
     face* facesOnScreen[NUM_PANELS];
-    int faceToSwap;
-    float vertexSize, lineWidth;
-    ofxAnimatableFloat whiteOut;
+    int faceToSwap, loaded, totalToLoad;
+    float lineWidth;
+    ofxAnimatableFloat whiteOut, vertexSize;
     ofShader fader;
+    
+    bool swapFaces;
 
 //--------------------------------------------------------------
-    faceController(){}
+    faceController(){
+        loaded = 0;
+        totalToLoad = 0;
+    }
     
 //--------------------------------------------------------------
     void loadFaces( string path){
         whiteOut.reset(1.0);
-        vertexSize = lineWidth = 1.0;
+        vertexSize.reset(1.0);
+        lineWidth = 1.0;
         faceToSwap = -1;
         ofDirectory dirImage, dirMesh;
         dirImage.allowExt("png");
         dirMesh.allowExt("txt");
         int numFaces = dirImage.listDir(path);
         int numMesh = dirMesh.listDir(path);
+        totalToLoad = numMesh;
         if( numFaces == numMesh){
-            for(int i=0; i<numMesh && i<40; i++){
+            for(int i=0; i<numMesh && i< NUM_PANELS; i++){
                 face f = face();
                 f.loadImage( dirImage.getPath(i) );
                 f.loadMesh( dirMesh.getPath(i) );
-                f.setScale(.8);
+                f.setScale(.5);
                 allFaces.push_back(f);
+                loaded = i;
+                cout << "loaded: " << loaded << endl;
            }
         }
         
         resetFacesOnPanels();
+        for( int i=0; i<NUM_PANELS; i++){
+            addFaceAtPlace(i, i);
+        }
         fader.load("shaders/fader");
+        swapFaces = true;
     }
     
 //--------------------------------------------------------------
-    void updateShowState( int showState, float dt ){
+    void updateShowState( int showState, float timeDelay ){
+        
+        if(loaded == 0)
+            return;
         
         switch ( showState ) {
 
@@ -81,14 +97,14 @@ public:
             case RandomFadeIn:
                 for(int i=0; i<NUM_PANELS; i++){
                     facesOnScreen[i]->alpha.reset(0.0);
-                    facesOnScreen[i]->alpha.animateToAfterDelay(255.0f, ofRandom(120.0));
+                    facesOnScreen[i]->alpha.animateToAfterDelay(255.0f, ofRandom(timeDelay));
                 }
                 break;
             
             case RandomFadeOut:
                 for(int i=0; i<NUM_PANELS; i++){
                     facesOnScreen[i]->alpha.reset(255.0f);
-                    facesOnScreen[i]->alpha.animateToAfterDelay(0.0f, ofRandom(120.0));
+                    facesOnScreen[i]->alpha.animateToAfterDelay(0.0f, ofRandom(15.0));
                 }
                 break;
                 
@@ -104,24 +120,28 @@ public:
                 }
                 break;
                 
-            case SwapFaces:
-                if(faceToSwap < 0)
-                    startFaceSwap();
-                else
-                    waitForSwap();
-                
-                break;
             default:
                 break;
+
         }
-        
-        for(int i=0; i<NUM_PANELS; i++){
-            facesOnScreen[i]->update(dt);
-        }
-        
-        whiteOut.update(dt);
-        
+ }
+    
+void update( float dt ){
+    if( SwapFaces ){
+        if(faceToSwap < 0)
+            startFaceSwap();
+        else
+            waitForSwap();
     }
+    
+    for(int i=0; i<NUM_PANELS; i++){
+        facesOnScreen[i]->update(dt);
+    }
+    
+    whiteOut.update(dt);
+    vertexSize.update(dt);
+        
+}
 
 //--------------------------------------------------------------  
     void setMode(ofPolyRenderMode newMode){
@@ -133,7 +153,7 @@ public:
 //--------------------------------------------------------------
     void draw(){
         glLineWidth(lineWidth);
-        glPointSize(vertexSize);
+        glPointSize(vertexSize.val());
         fader.begin();        
         for (int i=0; i<NUM_PANELS; i++) {
             fader.setUniform1f("multiplier", whiteOut.val());
@@ -179,12 +199,16 @@ private:
 //--------------------------------------------------------------
     void startFaceSwap(){
         
+        if(allFaces.size()==0)
+            return;
+        
         int possibleSwap = (int)ofRandom(NUM_PANELS);
         
         if( !facesOnScreen[possibleSwap]->alpha.isOrWillBeAnimating() ){
             faceToSwap = possibleSwap;
             facesOnScreen[faceToSwap]->alpha.reset(255.0f);
             facesOnScreen[faceToSwap]->alpha.animateFromTo(255.0f, 0.0f);
+            cout << faceToSwap << endl;
         }
     }
     
@@ -205,7 +229,7 @@ private:
         else if( tempX < 22) //east wall right
             posX = TILE_SIZE + TILE_SIZE + tempX*TILE_SIZE*2;
         else //south wall
-            posX = TILE_SIZE/2 +TILE_SIZE + TILE_SIZE + tempX*TILE_SIZE*2;
+            posX = TILE_SIZE + TILE_SIZE + tempX*TILE_SIZE*2;
         
         facesOnScreen[place] = &allFaces[faceToUse];
         facesOnScreen[place]->setPosition(posX, posY, 0.0f);

@@ -11,8 +11,8 @@
 
 AnimatedGrid::AnimatedGrid( int width, int height )
 {
-    alpha.reset(1.0);
-    waveAlpha.reset(2.0);
+    alpha.reset(0.0);
+    waveAlpha.reset(0.0);
     timeScaler = 0.1;
 }
 

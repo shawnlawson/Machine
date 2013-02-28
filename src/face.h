@@ -9,8 +9,8 @@
 #pragma once
 #include "ofMain.h"
 
-#define toClose 350
-#define toFar   2000
+#define toClose 50
+#define toFar   1000
 
 class face : public ofNode, ofVboMesh{
 
@@ -29,7 +29,7 @@ public:
     
     //--------------------------------------------------------------
     void loadImage( string path ){
-        image.allocate(280, 180, OF_IMAGE_COLOR_ALPHA);
+        image.allocate(300, 300, OF_IMAGE_COLOR_ALPHA);
         image.loadImage(path);
         image.setAnchorPercent(0.5, 0.5);
     }
@@ -46,7 +46,7 @@ public:
         ofBuffer buffer(file);
         vector<ofVec3f> vData;
 
-        int skip = 5;//1;	// this controls the resolution of the mesh
+        int skip = 4;	// this controls the resolution of the mesh
         int width = image.getWidth();
         int height = image.getHeight();
         ofVec3f zero(0, 0, 0);
@@ -90,7 +90,8 @@ public:
             v++;
         }
 
-        enableColors();                
+        enableColors();
+        rotate(ofRandom(100), 0, 1, 0);
     }
     
     //--------------------------------------------------------------
@@ -132,7 +133,7 @@ public:
 
       //  image.bind();
         
-        rotate(1, 0, 1, 0);
+        rotate(.4, 0, 1, 0);
         transformGL();
       if( drawMode == OF_MESH_FILL)  drawFaces();
       else if( drawMode == OF_MESH_WIREFRAME) drawWireframe();
@@ -142,5 +143,10 @@ public:
    //     image.unbind();
    
     }
-    
+    void joannaDraw(){
+
+        if( drawMode == OF_MESH_FILL)  drawFaces();
+        else if( drawMode == OF_MESH_WIREFRAME) drawWireframe();
+        else if( drawMode == OF_MESH_POINTS) drawVertices();
+    }
 };

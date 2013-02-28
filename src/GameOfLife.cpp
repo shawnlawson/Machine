@@ -26,10 +26,13 @@ GameOfLife::GameOfLife(int width, int height){
 void GameOfLife::loadShader(){
     gol.load("shaders/gol");
     colorNoise.load("shaders/colorNoise");
+    //bwNoise.load("shaders/BWNoise");
     
     fbo.begin();
     colorNoise.begin();
+  //  bwNoise.begin();
     ofRect(0, 0, fbo.getWidth(), fbo.getHeight());
+    //bwNoise.end();
     colorNoise.end();
     fbo.end();
 }
@@ -49,12 +52,24 @@ void GameOfLife::fadePartial(float newAlpha)
     alpha.animateTo(newAlpha);
 }
 
+void GameOfLife::regenerate(){
+    fbo.begin();
+      colorNoise.begin();
+    //bwNoise.begin();
+    ofRect(0, 0, fbo.getWidth(), fbo.getHeight());
+    //bwNoise.end();
+    colorNoise.end();
+    fbo.end();
+    bFront = true;
+}
+
 void GameOfLife::update(float dt){
-    
-    
+    alpha.update(dt);
 }
 
 void GameOfLife::draw(int x, int y){
+    
+    ofSetColor(255, 255, 255, 255);
     
     if(bFront)
     {    
@@ -62,10 +77,12 @@ void GameOfLife::draw(int x, int y){
         gol.begin();
         glDrawBuffer(GL_COLOR_ATTACHMENT0_EXT+1);
         gol.setUniformTexture("tex0", fbo.getTextureReference(), 0);
+        gol.setUniform1f("alpha", 1.0);
         fbo.getTextureReference(0).draw(0,0);
         gol.end();
         fbo.end();
-    
+        
+        ofSetColor(255, 255, 255, 255*alpha.val());
         fbo.getTextureReference(1).draw(x,y);
     }
     else
@@ -74,10 +91,12 @@ void GameOfLife::draw(int x, int y){
         gol.begin();
         glDrawBuffer(GL_COLOR_ATTACHMENT0_EXT);
         gol.setUniformTexture("tex0", fbo.getTextureReference(1), 0);
+        gol.setUniform1f("alpha", 1.0);
         fbo.getTextureReference(1).draw(0,0);
         gol.end();
         fbo.end();
         
+        ofSetColor(255, 255, 255, 255*alpha.val());
         fbo.draw(x, y);
     }
     
